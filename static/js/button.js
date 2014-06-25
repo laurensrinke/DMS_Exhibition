@@ -14,18 +14,11 @@ Version: c0.1
 // Q1: Button_Act Füllfarbe auf 100% lassen?
 
 
-Button = function(b_id, b_state, b_text, img_normal, img_over, img_down, b_x, b_y, process, style_class)
+Button = function(id, text, img_normal, img_over, img_down, x, y, show_prozess, style_class)
 {
-	/*
-	* 
-	*/
+	
+	// Variables ////////////////////////////////////////////////////////
 	var i_this;
-
-	/*
-	* 
-	*/
-	var i_id = b_id;
-	var text = b_text;
 
 	var i_container = 0;
 	var i_text_container = '';
@@ -37,7 +30,7 @@ Button = function(b_id, b_state, b_text, img_normal, img_over, img_down, b_x, b_
 
 	var i_prozess = '';
 
-	// functions /////////////////////////////////
+	// functions ////////////////////////////////////////////////////////
 	// 
 	function create()
 	{
@@ -47,11 +40,11 @@ Button = function(b_id, b_state, b_text, img_normal, img_over, img_down, b_x, b_
 		*/
 		// create container
 		i_container = document.createElement('section');
-		i_container.className += ' style_class';
-		i_container.id = i_id;
+		i_container.className += style_class;
+		i_container.id = id;
 		i_container.style.position = 'absolute';
-		i_container.style.left = b_x + 'px';
-		i_container.style.top = b_y + 'px';
+		i_container.style.left = x + 'px';
+		i_container.style.top = y + 'px';
 
 		// create states elements
 		b_normal = document.createElement('img');
@@ -94,37 +87,31 @@ Button = function(b_id, b_state, b_text, img_normal, img_over, img_down, b_x, b_
 	function mouse_over()
 	{
 		b_over.style.opacity = 1;
-		i_text_container.style.color = '#56C9DC';
 	}
 
 	function mouse_out()
 	{
 		b_over.style.opacity = 0;
-		i_text_container.style.color = '#FFF';
 		
 	}
 
 	function mouse_down()
 	{
 		b_down.style.opacity = 1;	
-		//i_text_container.style.opacity = .5;	
-		i_text_container.style.color = '#FFF';
 	}
 
 	function mouse_up()
 	{
 		b_down.style.opacity = 0;
-		i_text_container.style.color = '#56C9DC';	
-		if (process) {show_prozess();};
 	}
 
 	function show_prozess()
 	{
 		var p_value = 0;
-
+		$('#nav_b1_line').remove();
 		// add line
 		i_prozess = document.createElement('section');
-		i_prozess.id = i_id + '_line';
+		i_prozess.id = id + '_line';
 		i_prozess.className = 'btn_line';
 
 		// add glow object
