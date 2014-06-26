@@ -14,7 +14,7 @@ Version: c0.1
 // Q1: Button_Act Füllfarbe auf 100% lassen?
 
 
-Button = function(id, text, img_normal, img_over, img_down, x, y, show_prozess, style_class)
+Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, style_class)
 {
 	
 	// Variables ////////////////////////////////////////////////////////
@@ -23,12 +23,16 @@ Button = function(id, text, img_normal, img_over, img_down, x, y, show_prozess, 
 	var i_container = 0;
 	var i_text_container = '';
 
-	var def = '';
-	var b_normal = '';
-	var b_over   = '';
-	var b_down = '';
+	var b_def = '';
+	var b_hover   = '';
+	var b_act = '';
+
+	var isActive = false; // 
 
 	var i_prozess = '';
+
+	var j_id = ''; // jQuery_ID
+
 
 	// functions ////////////////////////////////////////////////////////
 	// 
@@ -46,66 +50,109 @@ Button = function(id, text, img_normal, img_over, img_down, x, y, show_prozess, 
 		i_container.style.left = x + 'px';
 		i_container.style.top = y + 'px';
 
+
 		// create states elements
-		b_normal = document.createElement('img');
-		b_normal.src = img_normal;
-		b_normal.className+= 'btn_img';
+		b_act = document.createElement('img');
+		b_act.src = img_act;
+		b_act.className+= 'btn_img';
+		b_act.style.opacity = 0;
 
-		b_over = document.createElement('img');
-		b_over.src = img_over;
-		b_over.className+= 'btn_img';
-		b_over.style.opacity = 0;
+		b_hover = document.createElement('img');
+		b_hover.src = img_hover;
+		b_hover.className+= 'btn_img';
+		b_hover.style.opacity = 0;
 
-		b_down = document.createElement('img');
-		b_down.src = img_down;
-		b_down.className+= 'btn_img';
-		b_down.style.opacity = 0;
+
+		b_def = document.createElement('img');
+		b_def.src = img_def;
+		b_def.className+= 'btn_img';
 
 		// add text
-		i_text_container = document.createElement('section');
+		i_text_container = document.createElement('article');
 		i_text_container.innerHTML = text;
 		i_text_container.className = 'btn_text'
 
 		// add elements together
-		i_container.appendChild(b_normal);
-		i_container.appendChild(b_over);
-		i_container.appendChild(b_down);
+		i_container.appendChild(b_def);
+		i_container.appendChild(b_act);
+		i_container.appendChild(b_hover);
 		i_container.appendChild(i_text_container);
 
 		// add object to page
 		document.body.appendChild(i_container);
 
 		// Event Listener ///////////////////////////////////////////////////////////////////////
-		i_container.addEventListener("mouseover", mouse_over, false);
-		i_container.addEventListener("mouseout", mouse_out, false);
-		i_container.addEventListener("mousedown", mouse_down, false);
-		i_container.addEventListener("mouseup", mouse_up, false);
+		i_container.addEventListener("mouseover", mouseOver, false);
+		i_container.addEventListener("mouseout", mouseOut, false);
+		i_container.addEventListener("mousedown", mouseDown, false);
+		i_container.addEventListener("mouseup", mouseUp, false);
 
+		// return
 		// return _id;
 	}
 	
-	function mouse_over()
+	
+	// ---------------- Mouse -----------------
+
+	function mouseOver()
 	{
-		b_over.style.opacity = 1;
+		b_hover.style.opacity = 1;
+		$('#' + id).trigger( "custom", ["over"]);
 	}
 
-	function mouse_out()
+
+	function mouseOut()
 	{
-		b_over.style.opacity = 0;
-		
+		b_hover.style.opacity = 0;
+		$('#' + id).trigger( "custom", ["out"]);
 	}
 
-	function mouse_down()
+	function mouseDown()
 	{
-		b_down.style.opacity = 1;	
+		b_act.style.opacity = 1;
+		if (isActive) {
+			isActive = false;
+		} else{
+			isActive = true;
+		};
+		$('#' + id).trigger( "custom", ["down"]);
 	}
 
-	function mouse_up()
+	function mouseUp()
 	{
-		b_down.style.opacity = 0;
+		// send event to set all buttons on inactive
+
+		// ... 
+		b_act.style.opacity = 0;
+		if (isActive) {
+			b_act.style.opacity = 1;
+
+		} else{
+			b_act.style.opacity = 0;
+		};
+		$('#' + id).trigger( "custom", ["up"]);
 	}
 
-	function show_prozess()
+	// ---------------- Settings ----------------
+	
+
+	function getId()
+	{
+		return id;
+	}
+
+	function setActive()
+	{
+		b_act.style.opacity = 1;
+
+	}
+
+	function setInactive()
+	{
+		b_act.style.opacity = 0;
+	}
+
+	function showProzess()
 	{
 		var p_value = 0;
 		$('#nav_b1_line').remove();
@@ -131,14 +178,18 @@ Button = function(id, text, img_normal, img_over, img_down, x, y, show_prozess, 
 	}
 	
 	
-	/* expose certain functions (in this case ALL) */
+	/* define public functions */
 	var exposed = {
 		create: create,
-		mouse_over: mouse_over, 
-		mouse_out: mouse_out,
-		mouse_down: mouse_down,
-		mouse_up: mouse_up,
-		show_prozess: show_prozess,
+		// mouseOver: mouseOver, 
+		// mouseOut: mouseOut,
+		// mouseDown: mouseDown,
+		// mouseUp: mouseUp,
+		getId:getId,
+		setActive:setActive, 
+		setInactive: setInactive,
+		setActive: setActive,
+		// showProzess: showProzess,
 	}
 	return exposed;
 }

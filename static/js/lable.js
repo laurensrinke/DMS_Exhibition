@@ -2,40 +2,24 @@
 
 /*
 Author:  IgJo
-Created: 24.06.2014
+Created: 26.06.2014
 Version: c0.1
 */
 
 
 // IDEA
-// ...coming soon. 
 // ----------------------------------------------------
-
-// 2 DO
-// Make it simple as possible. No ugly class-shit.
-
+// This is a simple lable class. You just define title 
+// position. You also can set animate it. (Will be 
+	// included later).
 
 // Questions
 // ----------------------------------------------------
-// Q1: Button_Act Füllfarbe auf 100% lassen?
 
 
-Tabs = function(img_def, img_act, img_hover)
+Lable = function(x, y, text)
 {
 	// Variables /////////////////////////////////
-	var state = 0; // 0, 1, 2
-	var title = [
-	    "Missionplanner",
-	    "Live View",
-	    "Post Editing"
-	];
-
-	var buttons = [
-	   ['Missionplanner', 1, ''],
-	   ['Live View',      0, ''],
-	   ['Post Editing',   0, ''],
-	];
-
 
 	// Buttons
 	var nav_button_1, nav_button_2, nav_button_3; 
