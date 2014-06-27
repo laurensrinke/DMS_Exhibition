@@ -11,6 +11,11 @@ UI-ELements:
  ☐ lable class
 
 
+   UI-Transistions:
+     Label - Typewriter Effekt ein bauen (javascript mit Effekt von Button.js)   
+    
+
+
    Fragen:
 ☐ Macht es Sinn, dass man objete zu einem andererm Objekt hinzufügen kann?
        Ja, denke schon, weil man so einfach die Objekte von einem andererm Objekt 

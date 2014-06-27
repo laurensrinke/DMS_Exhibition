@@ -12,7 +12,7 @@
 // Questions
 // ----------------------------------------------------
 
-Lable = function(x, y, text)
+Lable = function(x, y, text, myDelay, myDuration)
 {
 	// Variables /////////////////////////////////
 
@@ -20,183 +20,138 @@ Lable = function(x, y, text)
 	var container = 0;
 	var text_container = '';
 	var line = '';
+
+
+	// SVG objects
+	var svgContainer = d3.select("body").append("svg");
+	var lineContainer = svgContainer.append("line");
+	var textContainer = svgContainer.append("text");  
+
 	// var nav_text_1, nav_text_2, nav_text_3; 
 
 	// functions /////////////////////////////////
 	function create()
 	{
 
-		// create container
-		// container = document.createElement('canvas');
-		// container.style.position = "absolute";
-		// container.style.left = x;
-		// container.style.top = y;
-		// container.style.width = "220px";
-		
-		
-		
-		// // prpeper 2d stuff
-		// text_container = container.getContext('2d');
+		svgContainer
+			.attr("width", 255)
+			.attr("height", 19)
+			.style("position", 'absolute')
+			.style("left", x +'px')
+			.style("top", y +'px');
 
-		// // add text
-		// text_container.font = "400 14px Roboto";
-		// text_container.fillStyle = '#FFF'
-		// text_container.fillText(text,10,50);
+		lineContainer
+			.attr("x1", 11)
+			.attr("y1", 16.5)
+			.attr("x2", 11)
+			.attr("y2", 16.5)
+			.attr("fill-width", 0.5)
+			.attr("stroke", "#FFF")
+			.attr('opacity', 0)
 
+		textContainer
+			.text('')    
+			.attr("x", 10)    
+			.attr("y", 10)    
+			.style("fill","#FFF")
+			.style("font-family","400 14px Roboto")
+			.attr('font-size', 14);
 
+		// end of transition
+		lineContainer
+			.transition()
+			.delay(100)
+			.duration(myDuration)
+			.ease("cubic")
+			.attr("x2", 225)
+			.attr('font-size', 14)
+			.attr('opacity', 1);
 
-		// SVG ////////////////////////////////////////////////////////
+		// textContainer.transition()
+		// 	.delay(myDelay)
+		// 	.duration(myDuration)
+		// 	.ease("cubic")
+		// 	.attr('font-size', 14)
+		// 	.attr('opacity', 1)
+		// 	.text(text[0]+text[1])
 
-		// container = document.createElement('svg');
-		// container.style.position = "absolute";
-		// container.style.left = "23px";
-		// container.style.top = "84px";
-		// container.style.width = "300px";
-		// container.style.height = "30px";
+		var myText = '';
 
-		// // text element
-		// text_container = document.createElement('text');
-		// text_container.innerHTML = text;
-		// text_container.style.color = '#FFF';
-		// text_container.style.fontWeight = 100;
-		// text_container.style.fontSize = '14px';
+		for (var i = 0; i < text.length; i++) {
+			myText += text[i];
+			textContainer.transition()
+				.delay(myDelay*i/20)
+				.duration(myDuration)
+				.ease("cubic")
+				.attr('font-size', 14)
+				.attr('opacity', 1)
+				.text(myText)
+		};
+			
 
-		// // line element
-		// // text_container = document.createElement('line');
-		// // container.appendChild("line")
-  // //                        .attr("x1", 5)
-  // //                        .attr("y1", 5)
-  // //                        .attr("x2", 50)
-  // //                        .attr("y2", 50);
+			// for (var i = 0; i < text.length; i++) {
+			// 	lineContainer.transition()
+			// 		.delay(400)
+			// 		.tween(say('hey'))
+			// 	// myText = '';
+			// 	// setTimeout(function function_name(i) {
+			// 	// 	myText += text[i]
+			// 	// 	say(myText);	
+			// 	// }, i*100);
+			// };
 
+		// textContainer.transition()
+		// 	.dely(500)
+		// 	.each(text.length, function(){
+		// 		myText += text
+		// 	})
 
-		// // add elements to container
-		// container.appendChild(text_container);
-		// container.appendChild(line);
+		// 	.delay(750)
+  //   		.each("start", function() { d3.select(this).style("color", "green"); })
+  //   		.style("color", "red");
 
-		
+		// textContainer
+		// 	.transition()
+		// 	.delay(myDelay)
+		// 	.duration(myDuration)
+		// 	.ease("cubic")
+		// 	.attr('font-size', 14)
+		// 	.attr('opacity', 1);
+		// var myVar
+		// var myText
+		// myVar = setInterval(function() {
+		// 	myText += text[i]
+		// 	lineContainer
+		// 		.text(myText)
+			
+		// for (var i = 0; i < text.length; i++) {
+		// 	say('hey ' + i);
+		// };
+	 //    }, 1000);
 
-
-
-
-		// D3.JS
-		// creat container
-		container = document.createElement('svg');
-		container.style.width = 400;
-		container.style.width = 300;
-		document.body.appendChild(container);
-		var svg_container = d3.select(container).append("line")
-
-        svg_container.append('text')
-       		.text(text)
-        	.attr("width", "200px")
-        	.attr("height", "200px")
-        	.style('color', '#FFF')
-        	.attr("top", "200px")
-        	.attr("left", "200px");
- 
-        svg_container.append("line")
-			.attr("x1", 5)
-			.attr("y1", 5)
-			.attr("x2", 50)
-			.attr("y2", 50)
-			.style("stroke", "steelblue")
-			.style("fill", "#F00");
- 
-  //       path.append("text")
-  //           .text(text)
-  //           .attr("position", 'absolute')
-  //           .style("position", "absolute")
-  //           .style.top = '200px';
-
-        // (1) Specifying path data the SVG way
-   //      svgcanvas.append("svg:path")
-   //          .attr("d","M 0 60 L 50 110 L 90 70 L 140 100")
-   //          .style("stroke-width", 2)
-   //          .style("stroke", "steelblue")
-   //          .style("fill", "none");
-
-
-
-
-
-
-
-			// .append("text")
-			// .text(text)
-			// .style("position", "absolute")
-			// .style("left", "24px")
-			// .style("top", "90px")
-			// .style('color', '#FFF')
-			// .style('font-size', '14px')
-			// .attr("width", 300)
-   //          .attr("height", 25);
-
-   //          line = d3.select("body").append("svg:path")
-   //          .attr("d","M 0 60 L 50 110 L 90 70 L 140 100")
-   //          .style("stroke-width", 2)
-   //          .style("stroke", "steelblue")
-   //          .style("fill", "none");
-
-   		// var divElem = d3.select("body");
-     //    var svgcanvas = divElem.append("svg:svg")
-     //        .attr("width", 200)
-     //        .attr("height", 200);
- 
-     //    svgcanvas.append("svg:path")
-     //        .attr("d","M 0 60 L 50 110 L 90 70 L 140 100")
-     //        .style("stroke-width", 2)
-     //        .style("stroke", "steelblue")
-     //        .style("fill", "none");
-
-     //    svgcanvas.append("svg:text")
-     //        .attr("d","M 0 30 L 60 120 L 190 20 L 100 10")
-     //        .style("stroke-width", 2)
-     //        .style("stroke", "steelblue")
-     //        .style("fill", "none");
-
-
-
-		// text_container = document.createElement('text');
-		// text_container.innerHTML = text;
-		// text_container.style.color = '#FFF';
-		// text_container.style.fontWeight = 100;
-		// text_container.style.fontSize = '14px';
-
-		// container.append(text_container);
-// 
-
-		// <text x="20" y="20" font-family="sans-serif" font-size="20px" fill="red">Hello!</text>
 		
 
 
-		// var ctx=container.getContext("2d");
-		// ctx.strokeStyle="#FF0000";
-		// ctx.strokeRect(x,y,213,0);
-		// ctx.beginPath();
-		// ctx.moveTo(x,y);
-		// ctx.lineTo(x+213,y);
-		// ctx.stroke();
+		// textContainer
+		// 	.transition()
+		//     .duration(3000)
+		//         .tween("text", function(d) {
+		//             var i = d3.interpolate(this.textContent, d),
+		//                 prec = (d + "").split("."),
+		//                 round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
 
-		// create line element
-		// svg = document.createElement('svg');
-		// svg.clssName = 'line_svg';
-		// svg.style.width = '213px';
-		// svg.style.height = '1px';
-
-
-		// line object
-		// line = document.createElement('line');
-
-		// svg.appendChild(line);
-
-		// var lineWidth = 420, lineHeight = 20;
-		
-		// add element to webside
-		// document.body.appendChild(container);
+		//             return function(t) {
+		//                 this.textContent = Math.round(i(t) * round) / round;
+		//             };
+		//         });
 
 		// return object
 		// return _id;
+	}
+
+	// animate line
+	function animate (argument) {
+		
 	}
 
 	// ------------------------------------------------------------
@@ -204,6 +159,7 @@ Lable = function(x, y, text)
 	/* public functions *///////////////////////////////////////////////////////
 	var exposed = {
 		create: create,
+		animate: animate,
 	}
 	return exposed;
 }
