@@ -24,6 +24,17 @@ $(function(){
 		'img/button/button_down.fw.png', 
 		1682, 1019, true, 'btn_def');
 	first_Button.create();
+
+
+	// add radio stuff
+	// var radio_1 = new Radio(24, 130, 'Manual', 'Route', 'Area');
+	// radio_1.create();
+
+	// add Lable stuff
+	var lable_1 = new Lable(21, 87, 'Flight Mode');
+	lable_1.create();
+
+
 });
 
 // --------------------------------------------------------------------------------------------
