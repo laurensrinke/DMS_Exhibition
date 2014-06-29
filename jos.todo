@@ -1,3 +1,61 @@
+Hello:
+
+
+Akutelle Datein:
+ ✔ Plan machen @done (14-06-28 21:46)
+ ☐ Pixel zählen
+ ✔ Bilder raus speichern @done (14-06-28 21:46)
+ ☐ Include title
+ ☐ Include value
+ ☐ Factor of change
+
+
+
+
+
+
+__:
+__:
+  UI-Elemente:
+    ✔ Buttons @done (14-06-27 17:00)
+    ✔ Tabs @done (14-06-27 17:02)
+    ✔ Lables @done (14-06-27 17:02)
+    ✔ Radio @done (14-06-27 21:49)
+    ☐ Unit
+       ☐ hours / minutes
+       ☐ km / ml
+       ☐ % / m / h
+       ☐ GPS / UTM Ref
+    ☐ Map 
+    ☐ List
+    ☐ Input
+    ☐ Slider
+
+
+ UI-Transistions:
+   ☐ Punkte die sich nacheinander aufbauen 
+   ☐ Glitch-Effekt
+   ☐ Button Redesign Transistion
+
+Andere Anliegen:
+  ☐ Helligkeits-Slider
+  ☐ Interfcae für Piloten
+
+Feedback:
+  ☐ Spieht nach einem Spiel aus.
+  ☐ Wirkt noch nicht seriös.
+  ☐ Teilweise lassen sich Icons verwenden. 
+          ☐ Energie-Anzeig
+          ☐ Verbindung
+          ☐ Signalstärke
+          ☐ Speichern
+          ☐ Löschen
+          ☐ 
+
+
+
+______________________________________________________________________________
+
 My personal todo-list
 
 UI-ELements:
