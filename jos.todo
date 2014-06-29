@@ -3,11 +3,14 @@ Hello:
 
 Akutelle Datein:
  ✔ Plan machen @done (14-06-28 21:46)
- ☐ Pixel zählen
+ ✔ Pixel zählen @done (14-06-29 17:44)
  ✔ Bilder raus speichern @done (14-06-28 21:46)
- ☐ Include title
- ☐ Include value
+ ✔ write Infromation class @done (14-06-29 18:38)
+ ✔ Include title @done (14-06-29 18:38)
+ ✔ Include value @done (14-06-29 18:38)
  ☐ Factor of change
+ ☐ unit_r_1
+ ☐ unit_r_1 eben so - da liegt der Fehler
 
 
 
@@ -21,11 +24,13 @@ __:
     ✔ Tabs @done (14-06-27 17:02)
     ✔ Lables @done (14-06-27 17:02)
     ✔ Radio @done (14-06-27 21:49)
-    ☐ Unit
-       ☐ hours / minutes
-       ☐ km / ml
-       ☐ % / m / h
-       ☐ GPS / UTM Ref
+    ✔ Unit @done (14-06-29 17:45)
+       ✔ hours / minutes @done (14-06-29 17:45)
+       ✔ km / ml @done (14-06-29 17:45)
+       ✔ % / m / h @done (14-06-29 17:45)
+       ✔ GPS / UTM Ref @done (14-06-29 17:45)
+    ☐ Blur einbauen
+    ☐ Information
     ☐ Map 
     ☐ List
     ☐ Input

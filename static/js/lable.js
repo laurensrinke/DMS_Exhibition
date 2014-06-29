@@ -34,7 +34,7 @@ Lable = function(x, y, text, myDelay, myDuration)
 	{
 
 		svgContainer
-			.attr("width", 255)
+			.attr("width", 230)
 			.attr("height", 19)
 			.style("position", 'absolute')
 			.style("left", x +'px')

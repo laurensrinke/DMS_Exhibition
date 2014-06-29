@@ -16,9 +16,8 @@ Wie macht man es mit den 3 oder 4?
 	
 */
 
-Unit = function(id, myClass, x, y, text_1, text_2, text_3)
+Unit = function(id, myClass, x, y, text_1, text_2, text_3, lable_text, value, factor)
 {
-
 	// Variables /////////////////////////////////
 	var i_container = 0;
 	var status = 0;
@@ -79,15 +78,11 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 			    }
 			}
 		});
-
-
 		// return object
 		return i_container;
 	}
 
 	function switchUnit () {
-		say('start');
-		say(status + ' ' + myLength);
 		// say($('#unit_' + id).find('.btn_text').text(':)'));
 		if (status <= myLength-2) {
 			status++;
@@ -95,13 +90,9 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 			status = 0;
 		};
 		$('#unit_' + id).find('.btn_text').text(unitArray[status][0]);
-		say('end');
-		say(status + ' ' + myLength);
 	}
 
-
 	function updateStatus () {
-	
 	}
 
 

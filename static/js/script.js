@@ -73,16 +73,30 @@ $(function(){
 	radio_3.create();
 
 	// right side
-
 	var radio_4 = new Radio('r_4', 1682, 131, 'Waypoints', 'Flight Zone', '', '');
 	radio_4.create();
 
-	// UNITS //////////////////////////////////////////////////////////////////////////////////
-	var unit_1 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
-	tab_1.appendChild(unit_1.create());
 
-	var unit_2 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
-	tab_1.appendChild(unit_2.create());
+	// Info ///////////////////////////////////////////////////////////////////////////////
+	var info_1 = new Info('r_1', 'info', 13, 546, 'Duration', '1.6', 60, 'h', 'm.', '');
+	tab_1.appendChild(info_1.create());
+
+	var info_2 = new Info('r_2', 'info', 13, 581, 'Duration', '1.6', 60, 'h', 'm.', '');
+	tab_1.appendChild(info_2.create());
+
+
+	// UNITS //////////////////////////////////////////////////////////////////////////////////
+	// var unit_1 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
+	// tab_1.appendChild(unit_1.create());
+
+	// var unit_2 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
+	// tab_1.appendChild(unit_2.create());
+
+	// var unit_3 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
+	// tab_1.appendChild(unit_3.create());
+
+	// var unit_4 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
+	// tab_1.appendChild(unit_4.create());
 	
 
 	// TRIGGER-EVENT /////////////////////////////////////////////////////////////////////////
