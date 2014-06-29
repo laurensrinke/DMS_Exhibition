@@ -78,10 +78,10 @@ $(function(){
 	radio_4.create();
 
 	// UNITS //////////////////////////////////////////////////////////////////////////////////
-	var unit_1 = new Unit('r_1', 'unit', 212, 463, 'h', 'min', '', '');
+	var unit_1 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
 	tab_1.appendChild(unit_1.create());
 
-	var unit_2 = new Unit('r_2', 'unit', 212, 563, 'h', 'min', '', '');
+	var unit_2 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
 	tab_1.appendChild(unit_2.create());
 	
 

@@ -24,7 +24,8 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 	var status = 0;
 	var myLength = 0;
 
-	var button = '';
+	var button;
+	var child;
 
 	var unitArray = [
 	   [text_1, 1, ''], // default active
@@ -37,6 +38,9 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 	{
 		i_container = document.createElement('section');
 		i_container.className += myClass;
+		i_container.style.position = 'absolute';
+		i_container.style.left = x + 'px';
+		i_container.style.top = y + 'px';
 
 		// create button
 
@@ -53,18 +57,13 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 			'img/unit/unit_def.fw.png', 
 			'img/unit/unit_hover.fw.png', 
 			'img/unit/unit_act.fw.png', 
-			0+x, y+i*28, false, 'unit_btn');
+			0, 0, false, 'unit_btn');
 
 		// add event listener
 		
 		// create & append buttons 
 		i_container.appendChild(button.create());
-		say('Childs');
-		say(i_container);
-		say($(button.create()).on( "custom", function(event, param1, param2){say('hey')}));
-		$(button.create()).on( "custom", function(event, param1, param2){say('hey')});
-
-		$(i_container).find('#unit_' + id).on( "custom", function(event, param1, param2){
+		child = $(i_container).find('#unit_' + id).on( "custom", function(event, param1, param2){
 			switch(param1) {
 			    case 'over':
 			        break;
@@ -73,10 +72,7 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 			    case 'down':
 			        break;
 			    case 'up':
-			    	say('hello ' + id);
-					// find out whitch button was pressed and set it to stat
-					// update all buttons besides stat button
-			      	// updateStatus();
+			      	switchUnit();
 			        break;
 			    default:{
 			        alert('unknow event! unit button' + i);
@@ -85,76 +81,27 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3)
 		});
 
 
-		// say(i_container.firstChild);
-		// i_container.firstChild.addEventListener("custom", function (e) {say('hello bitch')}, false);
-
-
-
-
-		document.addEventListener('custom', function (e) {
-			say(e);
-			// switch(e) {
-			//     case 'over':
-			//         break;
-			//     case 'out':
-			//         break;
-			//     case 'down':
-			//         break;
-			//     case 'up':
-			//     	say('hello');
-			// 		// find out whitch button was pressed and set it to stat
-			// 		// update all buttons besides stat button
-			//       	updateStatus();
-			//         break;
-			//     default:{
-			//         alert('unknow event! unit button' + i);
-			//     }
-			// }
-		}, false);
-
-		// add event listener to radio buttons
-		// button.addEventListener("custom", say('hello'), false);
-
-		// $('#unit_' + id).on( "custom", function(event, param1, param2) {
-			
-		// });
-
 		// return object
 		return i_container;
 	}
 
 	function switchUnit () {
-		say('unit_r_1');
-			// switch(param1) {
-			//     case 'over':
-			//         break;
-			//     case 'out':
-			//         break;
-			//     case 'down':
-			//         break;
-			//     case 'up':
-			//     	say('hello');
-			// 		// find out whitch button was pressed and set it to stat
-			// 		// update all buttons besides stat button
-			//       	updateStatus();
-			//         break;
-			//     default:{
-			//         alert('unknow event! unit button' + i);
-			//     }
-			// }
+		say('start');
+		say(status + ' ' + myLength);
+		// say($('#unit_' + id).find('.btn_text').text(':)'));
+		if (status <= myLength-2) {
+			status++;
+		} else{
+			status = 0;
+		};
+		$('#unit_' + id).find('.btn_text').text(unitArray[status][0]);
+		say('end');
+		say(status + ' ' + myLength);
 	}
 
 
 	function updateStatus () {
-		// button.setText('O.o');
-		// alert('send');
-		// for (var i = 0; i < myLength; i++) {
-		// 	if (status != i) {
-		// 		unitArray[i][2].setInactive();
-		// 	} else {
-		// 		unitArray[i][2].setActive();
-		// 	}
-		// }
+	
 	}
 
 
