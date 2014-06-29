@@ -52,20 +52,21 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 
 
 		// create states elements
-		b_act = document.createElement('img');
-		b_act.src = img_act;
-		b_act.className+= 'btn_img';
-		b_act.style.opacity = 0;
-
+		
 		b_hover = document.createElement('img');
 		b_hover.src = img_hover;
 		b_hover.className+= 'btn_img';
 		b_hover.style.opacity = 0;
 
-
 		b_def = document.createElement('img');
 		b_def.src = img_def;
 		b_def.className+= 'btn_img';
+
+		b_act = document.createElement('img');
+		b_act.src = img_act;
+		b_act.className+= 'btn_img';
+		b_act.style.opacity = 0;
+
 
 		// add text
 		i_text_container = document.createElement('article');
@@ -88,7 +89,7 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 		i_container.addEventListener("mouseup", mouseUp, false);
 
 		// return
-		// return _id;
+		return i_container;
 	}
 	
 	
@@ -97,41 +98,45 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 	function mouseOver()
 	{
 		b_hover.style.opacity = 1;
-		$('#' + id).trigger( "custom", ["over"]);
+		b_def.style.opacity = 0;
+		$('#' + id).trigger( "custom", ["over", id]);
 	}
 
 
 	function mouseOut()
 	{
+		b_def.style.opacity = 1;
 		b_hover.style.opacity = 0;
-		$('#' + id).trigger( "custom", ["out"]);
+		$('#' + id).trigger( "custom", ["out", id]);
+		// if not active, set inacitve
+		if (isActive == false) {setInactive()};
 	}
 
 	function mouseDown()
 	{
 		b_act.style.opacity = 1;
-		if (isActive) {
-			isActive = false;
-		} else{
-			isActive = true;
-		};
-		$('#' + id).trigger( "custom", ["down"]);
+		$('#' + id).trigger( "custom", ["down", id]);
 	}
 
 	function mouseUp()
 	{
-		// send event to set all buttons on inactive
-
-		// ... 
+		// change active status
 		b_act.style.opacity = 0;
 		if (isActive) {
 			b_act.style.opacity = 1;
-
+			isActive = false;
 		} else{
 			b_act.style.opacity = 0;
+			isActive = true;
 		};
-		$('#' + id).trigger( "custom", ["up"]);
+		$('#' + id).trigger( "custom", ["up", id]);
 	}
+
+	// ---------------- Mouse Effects ----------------
+
+	// function hoverButton (argument) {
+
+	// }
 
 	// ---------------- Settings ----------------
 	
@@ -144,12 +149,20 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 	function setActive()
 	{
 		b_act.style.opacity = 1;
-
+		b_def.style.opacity = 0;
+		isActive = true;
 	}
 
 	function setInactive()
 	{
 		b_act.style.opacity = 0;
+		b_def.style.opacity = 1;
+		isActive = false;
+	}
+
+	function setText(argument)
+	{
+		i_text_container.innerHTML = argument;
 	}
 
 	function showProzess()
@@ -169,7 +182,7 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 	    	} else {
 	    		clearInterval(myVar)
 	    	}
-	    	console.log(p_value);
+	    	// console.log(p_value);
 	    }, 2);
 		
 
@@ -177,19 +190,13 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 		i_container.appendChild(i_prozess);
 	}
 	
-	
 	/* define public functions */
 	var exposed = {
 		create: create,
-		// mouseOver: mouseOver, 
-		// mouseOut: mouseOut,
-		// mouseDown: mouseDown,
-		// mouseUp: mouseUp,
 		getId:getId,
 		setActive:setActive, 
 		setInactive: setInactive,
 		setActive: setActive,
-		// showProzess: showProzess,
 	}
 	return exposed;
 }

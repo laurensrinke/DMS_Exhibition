@@ -6,22 +6,24 @@ Created: 26.06.2014
 Version: c0.1
 */
 
+/*
+- 3 Buttons zeichnen
+- An aus detecten
+- Transistions gestalten
 
-// IDEA
-// ----------------------------------------------------
-// 
+Wie macht man es mit den 3 oder 4? 
+	Entweder man gibt es auch an, oder es wird überprüft ob die letzte Variable leer ist!
+	
+*/
 
-// Questions
-// ----------------------------------------------------
-
-
-Radio = function(x, y, text_1, text_2, text_3, text_4)
+Radio = function(id, x, y, text_1, text_2, text_3, text_4)
 {
-	// Variables /////////////////////////////////
 
-	// Buttons
+	// Variables /////////////////////////////////
 	var i_container = 0;
-	// var nav_text_1, nav_text_2, nav_text_3; 
+	var status = 0;
+	var myLength = 0;
+
 
 	var radioArray = [
 	   [text_1, 1, ''], // default active one
@@ -33,86 +35,88 @@ Radio = function(x, y, text_1, text_2, text_3, text_4)
 	// functions /////////////////////////////////
 	function create()
 	{
+		i_container = document.createElement('section');
+		// i_container.className += style_class;
 
-		// <input type="radio" name="..." checked />
+		// count radio elements
+		for (var i = 0; i < radioArray.length; i++) {
+			if (radioArray[i][0] != '') {myLength++};
+		};
 
-		// buttons[0][2] = new Button(
-		// 	'nav_b1', 
-		// 	title[0], 
-		// 	'img/tabs/tabs_def.fw.png', 
-		// 	'img/tabs/tabs_hover.fw.png', 
-		// 	'img/tabs/tabs_act.fw.png', 
-		// 24, 11, false, 'nav_btn');
+		// add buttons
+		for (var i = 0; i < myLength; i++) {
+			// write construction manual
+			radioArray[i][2] = new Button( 
+				id + '_nav_b' + i, 
+				radioArray[i][0], 
+				'img/radio/radio_def.fw.png', 
+				'img/radio/radio_hover.fw.png', 
+				'img/radio/radio_act.fw.png', 
+				0+x, y+i*28, false, 'radio_btn');
+			// create buttons
+			radioArray[i][2].create();
 
+			// say('#' + id + '_nav_b' + i);
 
+			// add event listener to radio buttons
+			$('#' + id + '_nav_b' + i).on( "custom", function(event, param1, param2) {
+				// say('been clicked: ' + param1 + ' ' + myId)
+				// do sth.
+				switch(param1) {
+				    case 'over':
+				        break;
+				    case 'out':
+				        break;
+				    case 'down':
+				        break;
+				    case 'up':
+						// find out whitch button was pressed and set it to stat
+						status = parseInt(param2[param2.length-1]);
+						// update all buttons besides stat button
+				      	updateStatus();
+				        break;
+				    default:{
+				        alert('unknow event! nav_b' + i);
+				    }
+				}
+			});
+		};
 
-		// create container
-		container = document.createElement('canvas');
-		container.style.width = "213px";
-		container.style.height = "27px";
-		container.style.position = "absolute";
-		container.style.top = "20px";
-		container.style.left = "20px";
-
-
-		var ctx=container.getContext("2d");
-		// ctx.strokeStyle="#FF0000";
-		// ctx.strokeRect(x,y,213,0);
-		ctx.beginPath();
-		ctx.moveTo(x,y);
-		ctx.lineTo(x+213,y);
-		ctx.stroke();
-
-		// create line element
-		// svg = document.createElement('svg');
-		// svg.clssName = 'line_svg';
-		// svg.style.width = '213px';
-		// svg.style.height = '1px';
-
-
-		// line object
-		// line = document.createElement('line');
-
-		// svg.appendChild(line);
-
-		var lineWidth = 420, lineHeight = 20;
-		
-		// add element to webside
-		document.body.appendChild(container);
+		// set button one active
+		radioArray[0][2].setActive();
 
 		// return object
 		// return _id;
 	}
 
-	function uncheck(argument) {
-		// body...
+
+	function updateStatus () {
+		for (var i = 0; i < myLength; i++) {
+			if (status != i) {
+				radioArray[i][2].setInactive();
+			} else {
+				radioArray[i][2].setActive();
+			}
+		}
+
+		// set new status variable
+		// state = parseInt(argument);
+		// for (var i = 0; i < radioArray.length; i++) {
+		// 	// set all buttons inavtive
+		// 	radioArray[i][1] = 0;
+		// 	// set active Button inactive
+		// 	radioArray[state][1] = 1;
+		// 	// update button status - send message to buttons
+		// 	if (radioArray[i][1] == 0) {
+		// 		if (radioArray[i][2] != '') {radioArray[i][2].setInactive()};
+		// 	} else if (radioArray[i][1] == 1) {
+		// 		radioArray[i][2].setActive();
+		// 	} else {
+		// 		alert('Congrats - You system is pregnant!');
+		// 	}
+		// };
 	}
 
-	function check (argument) {
-		// body...
-	}
-
-	function hover (argument) {
-		// body...
-	}
-
-	function out (argument) {
-		// body...
-	}
-
-	function down (argument) {
-		// body...
-	}
-
-	function up (argument) {
-		// body...
-	}
-
-
-
-	function updateState (argument) {
-		// body...
-	}
 
 	function setState (argument) {
 		// body...
@@ -121,8 +125,6 @@ Radio = function(x, y, text_1, text_2, text_3, text_4)
 	function setActive (argument) {
 		// body...
 	}
-	
-	
 
 	// ------------------------------------------------------------
 	// never touch a running system
@@ -130,6 +132,7 @@ Radio = function(x, y, text_1, text_2, text_3, text_4)
 	/* public functions */
 	var exposed = {
 		create: create,
+		updateStatus: updateStatus,
 	}
 	return exposed;
 }

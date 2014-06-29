@@ -8,23 +8,31 @@ function map(v, a, b, x, y) {
 
 
 $(function(){
+	// TAB_1 CONTAINER /////////////////////////////////////////////////////////////////////
+	var tab_1 = document.createElement('section');
+	tab_1.id = 'tab_1';
+	document.body.appendChild(tab_1);
 
-	
-	
-	// var myTabs = new Tabs('img/tabs/tabs_def.fw.png', 'img/tabs/tabs_act.fw.png', 'img/tabs/tabs_hover.fw.png', true);
-	// myTabs.create();
 
+	// create nav tabs
+	var myTabs = new Tabs('img/tabs/tabs_def.fw.png', 'img/tabs/tabs_act.fw.png', 'img/tabs/tabs_hover.fw.png', true);
+	myTabs.create();
 
 	// function(id, text, img_normal, img_over, img_down, x, y, show_prozess, style_class)
 	var first_Button = new Button(
 		'b_1', 
-		'Upload to Drown', 
+		'Upload to Drone', 
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
 		1682, 1019, true, 'btn_def');
 	first_Button.create();
+	say('button.creat()');
+	say(first_Button.create());
 
+	say(first_Button);
+
+	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
 	var lable_1 = new Lable(13, 91, 'Flight Mode', 1000, 300);
 	lable_1.create();
@@ -39,10 +47,45 @@ $(function(){
 
 	// add Lable stuff
 	var lable_4 = new Lable(13, 755, 'Map', 1000, 300);
-	lable_4.create();
+	lable_4.create(); 
 
+	// add Lable stuff
+	var lable_5 = new Lable(1671, 91, 'Flight Options', 1000, 300);
+	lable_5.create();
+
+	// add Lable stuff
+	var lable_6 = new Lable(1671, 313, 'Waypoint List', 1000, 300);
+	lable_6.create();
+
+	// add Lable stuff
+	var lable_7 = new Lable(1671, 847, 'Flight Details', 1000, 300);
+	lable_7.create();
+
+
+	// RADIO ///////////////////////////////////////////////////////////////////////////////
+	var radio_1 = new Radio('r_1', 24, 131, 'Manual', 'Route', 'Area', '');
+	radio_1.create();
+
+	var radio_2 = new Radio('r_2', 24, 311, '3D Map', 'Toxicity', '360° Camera', 'Infrared');
+	radio_2.create();
+
+	var radio_3 = new Radio('r_3', 24, 831, 'Standart', 'Satelitte', '3D', '');
+	radio_3.create();
+
+	// right side
+
+	var radio_4 = new Radio('r_4', 1682, 131, 'Waypoints', 'Flight Zone', '', '');
+	radio_4.create();
+
+	// UNITS //////////////////////////////////////////////////////////////////////////////////
+	var unit_1 = new Unit('r_1', 'unit', 212, 463, 'h', 'min', '', '');
+	tab_1.appendChild(unit_1.create());
+
+	var unit_2 = new Unit('r_2', 'unit', 212, 563, 'h', 'min', '', '');
+	tab_1.appendChild(unit_2.create());
 	
 
+	// TRIGGER-EVENT /////////////////////////////////////////////////////////////////////////
 	$( "body" ).click(function() {
   		// lable_1.animate();
 	});
