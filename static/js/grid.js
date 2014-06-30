@@ -38,13 +38,29 @@ Grid = function(id, myClass, x, y, width, height)
 		    .style("position", 'absolute')
 			.style("left", x +'px')
 			.style("top", y +'px')
-			.attr('fill', 'red')
+			// .attr('fill', 'red')
 			// .style('background', 'rgba(5, 5, 5, 0.5)');
-			.attr('background', 'rgba(5, 5, 5, 0.5)');
+			// .attr('background', 'rgba(5, 5, 5, 0.5)');
 			// trabnsistion to obacjit y 00 -- 0.4
 			// .attr('fill', 'rgba(250,0,0, 0.5)');
 			// .style('fill', 'rgba(0, 0, 0, 0.8)')
 
+		// append rect
+		drawArea.append('rect')
+			.attr("x", 0)
+			.attr("y", 0)
+			.attr("width", width)
+			.attr("height", height)
+			.style("opacity", 0)
+			.style("background", "rgba(100, 100, 100, 0.5)")
+			.transition()
+			.delay(2000)
+			.duration(2000)
+			.style("opacity", 0.4)
+			// .style('fill', 'rgba(5, 5, 5, 0.5)')
+
+
+		// append grid
 		var lineData = [ { "x": 0,   "y": 0},  { "x": 400,  "y": 0}];
 
 		var lineFunction = d3.svg.line()
@@ -69,6 +85,9 @@ Grid = function(id, myClass, x, y, width, height)
 				.attr('x2', width)
 				.ease("quad")
 		};
+
+		
+
 	
 		// // return object
 		// return i_container;

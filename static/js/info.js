@@ -65,12 +65,6 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 		container.appendChild(unit.create());
 
 		// add trigger for unit swap
-		// unit_r_2_r_1
-		// trigger = $(container).find('unit' + id + '_r_1').css('border', '1px solid red');
-		say('Search result: ');
-		say($(container).find('#unit_r_2_r_1').css('border', '1px solid red'));
-		$(container).find('#unit_r_2_r_1').on('custom', function (e) {say('old boy');}, false);
-
 		$(container).find('#unit_' + id + '_r_1').on( "custom", function(event, param1, param2){
 			switch(param1) {
 			    case 'over':

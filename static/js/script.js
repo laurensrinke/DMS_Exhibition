@@ -15,7 +15,7 @@ $(function(){
 
 	// Grid ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// draw grid 
-	var grid_left = new Grid('grid_left', 'grid', 0, 84, 262, 1080);
+	var grid_left = new Grid('grid_left', 'grid', 0, 84, 261, 1080);
 	grid_left.create();
 
 	var grid_nav = new Grid('grid_nav', 'grid', 0, 0, 1920, 84);
