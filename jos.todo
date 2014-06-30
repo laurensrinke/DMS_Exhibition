@@ -2,23 +2,15 @@ Hello:
 
 
 Akutelle Datein:
- ✔ Plan machen @done (14-06-28 21:46)
- ✔ Pixel zählen @done (14-06-29 17:44)
- ✔ Bilder raus speichern @done (14-06-28 21:46)
- ✔ write Infromation class @done (14-06-29 18:38)
- ✔ Include title @done (14-06-29 18:38)
- ✔ Include value @done (14-06-29 18:38)
- ☐ Factor of change
- ☐ unit_r_1
- ☐ unit_r_1 eben so - da liegt der Fehler
+  ✔ Plan machen @done (14-06-29 21:15)
+  ✔ Grid funktion bauen @done (14-06-30 01:24)
+  ☐ Grid mit den Optionen Ende und Anfang versehen
+  ✔ Größe des Grids ausmessen @done (14-06-30 02:35)
+  ✔ Grid korekt aufbauen @done (14-06-30 02:35)
+  ✔ Grid aufbau animieren @done (14-06-30 02:35)
+  ✔ Karte einbinden @done (14-06-30 01:16)
 
 
-
-
-
-
-__:
-__:
   UI-Elemente:
     ✔ Buttons @done (14-06-27 17:00)
     ✔ Tabs @done (14-06-27 17:02)
@@ -29,12 +21,26 @@ __:
        ✔ km / ml @done (14-06-29 17:45)
        ✔ % / m / h @done (14-06-29 17:45)
        ✔ GPS / UTM Ref @done (14-06-29 17:45)
-    ☐ Blur einbauen
-    ☐ Information
-    ☐ Map 
+    ✔ Information @done (14-06-29 21:08)
+    ☐ Blur einbauen 
+    ☐ Map
+        ☐ Switch from day to night
+        ☐ Select different theme styles
+        ☐ Slider to Zoom out or in
+        ☐ Show actual GPS Position on bottom of card
+        ☐ Draw Grid on map (UTM Ref)
+        ☐ Update Color Style
+        ☐ How to draw a map on the map?
+        ☐ How to draw positions on map?
     ☐ List
     ☐ Input
     ☐ Slider
+
+
+
+Questions:
+
+  ☐ If I press 'upload to drone' button do I swap to live view? Yes!?!??? Ask Team
 
 
  UI-Transistions:

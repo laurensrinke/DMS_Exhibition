@@ -11,7 +11,8 @@
 @base: #red;
 
 body {
-	background: url('../img/bg_mission_planner.fw.png');
+	background: #ddd url('../img/bg_mission_planner.fw.png');
+	background-repeat: no-repeat;
 }
 
 
@@ -144,4 +145,42 @@ nav {
 	letter-spacing: 1px;
 	width: 100px;
 	text-align: right;
+}
+
+img#test {
+	// -webkit-filter: blur(10px);
+	// filter: blur(10px);
+	-webkit-filter: sepia(255);
+}
+
+
+// filter: grayscale(0);
+//   filter: sepia(0);
+//   filter: saturate(1);
+//   filter: hue-rotate(0deg);
+//   filter: invert(0);
+//   filter: opacity(1);
+//   filter: brightness(1);
+//   filter: contrast(1);
+//   filter: blur(0px);
+//   filter: drop-shadow(5px 5px 5px #ccc);
+
+
+canvas {
+	width: 1920px;
+	height: 1080px;
+}
+
+#map {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+        width: 1920px;
+        height: 1080px;
+        // border: 1px dotted #000;
+        z-index: 0;
+}
+
+.gmnoprint {
+	display: none;
 }

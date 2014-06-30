@@ -8,6 +8,23 @@ function map(v, a, b, x, y) {
 
 
 $(function(){
+	// BACKGROUND /////////////////////////////////////////////////////////////////////////////
+	// create svg drawing
+ 	// var draw = SVG('drawing').size(300, 300);
+	// var rect = draw.rect(100, 100).attr({fill: '#f06'});
+
+	// Grid ////////////////////////////////////////////////////////////////////////////////////////////////////
+	// draw grid 
+	var grid_left = new Grid('grid_left', 'grid', 0, 84, 262, 1080);
+	grid_left.create();
+
+	var grid_nav = new Grid('grid_nav', 'grid', 0, 0, 1920, 84);
+	grid_nav.create();
+
+	var grid_right = new Grid('grid_nav', 'grid', 1658, 84, 1920, 1080);
+	grid_right.create();
+
+
 	// TAB_1 CONTAINER /////////////////////////////////////////////////////////////////////
 	var tab_1 = document.createElement('section');
 	tab_1.id = 'tab_1';
