@@ -80,17 +80,17 @@ $(function(){
 
 
 	// RADIO ///////////////////////////////////////////////////////////////////////////////
-	var radio_1 = new Radio('r_1', 24, 131, 'Manual', 'Route', 'Area', '');
+	var radio_1 = new Radio('r_1', 24, 130, 'Manual', 'Route', 'Area', '');
 	radio_1.create();
 
-	var radio_2 = new Radio('r_2', 24, 311, '3D Map', 'Toxicity', '360° Camera', 'Infrared');
+	var radio_2 = new Radio('r_2', 24, 310, '3D Map', 'Toxicity', '360° Camera', 'Infrared');
 	radio_2.create();
 
-	var radio_3 = new Radio('r_3', 24, 831, 'Standart', 'Satelitte', '3D', '');
+	var radio_3 = new Radio('r_3', 24, 830, 'Standart', 'Satelitte', '3D', '');
 	radio_3.create();
 
 	// right side
-	var radio_4 = new Radio('r_4', 1682, 131, 'Waypoints', 'Flight Zone', '', '');
+	var radio_4 = new Radio('r_4', 1682, 130, 'Waypoints', 'Flight Zone', '', '');
 	radio_4.create();
 
 

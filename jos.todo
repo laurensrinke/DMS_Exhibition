@@ -9,6 +9,9 @@ Akutelle Datein:
   ✔ Grid korekt aufbauen @done (14-06-30 02:35)
   ✔ Grid aufbau animieren @done (14-06-30 02:35)
   ✔ Karte einbinden @done (14-06-30 01:16)
+  ☐ Höhenkarte auf allen Leveln anzeigen
+  ☐ Wie kann man verschieden Layer aus und dazu schalten?
+  ☐ Kann man irgendwo die Farblichkeit verändern.
 
 
   UI-Elemente:
@@ -30,7 +33,7 @@ Akutelle Datein:
         ☐ Show actual GPS Position on bottom of card
         ☐ Draw Grid on map (UTM Ref)
         ☐ Update Color Style
-        ☐ How to draw a map on the map?
+        ☐ How to draw a map on the map? Leaflet?
         ☐ How to draw positions on map?
     ☐ List
     ☐ Input
