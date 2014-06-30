@@ -9,6 +9,8 @@ Akutelle Datein:
   ✔ Grid korekt aufbauen @done (14-06-30 02:35)
   ✔ Grid aufbau animieren @done (14-06-30 02:35)
   ✔ Karte einbinden @done (14-06-30 01:16)
+  ☐ Disable scrollbars
+  ☐ Add small maps
   ☐ Höhenkarte auf allen Leveln anzeigen
   ☐ Wie kann man verschieden Layer aus und dazu schalten?
   ☐ Kann man irgendwo die Farblichkeit verändern.
@@ -25,8 +27,8 @@ Akutelle Datein:
        ✔ % / m / h @done (14-06-29 17:45)
        ✔ GPS / UTM Ref @done (14-06-29 17:45)
     ✔ Information @done (14-06-29 21:08)
-    ☐ Blur einbauen 
-    ☐ Map
+    ☐ Blur einbauen // really? Ding fragen
+    ✔ Map @done (14-06-30 03:33)
         ☐ Switch from day to night
         ☐ Select different theme styles
         ☐ Slider to Zoom out or in
@@ -38,6 +40,8 @@ Akutelle Datein:
     ☐ List
     ☐ Input
     ☐ Slider
+
+    ☐ Taktische Zeichen
 
 
 
