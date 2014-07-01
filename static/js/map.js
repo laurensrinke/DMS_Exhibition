@@ -104,6 +104,23 @@ function initialize() {
   // Swap map vis
 
 
+  	var mapOptions2 = {
+        zoom: 14,
+        center: new google.maps.LatLng(37.850336, 140.950341),
+    
+	    //styles: [{"stylers":[{"visibility":"on"},{"saturation":-100},{"gamma":0.54}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#000000"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"gamma":0.48}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"gamma":7.18}]}],
+	    styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
+
+    };
+
+    var mapElement2 = document.getElementById('small-map-canvas');
+    var map2 = new google.maps.Map(mapElement2, mapOptions2);
+
+
+    // EVENT LISTENERS ///////////////////////////////////////////////////////////////
+
+
+
   	$('#r_3_nav_b0').on("custom", function(event, param1, param2){
 		switch(param1) {
 		    case 'over':
@@ -114,6 +131,7 @@ function initialize() {
 		        break;
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
+		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
 		        break;
 		    default:{
 		    }
@@ -130,6 +148,7 @@ function initialize() {
 		        break;
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
+		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
 		        break;
 		    default:{
 		    }
@@ -147,6 +166,7 @@ function initialize() {
 		        break;
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
+		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
 		        break;
 		    default:{
 		    }
@@ -163,12 +183,42 @@ function initialize() {
 		        break;
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
+		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
 		        break;
 		    default:{
 		    }
 		}
 	});
-	google.maps.event.trigger(map, 'resize');
+	// google.maps.event.trigger(map, 'resize');
+
+
+	// SYNC MAPS 
+
+	google.maps.event.addListener(map, 'zoom_changed', function() {
+	  	map2.setZoom(map.getZoom()-4);
+    	// say(map.getZoom());
+	});
+
+	google.maps.event.addListener(map, 'center_changed', function() {
+	  	map2.setCenter(map.getCenter());
+    	// say(map.getCenter());
+    	// say('Got it!')
+	});
+
+	// if you gonna enable this stuff below you have to wait 
+
+	// google.maps.event.addListener(map2, 'zoom_changed', function() {
+	//   	map.setZoom(map2.getZoom()+4);
+ //    	// say(map.getZoom());
+	// });
+
+	// google.maps.event.addListener(map2, 'center_changed', function() {
+	//   	map.setCenter(map2.getCenter());
+ //    	// say(map.getCenter());
+ //    	// say('Got it!')
+	// });
+
+
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -188,4 +238,28 @@ function smoothZoom (map, max, cnt) {
         setTimeout(function(){map.setZoom(cnt)}, 80); // 80ms is what I found to work well on my system -- it might not work well on all systems
     }
 } 
+
+
+// --- small map ------------------------------------------------------------------------
+
+
+// var map;
+// function initialize() {
+//   var mapOptions = {
+//     zoom: 8,
+//     center: new google.maps.LatLng(-34.397, 150.644)
+//   };
+//   map = new google.maps.Map(document.getElementById('map_canvas'),
+//       mapOptions);
+// }
+
+// // google.maps.event.addDomListener(window, 'load', initialize);
+
+
+ // When the window has finished loading create our google map below
+// google.maps.event.addDomListener(window, 'load', init);
+
+function init() {
+    
+}
 

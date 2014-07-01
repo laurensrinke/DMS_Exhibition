@@ -89,7 +89,7 @@ $(function(){
 	var radio_2 = new Radio('r_2', 24, 310, '3D Map', 'Toxicity', '360° Camera', 'Infrared', '');
 	tab_1.appendChild(radio_2.create());
 
-	var radio_3 = new Radio('r_3', 24, 830, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	var radio_3 = new Radio('r_3', 24, 775, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
 	tab_1.appendChild(radio_3.create());
 
 	// right side

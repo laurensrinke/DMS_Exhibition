@@ -24,6 +24,14 @@ html, body, #map-canvas {
 	padding: 0px
 }
 
+body {
+	background: #ddd url('../img/bg_mission_planner.fw.png');
+// 	// background: #ddd;
+// 	background-repeat: no-repeat;
+// 	width: 1920px;
+// 	height: 1080px;
+}
+
 
 .btn_img {
 	position: absolute;
@@ -113,7 +121,7 @@ nav {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	width: 123px;
+	width: 213px;
 	height: 25px;
 }
 
@@ -203,3 +211,28 @@ text {
 // gmnoprint
 
 // gmnoprint
+
+
+#small-map-canvas {
+	position: absolute;
+	top: 923px;
+	left: 24px;
+	height: 118px;
+	width: 211px;
+	border: 1px solid rgba(200, 200, 200, 1);
+	background: #333;
+	z-index: 100;
+}
+
+#small-map-canvas .gmnoprint{
+	display: none;
+}
+
+#small-map-canvas a{
+	display: none;
+}
+
+#small-map-canvas a img{
+	display: none;
+}
+
