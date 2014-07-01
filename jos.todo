@@ -4,18 +4,22 @@ Hello:
 Akutelle Datein:
   ✔ Plan machen @done (14-06-29 21:15)
   ✔ Grid funktion bauen @done (14-06-30 01:24)
-  ☐ Grid mit den Optionen Ende und Anfang versehen
+  ✔ Grid mit den Optionen Ende und Anfang versehen @done (14-07-01 08:43)
   ✔ Größe des Grids ausmessen @done (14-06-30 02:35)
   ✔ Grid korekt aufbauen @done (14-06-30 02:35)
   ✔ Grid aufbau animieren @done (14-06-30 02:35)
   ✔ Karte einbinden @done (14-06-30 01:16)
   ✔ Design map @done (14-07-01 04:48)
-  ☐ Map wichtige Elemente anzeigen, Tankstellen, Schulen, ...ex
   ✔ Disable scrollbars @done (14-07-01 04:48)
-  ☐ Add small maps
-  ☐ Höhenkarte auf allen Leveln anzeigen
-  ☐ Wie kann man verschieden Layer aus und dazu schalten?
-  ☐ Kann man irgendwo die Farblichkeit verändern.
+  ✔ Add small maps @done (14-07-01 05:52)
+  ✔ Höhenkarte auf allen Leveln anzeigen @done (14-07-01 08:44)
+  ✔ Wie kann man verschieden Layer aus und dazu schalten? @done (14-07-01 08:44)
+  ☐ Lable fixen
+    ☐ Text einbauen
+  ☐ Webseite fertig machen
+  ☐ Webseite weg schicken
+  ☐ Tabs aufbauen
+  ☐ Wie sieht der Tab wechsel aus? (Fade in out left right, deep, ...)
 
 
   UI-Elemente:
@@ -29,7 +33,7 @@ Akutelle Datein:
        ✔ % / m / h @done (14-06-29 17:45)
        ✔ GPS / UTM Ref @done (14-06-29 17:45)
     ✔ Information @done (14-06-29 21:08)
-    ☐ Blur einbauen // really? Ding fragen
+    ☐ Blur einbauen // really? Ding fragen, erstmal NÖ!
     ✔ Map @done (14-06-30 03:33)
         ☐ Switch from day to night
         ☐ Select different theme styles
@@ -40,7 +44,7 @@ Akutelle Datein:
         ✔ How to draw a map on the map? Leaflet? @done (14-07-01 04:45) (Google Map API!)
         ✔ How to draw positions on map? @done (14-07-01 04:45) (Google Map API!)
     ☐ List
-    ☐ Input
+    ✔ Input @done (14-07-01 09:16)
     ☐ Slider
 
     ☐ Taktische Zeichen
@@ -53,6 +57,7 @@ Questions:
   ☐ Können wir Datenvisualisierungen einbauen: 
     http://www.sueddeutsche.de/wissen/satellitenaufnahmen-signaturen-der-staedte-1.2021088
   ☐ Gibt es doch irgendwo einen Button wo man auf die HomePosiotn zurück kann? Ja! Nur wo?
+  ☐ Kann man irgendwo die Farblichkeit verändern.
 
 
  UI-Transistions:
@@ -63,6 +68,8 @@ Questions:
 Andere Anliegen:
   ☐ Helligkeits-Slider
   ☐ Interfcae für Piloten
+  ☐ Map wichtige Elemente anzeigen, Tankstellen, Schulen, ...ex
+
 
 Feedback:
   ☐ Spieht nach einem Spiel aus.
@@ -73,19 +80,12 @@ Feedback:
           ☐ Signalstärke
           ☐ Speichern
           ☐ Löschen
+
+Matze:
+  ☐ Taktische Zeichen gestalten.
+  ☐ Taktische Zeichen exportieren in der richtigen Größe
 ______________________________________________________________________________
 
-My personal todo-list
-
-UI-ELements:
- [] radio class
- [] slider class
- ☐ header class
- ☐ map class
- ☐ unit class 
- ☐ list class
- ☐ input class
- ☐ lable class
 
 
    UI-Transistions:

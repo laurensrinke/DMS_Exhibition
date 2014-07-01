@@ -54,19 +54,19 @@ $(function(){
 
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
-	var lable_1 = new Lable(13, 91, 'Flight Mode', 1000, 300);
+	var lable_1 = new Lable(24, 92, 'Flight Mode', 1000, 300);
 	tab_1.appendChild(lable_1.create());
 
 	// add Lable stuff
-	var lable_2 = new Lable(13, 271, 'Attachment', 1000, 300);
+	var lable_2 = new Lable(24, 271, 'Attachment', 1000, 300);
 	tab_1.appendChild(lable_2.create());
 
 	// add Lable stuff
-	var lable_3 = new Lable(13, 479, 'Resolution', 1000, 300);
+	var lable_3 = new Lable(24, 479, 'Resolution', 1000, 300);
 	tab_1.appendChild(lable_3.create());
 
 	// add Lable stuff
-	var lable_4 = new Lable(13, 755, 'Map', 1000, 300);
+	var lable_4 = new Lable(24, 755, 'Map', 1000, 300);
 	tab_1.appendChild(lable_4.create()); 
 
 	// add Lable stuff
@@ -89,7 +89,7 @@ $(function(){
 	var radio_2 = new Radio('r_2', 24, 310, '3D Map', 'Toxicity', '360° Camera', 'Infrared', '');
 	tab_1.appendChild(radio_2.create());
 
-	var radio_3 = new Radio('r_3', 24, 775, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	var radio_3 = new Radio('r_3', 24, 803, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
 	tab_1.appendChild(radio_3.create());
 
 	// right side
@@ -109,6 +109,14 @@ $(function(){
 	// var info_2 = new Info('r_2', 'info', 1671, 922, 'Distance', '1.863', 0.621, 'km', 'mi.', '');
 	var info_3 = new Info('r_3', 'info', 1671, 958, 'Battery Usage', '78', 0.3, '%', 'h.', '');
 	tab_1.appendChild(info_3.create());
+
+
+	// Input ///////////////////////////////////////////////////////////////////////////////
+	var input_1 = new Input('i_1', 'info', 1671, 195, 'Rel. Altitude', '6', 0.621, 'm', 'km.', '', '-');
+	tab_1.appendChild(input_1.create());
+
+	var input_2 = new Input('i_2', 'info', 1671, 223, 'Rel. Speed', '3', 0.621, 'km/h', 'mph', '', '-');
+	tab_1.appendChild(input_2.create());
 
 
 	// UNITS //////////////////////////////////////////////////////////////////////////////////

@@ -128,11 +128,29 @@ nav {
 .unit_btn {
 	width: 25px;
 	height: 25px;
-
 }
 
 .unit_btn img{
 	width: 25px;
+	height: 25px;
+}
+
+.unit2_btn {
+	width: 49px;
+	height: 25px;
+}
+
+.unit2_btn img{
+	width: 49px;
+	height: 25px;
+}
+
+.unit2_btn > article.btn_text {
+	color: #FFF;
+	position: absolute;
+	top: 3px;
+	text-align: center;
+	width: 49px;
 	height: 25px;
 }
 
@@ -152,7 +170,7 @@ nav {
 	font-size: 13px;
 	color: #FFF;
 	letter-spacing: 1px;
-	width: 100px;
+	width: 200px;
 }
 
 
@@ -165,6 +183,28 @@ nav {
 	text-align: right;
 }
 
+.text_input {
+	font-family: 'Roboto-Regular';
+	font-size: 13px;
+	color: #FFF;
+	letter-spacing: 1px;
+	width: 100px;
+	height: 21px;
+	text-align: right;
+	padding: 0px 5px 2px 5px;
+	border: 1px none;
+	background: rgba(0, 0, 0, 0);
+}
+
+input:focus
+{ 
+	// background-color:yellow;
+	border: none;
+	box-shadow: none;
+	outline: 0;
+}
+
+
 img#test {
 	// -webkit-filter: blur(10px);
 	// filter: blur(10px);
@@ -172,45 +212,10 @@ img#test {
 }
 
 
-// filter: grayscale(0);
-//   filter: sepia(0);
-//   filter: saturate(1);
-//   filter: hue-rotate(0deg);
-//   filter: invert(0);
-//   filter: opacity(1);
-//   filter: brightness(1);
-//   filter: contrast(1);
-//   filter: blur(0px);
-//   filter: drop-shadow(5px 5px 5px #ccc);
-
-
-// canvas {
-// 	width: 1920px;
-// 	height: 1080px;
-// }
-
-// #map, #map-canvas {
-// 		position: absolute;
-// 		top: 0px;
-// 		left: 0px;
-//         width: 1920px;
-//         height: 1080px;
-//         // border: 1px dotted #000;
-//         z-index: 0;
-// }
-
 text {
 	width: 200px;
 }
 
-// .gmnoprint {
-// 	display: none;
-// }
-
-// Satelit & Karte
-// gmnoprint
-
-// gmnoprint
 
 
 #small-map-canvas {
