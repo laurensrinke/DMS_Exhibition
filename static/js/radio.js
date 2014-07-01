@@ -16,7 +16,7 @@ Wie macht man es mit den 3 oder 4?
 	
 */
 
-Radio = function(id, x, y, text_1, text_2, text_3, text_4)
+Radio = function(id, x, y, text_1, text_2, text_3, text_4, text_5)
 {
 
 	// Variables /////////////////////////////////
@@ -30,12 +30,16 @@ Radio = function(id, x, y, text_1, text_2, text_3, text_4)
 	   [text_2, 0, ''],
 	   [text_3, 0, ''],
 	   [text_4, 0, ''],
+	   [text_5, 0, ''],
 	];
 
 	// functions /////////////////////////////////
 	function create()
 	{
 		i_container = document.createElement('section');
+		i_container.style.position = 'absolute';
+		i_container.style.left = x + 'px';
+		i_container.style.top = y + 'px';
 		// i_container.className += style_class;
 
 		// count radio elements
@@ -52,14 +56,11 @@ Radio = function(id, x, y, text_1, text_2, text_3, text_4)
 				'img/radio/radio_def.fw.png', 
 				'img/radio/radio_hover.fw.png', 
 				'img/radio/radio_act.fw.png', 
-				0+x, y+i*28, false, 'radio_btn');
+				0, i*28, false, 'radio_btn');
 			// create buttons
-			radioArray[i][2].create();
+			i_container.appendChild(radioArray[i][2].create());
 
-			// say('#' + id + '_nav_b' + i);
-
-			// add event listener to radio buttons
-			$('#' + id + '_nav_b' + i).on( "custom", function(event, param1, param2) {
+			$(i_container).find('#' + id + '_nav_b' + i).on( "custom", function(event, param1, param2) {
 				// say('been clicked: ' + param1 + ' ' + myId)
 				// do sth.
 				switch(param1) {
@@ -86,7 +87,8 @@ Radio = function(id, x, y, text_1, text_2, text_3, text_4)
 		radioArray[0][2].setActive();
 
 		// return object
-		// return _id;
+		// say(i_container)
+		return i_container;
 	}
 
 
@@ -98,23 +100,6 @@ Radio = function(id, x, y, text_1, text_2, text_3, text_4)
 				radioArray[i][2].setActive();
 			}
 		}
-
-		// set new status variable
-		// state = parseInt(argument);
-		// for (var i = 0; i < radioArray.length; i++) {
-		// 	// set all buttons inavtive
-		// 	radioArray[i][1] = 0;
-		// 	// set active Button inactive
-		// 	radioArray[state][1] = 1;
-		// 	// update button status - send message to buttons
-		// 	if (radioArray[i][1] == 0) {
-		// 		if (radioArray[i][2] != '') {radioArray[i][2].setInactive()};
-		// 	} else if (radioArray[i][1] == 1) {
-		// 		radioArray[i][2].setActive();
-		// 	} else {
-		// 		alert('Congrats - You system is pregnant!');
-		// 	}
-		// };
 	}
 
 

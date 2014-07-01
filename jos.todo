@@ -9,7 +9,9 @@ Akutelle Datein:
   ✔ Grid korekt aufbauen @done (14-06-30 02:35)
   ✔ Grid aufbau animieren @done (14-06-30 02:35)
   ✔ Karte einbinden @done (14-06-30 01:16)
-  ☐ Disable scrollbars
+  ✔ Design map @done (14-07-01 04:48)
+  ☐ Map wichtige Elemente anzeigen, Tankstellen, Schulen, ...ex
+  ✔ Disable scrollbars @done (14-07-01 04:48)
   ☐ Add small maps
   ☐ Höhenkarte auf allen Leveln anzeigen
   ☐ Wie kann man verschieden Layer aus und dazu schalten?
@@ -34,9 +36,9 @@ Akutelle Datein:
         ☐ Slider to Zoom out or in
         ☐ Show actual GPS Position on bottom of card
         ☐ Draw Grid on map (UTM Ref)
-        ☐ Update Color Style
-        ☐ How to draw a map on the map? Leaflet?
-        ☐ How to draw positions on map?
+        ✔ Update Color Style @done (14-07-01 04:46)
+        ✔ How to draw a map on the map? Leaflet? @done (14-07-01 04:45) (Google Map API!)
+        ✔ How to draw positions on map? @done (14-07-01 04:45) (Google Map API!)
     ☐ List
     ☐ Input
     ☐ Slider
@@ -48,6 +50,9 @@ Akutelle Datein:
 Questions:
 
   ☐ If I press 'upload to drone' button do I swap to live view? Yes!?!??? Ask Team
+  ☐ Können wir Datenvisualisierungen einbauen: 
+    http://www.sueddeutsche.de/wissen/satellitenaufnahmen-signaturen-der-staedte-1.2021088
+  ☐ Gibt es doch irgendwo einen Button wo man auf die HomePosiotn zurück kann? Ja! Nur wo?
 
 
  UI-Transistions:
@@ -68,10 +73,6 @@ Feedback:
           ☐ Signalstärke
           ☐ Speichern
           ☐ Löschen
-          ☐ 
-
-
-
 ______________________________________________________________________________
 
 My personal todo-list

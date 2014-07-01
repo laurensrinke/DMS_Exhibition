@@ -52,7 +52,6 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 
 
 		// create states elements
-		
 		b_hover = document.createElement('img');
 		b_hover.src = img_hover;
 		b_hover.className+= 'btn_img';

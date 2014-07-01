@@ -21,9 +21,7 @@ Lable = function(x, y, text, myDelay, myDuration)
 	var text_container = '';
 	var line = '';
 
-
-	// SVG objects
-	var svgContainer = d3.select("body").append("svg");
+	var svgContainer = d3.select(document.createElement("svg"));
 	var lineContainer = svgContainer.append("line");
 	var textContainer = svgContainer.append("text");  
 
@@ -34,8 +32,8 @@ Lable = function(x, y, text, myDelay, myDuration)
 	{
 
 		svgContainer
-			.attr("width", 230)
-			.attr("height", 19)
+			.attr("width", "230px")
+			.attr("height", "19px")
 			.style("position", 'absolute')
 			.style("left", x +'px')
 			.style("top", y +'px');
@@ -43,37 +41,27 @@ Lable = function(x, y, text, myDelay, myDuration)
 		lineContainer
 			.attr("x1", 11)
 			.attr("y1", 16.5)
-			.attr("x2", 11)
+			.attr("x2", 100)
 			.attr("y2", 16.5)
-			.attr("fill-width", 0.5)
+			.attr("fill-width", 1.5)
 			.attr("stroke", "#FFF")
-			.attr('opacity', 0)
-
-		textContainer
-			.text('')    
-			.attr("x", 10)    
-			.attr("y", 10)    
-			.style("fill","#FFF")
-			.style("font-family","400 14px Roboto")
-			.attr('font-size', 14);
-
-		// end of transition
-		lineContainer
+			.attr("fill", "#FFF")
+			// .attr('opacity', 0)
 			.transition()
 			.delay(100)
 			.duration(myDuration)
 			.ease("cubic")
 			.attr("x2", 225)
-			.attr('font-size', 14)
 			.attr('opacity', 1);
 
-		// textContainer.transition()
-		// 	.delay(myDelay)
-		// 	.duration(myDuration)
-		// 	.ease("cubic")
-		// 	.attr('font-size', 14)
-		// 	.attr('opacity', 1)
-		// 	.text(text[0]+text[1])
+		textContainer
+			.text('')    
+			.attr("x", 10)    
+			.attr("width", 200)    
+			.attr("y", 10)  
+			.style("fill","#FFF")
+			.style("font-family","400 14px Roboto")
+			.attr('font-size', 14);
 
 		var myText = '';
 
@@ -87,66 +75,8 @@ Lable = function(x, y, text, myDelay, myDuration)
 				.attr('opacity', 1)
 				.text(myText)
 		};
-			
 
-			// for (var i = 0; i < text.length; i++) {
-			// 	lineContainer.transition()
-			// 		.delay(400)
-			// 		.tween(say('hey'))
-			// 	// myText = '';
-			// 	// setTimeout(function function_name(i) {
-			// 	// 	myText += text[i]
-			// 	// 	say(myText);	
-			// 	// }, i*100);
-			// };
-
-		// textContainer.transition()
-		// 	.dely(500)
-		// 	.each(text.length, function(){
-		// 		myText += text
-		// 	})
-
-		// 	.delay(750)
-  //   		.each("start", function() { d3.select(this).style("color", "green"); })
-  //   		.style("color", "red");
-
-		// textContainer
-		// 	.transition()
-		// 	.delay(myDelay)
-		// 	.duration(myDuration)
-		// 	.ease("cubic")
-		// 	.attr('font-size', 14)
-		// 	.attr('opacity', 1);
-		// var myVar
-		// var myText
-		// myVar = setInterval(function() {
-		// 	myText += text[i]
-		// 	lineContainer
-		// 		.text(myText)
-			
-		// for (var i = 0; i < text.length; i++) {
-		// 	say('hey ' + i);
-		// };
-	 //    }, 1000);
-
-		
-
-
-		// textContainer
-		// 	.transition()
-		//     .duration(3000)
-		//         .tween("text", function(d) {
-		//             var i = d3.interpolate(this.textContent, d),
-		//                 prec = (d + "").split("."),
-		//                 round = (prec.length > 1) ? Math.pow(10, prec[1].length) : 1;
-
-		//             return function(t) {
-		//                 this.textContent = Math.round(i(t) * round) / round;
-		//             };
-		//         });
-
-		// return object
-		// return _id;
+		return svgContainer.node();
 	}
 
 	// animate line

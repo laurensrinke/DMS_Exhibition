@@ -99,11 +99,11 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 	}
 
 	function setValue(argument) {
-		text_value.innerHTML = argument;
+		text_value.innerHTML = parseFloat(argument);
 	}
 
 	function getValue(argument) {
-		return parseInt(text_value.innerHTML);
+		return parseFloat(text_value.innerHTML);
 	}
 
 	// ------------------------------------------------------------
