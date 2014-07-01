@@ -72,7 +72,7 @@ Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, 
 		// create unit object
 		unit = new Unit(id + '_r_1', 'unit', 175, 0, unit_1, unit_2, unit_3);
 
-		
+
 		// add trigger for unit swap
 		$(container).find('#unit_' + id + '_r_1').on( "custom", function(event, param1, param2){
 			switch(param1) {
@@ -91,7 +91,7 @@ Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, 
 			}
 		});
 
-		
+
 
 
 		// create input field background
@@ -108,7 +108,7 @@ Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, 
 		    .style("position", 'absolute')
 			.style("left", '125px')
 			.style("top", '0px')
-		
+
 		for (var i = 0; i < 14; i++) {
 			drawArea.append("line")
 				.attr("x1", 0)
@@ -248,7 +248,7 @@ Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, 
 		// 		.attr('x2', 40)
 		// 		.ease("quad")
 		// };
-		
+
 		// retunr obejct
 		return container;
 	}

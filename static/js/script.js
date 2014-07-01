@@ -25,12 +25,17 @@ $(function(){
 	// CREATE TAB_1 CONTAINER /////////////////////////////////////////////////////////////////////
 	var tab_1 = document.createElement('section');
 	tab_1.id = 'tab_1';
+	tab_1.className = 'tab';
 
-	var tab_2 = document.createElement('section');
-	tab_2.id = 'tab_2';
+	// var tab_2 = document.createElement('section');
+	// tab_2.id = 'tab_2';
+	// tab_2.className = 'tab';
 
-	var tab_3 = document.createElement('section');
-	tab_3.id = 'tab_3';
+
+	// var tab_3 = document.createElement('section');
+	// tab_3.id = 'tab_3';
+	// tab_3.className = 'tab';
+
 
 
 	// TAB_1 CONTENT
@@ -51,14 +56,15 @@ $(function(){
 		1682, 1019, true, 'btn_def');
 	tab_1.appendChild(first_Button.create());
 
-
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
-	var lable_1 = new Lable(24, 92, 'Flight Mode', 1000, 300);
+	// function(x, y, text, myDelay, myDuration)
+	var lable_1 = new Lable(24, 87, 'Flight Mode', 2000, 300);
 	tab_1.appendChild(lable_1.create());
+	// tab_1.appendChild(lable_1.create());
 
 	// add Lable stuff
-	var lable_2 = new Lable(24, 271, 'Attachment', 1000, 300);
+	var lable_2 = new Lable(24, 268, 'Attachment', 2000, 300);
 	tab_1.appendChild(lable_2.create());
 
 	// add Lable stuff
@@ -142,8 +148,8 @@ $(function(){
 
 	// ADD TABS TO CONTAINER
 	document.body.appendChild(tab_1);
-	document.body.appendChild(tab_2);
-	document.body.appendChild(tab_3);
+	// document.body.appendChild(tab_2);
+	// document.body.appendChild(tab_3);
 	
 
 	// TRIGGER-EVENT /////////////////////////////////////////////////////////////////////////
