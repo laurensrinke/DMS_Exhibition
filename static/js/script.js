@@ -126,17 +126,17 @@ $(function(){
 
 
 	// UNITS //////////////////////////////////////////////////////////////////////////////////
-	// var unit_1 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
-	// tab_1.appendChild(unit_1.create());
+	var unit_1 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
+	tab_1.appendChild(unit_1.create());
 
-	// var unit_2 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
-	// tab_1.appendChild(unit_2.create());
+	var unit_2 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
+	tab_1.appendChild(unit_2.create());
 
-	// var unit_3 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
-	// tab_1.appendChild(unit_3.create());
+	var unit_3 = new Unit('r_1', 'unit', 212, 546, 'h', 'm.', '');
+	tab_1.appendChild(unit_3.create());
 
-	// var unit_4 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
-	// tab_1.appendChild(unit_4.create());
+	var unit_4 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
+	tab_1.appendChild(unit_4.create());
 
 
 
