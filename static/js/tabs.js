@@ -141,6 +141,9 @@ Tabs = function(img_def, img_act, img_hover)
 			}
 		});
 
+		// Trigger click on tab_0
+		 $('#nav_b1').trigger( "custom", ["up", 0]);
+
 		// return object
 		// return _id;
 	}

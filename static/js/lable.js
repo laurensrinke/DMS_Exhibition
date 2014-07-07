@@ -40,13 +40,13 @@ Lable = function(x, y, text, myDelay, myDuration)
 
 		// // append brackets
 		var start = [ 
-			{ "x": 0, "y": .5},  
-			{ "x": 0, "y": .5},
+			{ "x": 0, "y": 5.5},  
+			{ "x": 0, "y": 5.5},
 			];
 
 		var end = [ 
-			{ "x": 0,   "y": .5},  
-			{ "x": 213, "y": .5},
+			{ "x": 0,   "y": 5.5},  
+			{ "x": 213, "y": 5.5},
 			];
 
 		var lineFunction = d3.svg.line()

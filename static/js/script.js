@@ -81,16 +81,21 @@ $(function(){
 	tab_0.appendChild(tab_0_lb_4.create()); 
 
 	// add Lable stuff
-	var tab_0_lb_5 = new Lable(1671, 91, 'Flight Options', 1000, 300);
+	var tab_0_lb_5 = new Lable(1682, 91, 'Flight Options', 1000, 300);
 	tab_0.appendChild(tab_0_lb_5.create());
 
 	// add Lable stuff
-	var tab_0_lb_6 = new Lable(1671, 313, 'Waypoint List', 1000, 300);
+	var tab_0_lb_6 = new Lable(1682, 316, 'Waypoint List', 1000, 300);
 	tab_0.appendChild(tab_0_lb_6.create());
 
 	// add Lable stuff
-	var tab_0_lb_7 = new Lable(1671, 847, 'Flight Details', 1000, 300);
+	var tab_0_lb_7 = new Lable(1682, 751, 'Grid Resolution', 1000, 300);
 	tab_0.appendChild(tab_0_lb_7.create());
+
+	// add Lable stuff
+	var tab_0_lb_8 = new Lable(1682, 851, 'Flight Details', 1000, 300);
+	tab_0.appendChild(tab_0_lb_8.create());
+
 
 
 	// RADIO ///////////////////////////////////////////////////////////////////////////////
@@ -214,6 +219,8 @@ $(function(){
 
 	// var unit_4 = new Unit('r_2', 'unit', 212, 580, 'h', 'm.', '');
 	// tab_0.appendChild(unit_4.create());
+
+	// Trigger click on nav_1
 
 
 

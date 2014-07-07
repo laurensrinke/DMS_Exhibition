@@ -11,14 +11,14 @@ Akutelle Datein:
     ✔ Bild @done (14-07-07 02:05)
   ✔ Tabs exportieren @done (14-07-07 02:05)
   ☐ Tabs animieren
-  ☐ Tabs draw elements
-  ☐ Fake elements
+  ✔ Tabs draw elements @done (14-07-07 12:03)
+  ✔ Fake elements @done (14-07-07 12:03)
   ☐ Hover Effect more powerfull or less powerfull. I can not see differenct between act or hover
   ☐ Remove Slider Thing and other elements
   ☐ Update all color values.
-  ☐ Include Leap.js for swapping Tabs. (WITH ANIMATION!)
+  ✔ Include Leap.js for swapping Tabs. (WITH ANIMATION!) @done (14-07-07 12:03)
   ☐ Animation included?
-  ☐ Label updaten, so das sie nicht mehr die Linie schneiden.
+  ✔ Label updaten, so das sie nicht mehr die Linie schneiden. @done (14-07-07 12:02)
 
   ☐ Fix unit problem - sth. is wrong.
 
@@ -51,6 +51,10 @@ Akutelle Datein:
     ✔ Input @done (14-07-01 09:16)
     ☐ Zoom-Slider for the map
     ☐ Remove Typo from little map.
+
+
+Fancy:
+  ☐ Logo hover effect - like a little easter egg
 
 
 
