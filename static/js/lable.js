@@ -22,12 +22,6 @@ Lable = function(x, y, text, myDelay, myDuration)
 	var myTextContainer = d3.select(document.createElement("article"));
 	var myText = '';
 	var theLine = document.createElement('path');
-	say ('iam the fuckcing line')
-	say (theLine);
-
-	// var textContainer = myLine.append("section");
-
-	// var nav_text_1, nav_text_2, nav_text_3; 
 
 	// functions /////////////////////////////////
 	function create()
@@ -37,15 +31,6 @@ Lable = function(x, y, text, myDelay, myDuration)
 		container.style.left = x + 'px';
 		container.style.width = '213px';
 		container.style.height = '30px';
-		// container.style('height', '30px');
-		// var myLine = d3.select(document.createElement("section"));
-		// myLine.append('svg')
-		// 	.attr('width', 213)
-		// 	.attr('width', 213)
-		// 	.attr('height', 30)
-		// 	.style('position', 'absolute')
-		// 	.style('top', '0')
-		// 	.style('left', '0')
 
 		myLine.append("svg")
 			.style('width', "213px")

@@ -56,7 +56,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		24, 11, false, 'nav_btn');
+		260, 17, false, 'nav_btn');
 
 		buttons[1][2] = new Button(
 			'nav_b2', 
@@ -64,7 +64,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		675, 11, false, 'nav_btn');
+		725, 17, false, 'nav_btn');
 
 		buttons[2][2] = new Button(
 			'nav_b3', 
@@ -72,7 +72,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		1326, 11, false, 'nav_btn');
+		1189, 17, false, 'nav_btn');
 
 		// create buttons
 		for (var i = 0; i < buttons.length; i++) {
@@ -95,6 +95,7 @@ Tabs = function(img_def, img_act, img_hover)
 			        break;
 			    case 'up':
 			      	updateStat(0);
+			      	hideElements();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b1');
@@ -113,6 +114,7 @@ Tabs = function(img_def, img_act, img_hover)
 			        break;
 			    case 'up':
 			      	updateStat(1);
+			      	hideElements();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b2');
@@ -131,6 +133,7 @@ Tabs = function(img_def, img_act, img_hover)
 			        break;
 			    case 'up':
 			      	updateStat(2);
+			      	hideElements();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b3');
@@ -146,6 +149,7 @@ Tabs = function(img_def, img_act, img_hover)
 		// set new status variable
 		state = parseInt(argument);
 		
+		// NO IDEAD WHAT THIS SHIT IS DOING
 		for (var i = 0; i < buttons.length; i++) {
 			// set all buttons inavtive
 			buttons[i][1] = 0;
@@ -160,6 +164,46 @@ Tabs = function(img_def, img_act, img_hover)
 				alert('Congrats - You system is pregnant!');
 			}
 		};
+	}
+
+	// check if status changed?
+	// Do I have to remove all elements?
+	// add all my elements
+	// remove all my elements
+
+	function hideElements (argument) {
+		switch(state) {
+			    case 0:
+			    	say(0);
+					$('#tab_0' ).css('display', 'inline');
+					$('#tab_1').css('display', 'none');
+					$('#tab_2').css('display', 'none');
+					$('#tab_v_0' ).css('display', 'inline');
+					$('#tab_v_1').css('display', 'none');
+					$('#tab_v_2').css('display', 'none');
+			        break;
+			    case 1:
+			    	say(1);
+			    	$('#tab_0').css('display', 'none');
+					$('#tab_1').css('display', 'inline');
+					$('#tab_2').css('display', 'none');
+					$('#tab_v_0').css('display', 'none');
+					$('#tab_v_1').css('display', 'inline');
+					$('#tab_v_2').css('display', 'none');
+			        break;
+			    case 2:
+			    	say(2);
+			      	$('#tab_0').css('display', 'none');
+					$('#tab_1').css('display', 'none');
+					$('#tab_2').css('display', 'inline');
+					$('#tab_v_0').css('display', 'none');
+					$('#tab_v_1').css('display', 'none');
+					$('#tab_v_2').css('display', 'inline');
+			        break;
+			    default:{
+			        alert('!');
+			    }
+			}
 	}
 
 	
