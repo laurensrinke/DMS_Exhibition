@@ -2,25 +2,27 @@ Hello:
 
 
 Akutelle Datein:
-
-  ✔ Überlegen @done (14-07-06 23:33)
-  ✔ Planen @done (14-07-07 00:07)
-  ✔ Neue Tabs exportieren @done (14-07-07 00:07)
-  ✔ Wie baue ich die Tabs auf? @done (14-07-07 02:05)
-    ✔ Animation @done (14-07-07 02:05)
-    ✔ Bild @done (14-07-07 02:05)
-  ✔ Tabs exportieren @done (14-07-07 02:05)
-  ☐ Tabs animieren
-  ✔ Tabs draw elements @done (14-07-07 12:03)
-  ✔ Fake elements @done (14-07-07 12:03)
-  ☐ Hover Effect more powerfull or less powerfull. I can not see differenct between act or hover
-  ☐ Remove Slider Thing and other elements
+  ☐ Including actual time
+  ✔ gray Grid is not good to see on Satelite map - swap if you came to Satelite @done (14-07-08 02:18)
+  ☐ Including actual date
+  ☐ remove resolution on left side
+  ☐ wirte Waypoint-List-class
+  
+  ✔ fix Grid Resolution @done (14-07-07 21:51)
+  ✔ include Position lat & lng @done (14-07-07 23:48)
+  ✔ add Calculate Grid Button @done (14-07-07 23:48)
+  ✔ fix Flight Details @done (14-07-08 00:54)
+  ✔ remove duration @done (14-07-08 00:54)
+  ✔ remove distance @done (14-07-08 00:54)
+  ✔ remove Battery Ussage @done (14-07-08 00:54)
+  ✔ fix lable svg height @done (14-07-08 00:54)
+  ✔ fix info width @done (14-07-08 00:54)
+  ✔ Remove Slider Thing and other elements @done (14-07-07 19:33)
   ☐ Update all color values.
-  ✔ Include Leap.js for swapping Tabs. (WITH ANIMATION!) @done (14-07-07 12:03)
-  ☐ Animation included?
-  ✔ Label updaten, so das sie nicht mehr die Linie schneiden. @done (14-07-07 12:02)
+  ✔ Fix unit problem - sth. is wrong. @done (14-07-07 17:44)
+  ☐ Fix unit-factor problem
+  ☐ underlineing sections is different left side tab_0
 
-  ☐ Fix unit problem - sth. is wrong.
 
 
   UI-Elemente:
@@ -34,7 +36,7 @@ Akutelle Datein:
        ✔ % / m / h @done (14-06-29 17:45)
        ✔ GPS / UTM Ref @done (14-06-29 17:45)
     ✔ Information @done (14-06-29 21:08)
-    ☐ Tab Functions Building
+    ✔ Tab Functions Building @done (14-07-07 17:40)
     ☐ Login Screen
     ☐ Little Spaces (name, time)
     ☐ Blur einbauen // really? Ding fragen, erstmal NÖ!
@@ -54,7 +56,14 @@ Akutelle Datein:
 
 
 Fancy:
+  ☐ Three JS Leap Motion
+  ☐ Three JS Import 3D Model
   ☐ Logo hover effect - like a little easter egg
+  ☐ Tabs animieren
+  ☐ Animation included?
+  ☐ Hover Effect more powerfull or less powerfull. I can not see differenct between act or hover
+  ☐ Animation Unit-Swapping, type effect with amigo
+  ☐ Show Grid on the map and point it to it
 
 
 
@@ -135,3 +144,15 @@ Anmerkungen:
     ✔ Text einbauen @done (14-07-01 14:33)
   ✔ Webseite fertig machen @done (14-07-06 13:15)
   ✔ Webseite weg schicken @done (14-07-06 13:15)
+  ✔ Überlegen @done (14-07-06 23:33)
+  ✔ Planen @done (14-07-07 00:07)
+  ✔ Neue Tabs exportieren @done (14-07-07 00:07)
+  ✔ Wie baue ich die Tabs auf? @done (14-07-07 02:05)
+    ✔ Animation @done (14-07-07 02:05)
+    ✔ Bild @done (14-07-07 02:05)
+  ✔ Tabs exportieren @done (14-07-07 02:05)
+  ✔ Tabs draw elements @done (14-07-07 12:03)
+  ✔ Fake elements @done (14-07-07 12:03)
+  
+  ✔ Include Leap.js for swapping Tabs. (WITH ANIMATION!) @done (14-07-07 12:03)
+  ✔ Label updaten, so das sie nicht mehr die Linie schneiden. @done (14-07-07 12:02)

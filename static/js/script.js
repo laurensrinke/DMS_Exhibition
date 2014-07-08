@@ -51,15 +51,33 @@ $(function(){
 	var myTabs = new Tabs('img/tabs/tabs_def.fw.png', 'img/tabs/tabs_act.fw.png', 'img/tabs/tabs_hover.fw.png', true);
 	myTabs.create();
 
-	// function(id, text, img_normal, img_over, img_down, x, y, show_prozess, style_class)
-	var first_Button = new Button(
-		'b_1', 
+	// BUTTON
+	var tab_0_btn_1 = new Button(
+		'tab_0_btn_1', 
 		'Upload to Drone', 
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
 		1682, 1019, true, 'btn_def');
-	tab_0.appendChild(first_Button.create());
+	tab_0.appendChild(tab_0_btn_1.create());
+
+	var tab_0_btn_2 = new Button(
+		'tab_0_btn_2', 
+		'Calculate Grid', 
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		1682, 769, true, 'btn_def');
+	tab_0.appendChild(tab_0_btn_2.create());
+
+	var tab_0_btn_3 = new Button(
+		'tab_0_btn_3', 
+		'Upload to Drone', 
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		1682, 1019, true, 'btn_def');
+	tab_0.appendChild(tab_0_btn_3.create());
 
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
@@ -71,10 +89,6 @@ $(function(){
 	// add Lable stuff
 	var tab_0_lb_2 = new Lable(24, 268, 'Attachment', 2000, 300);
 	tab_0.appendChild(tab_0_lb_2.create());
-
-	// add Lable stuff
-	var tab_0_lb_3 = new Lable(24, 479, 'Resolution', 1000, 300);
-	tab_0.appendChild(tab_0_lb_3.create());
 
 	// add Lable stuff
 	var tab_0_lb_4 = new Lable(24, 755, 'Map', 1000, 300);
@@ -89,7 +103,7 @@ $(function(){
 	tab_0.appendChild(tab_0_lb_6.create());
 
 	// add Lable stuff
-	var tab_0_lb_7 = new Lable(1682, 751, 'Grid Resolution', 1000, 300);
+	var tab_0_lb_7 = new Lable(1682, 733, 'Grid Resolution', 1000, 300);
 	tab_0.appendChild(tab_0_lb_7.create());
 
 	// add Lable stuff

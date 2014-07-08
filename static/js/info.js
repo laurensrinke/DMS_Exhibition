@@ -34,6 +34,7 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 	{
 		// create container
 		container = document.createElement('article');
+		container.className = 'Info';
 
 		// place container
 		container.style.position = 'absolute';
@@ -57,7 +58,7 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 		text_value.innerHTML = value;
 
 		// create unit object
-		unit = new Unit(id + '_r_1', 'unit', 199, 0, unit_1, unit_2, unit_3);
+		unit = new Unit(id + '_r_1', 'unit', 199, 0, unit_1, unit_2, unit_3, "TEXT", 3, 3, 0, 0);
 
 		// add description, value & unit to container
 		container.appendChild(text_description);

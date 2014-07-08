@@ -16,9 +16,9 @@ Wie macht man es mit den 3 oder 4?
 	
 */
 
-Unit = function(id, myClass, x, y, text_1, text_2, text_3, lable_text, value, factor, size)
+Unit = function(id, myClass, x, y, text_1, text_2, text_3, lable_text, value, factor, size, info)
 {
-	// Variables /////////////////////////////////
+	// Variables //////////////////////////////////////////////////////////////////
 	var i_container = 0;
 	var status = 0;
 	var myLength = 0;
@@ -32,7 +32,7 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3, lable_text, value, fa
 	   [text_3, 0, ''],
 	];
 
-	// functions /////////////////////////////////
+	// functions //////////////////////////////////////////////////////////////////
 	function create()
 	{
 		i_container = document.createElement('section');
@@ -50,14 +50,14 @@ Unit = function(id, myClass, x, y, text_1, text_2, text_3, lable_text, value, fa
 
 		// add buttons
 		// write construction manual
-		if (size == '') {
+		if (size == 0) {
 			button = new Button( 
 				'unit_' + id, 
 				unitArray[0][0], 
 				'img/unit/unit_def.fw.png', 
 				'img/unit/unit_hover.fw.png', 
 				'img/unit/unit_act.fw.png', 
-				0, 0, false, 'unit_btn');
+				0, 0, false, 'unit_small_btn');
 
 		} else{
 			button = new Button( 

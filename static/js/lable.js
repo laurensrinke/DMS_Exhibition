@@ -30,23 +30,24 @@ Lable = function(x, y, text, myDelay, myDuration)
 		container.style.top = y +'px';
 		container.style.left = x + 'px';
 		container.style.width = '213px';
-		container.style.height = '30px';
+		container.style.height = '10px';
 
 		myLine.append("svg")
 			.style('width', "213px")
 			.style('height', "12px")
+			.id = 'hello'
 			
 		
 
 		// // append brackets
 		var start = [ 
-			{ "x": 0, "y": 5.5},  
-			{ "x": 0, "y": 5.5},
+			{ "x": 0, "y": .5},  
+			{ "x": 0, "y": .5},
 			];
 
 		var end = [ 
-			{ "x": 0,   "y": 5.5},  
-			{ "x": 213, "y": 5.5},
+			{ "x": 0,   "y": .5},  
+			{ "x": 213, "y": .5},
 			];
 
 		var lineFunction = d3.svg.line()
@@ -54,7 +55,11 @@ Lable = function(x, y, text, myDelay, myDuration)
 			.y(function(d) { return d.y; })
 			.interpolate("linear");
 
-		myLine.append("svg").append("path")
+		myLine.append("svg")
+			.style('position', 'absolute')
+			.style('top', '22px')
+			.style('left', '0px')
+			.append("path")
 			.style('position', 'absolute')
 			.style('top', '10px')
 			.style('left', '10px')
