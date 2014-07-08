@@ -22,6 +22,10 @@ $(function(){
 	// grid_right.create();
 
 
+	// GLOBAL STUFF
+	startTime();
+
+
 	// CREATE tab_0 CONTAINER /////////////////////////////////////////////////////////////////////
 	var tab_0 = document.getElementById('tab_0');
 	tab_0.className = 'tab';
@@ -200,23 +204,175 @@ $(function(){
 	var tab_1_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
 	tab_1.appendChild(tab_1_lb_2.create());
 
-	var tab_1_lb_3 = new Lable(24, 789, 'Map', 1000, 300);
+	var tab_1_lb_3 = new Lable(24, 788, 'Map', 1000, 300);
 	tab_1.appendChild(tab_1_lb_3.create()); 
 
-	var tab_1_lb_4 = new Lable(1680, 87, 'Add Marks', 1000, 300);
+	var tab_1_lb_4 = new Lable(1682, 91, 'Add Marks', 1000, 300);
 	tab_1.appendChild(tab_1_lb_4.create()); 
 
-	var tab_1_lb_5 = new Lable(1680, 237, 'Edit Mark', 1000, 300);
+	var tab_1_lb_5 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
 	tab_1.appendChild(tab_1_lb_5.create());
 
-	var tab_1_lb_6 = new Lable(1680, 531, 'Screenshot', 1000, 300);
+	var tab_1_lb_6 = new Lable(1682, 531, 'Screenshot', 1000, 300);
 	tab_1.appendChild(tab_1_lb_6.create()); 
 
-	var tab_1_lb_7 = new Lable(1680, 939, 'Export Data', 1000, 300);
-	tab_1.appendChild(tab_1_lb_7.create());
+	var tab_1_lb_7 = new Lable(1682, 939, 'Export Data', 1000, 300);
+	tab_1.appendChild(tab_1_lb_7.create()); 
+
+
+	// info lables
+	var tab_1_nf_1 = new Info('tab_1_nf_1', 'info', 13, 131, 'Duration', '1.6', 60, 'h', 'm.', '');
+	tab_1.appendChild(tab_1_nf_1.create());
+
+	var tab_1_nf_2 = new Info('tab_1_nf_2', 'info', 13, 164, 'Distance', '3', 0.621, 'km', 'mi.', '');
+	tab_1.appendChild(tab_1_nf_2.create());
+
+	var tab_1_nf_3 = new Info('tab_1_nf_3', 'info', 13, 198, 'Battery Usage', '78', 0.3, '%', 'h.', '');
+	tab_1.appendChild(tab_1_nf_3.create());
+
+
+
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+	// IIIIII		IIIIII      IIIIII
+
+	// Radio
+	var tab_3_rd_1 = new Radio('tab_3_rd_1', 23, 832, 'Video', '2D', '3D', '', '');
+	tab_2.appendChild(tab_3_rd_1.create());
+
+	// Buttons
+	var tab_3_btn_1 = new Button(
+		'tab_3_btn_1', 
+		'Screenshot', 
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		1681, 130, true, 'btn_def');
+	tab_2.appendChild(tab_3_btn_1.create());
+
+	var tab_3_btn_2 = new Button(
+		'tab_3_btn_2', 
+		'Print',
+		'img/button/button_def.fw.png',
+		'img/button/button_over.fw.png',
+		'img/button/button_down.fw.png',
+		1681, 983, true, 'btn_def');
+	tab_2.appendChild(tab_3_btn_2.create());
+
+	var tab_3_btn_3 = new Button(
+		'tab_3_btn_3', 
+		'Share',
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		1681, 1019, true, 'btn_def');
+	tab_2.appendChild(tab_3_btn_3.create());
+
+	var tab_3_btn_4 = new Button(
+		'tab_3_btn_4', 
+		'Path Finder', 
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		24, 683, true, 'btn_def');
+	tab_2.appendChild(tab_3_btn_4.create());
+
+	var tab_3_btn_5 = new Button(
+		'tab_3_btn_5', 
+		'Compare Maps', 
+		'img/button/button_def.fw.png', 
+		'img/button/button_over.fw.png', 
+		'img/button/button_down.fw.png', 
+		24, 717, true, 'btn_def');
+	tab_2.appendChild(tab_3_btn_5.create());
+
+	
 
 
 	
+
+	// var tab_1_btn_2 = new Button(
+	// 	'tab_1_btn_2', 
+	// 	'Print', 
+	// 	'img/button/button_def.fw.png', 
+	// 	'img/button/button_over.fw.png', 
+	// 	'img/button/button_down.fw.png', 
+	// 	1681, 982, true, 'btn_def');
+	// tab_1.appendChild(tab_1_btn_2.create());
+
+	// var tab_1_btn_3 = new Button(
+	// 	'tab_1_btn_3', 
+	// 	'Share', 
+	// 	'img/button/button_def.fw.png', 
+	// 	'img/button/button_over.fw.png', 
+	// 	'img/button/button_down.fw.png', 
+	// 	1681, 1018, true, 'btn_def');
+	// tab_1.appendChild(tab_1_btn_3.create());
+
+
+	// // add Lable stuff
+	var tab_2_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
+	tab_2.appendChild(tab_2_lb_1.create());
+
+	var tab_2_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
+	tab_2.appendChild(tab_2_lb_2.create());
+
+	var tab_2_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
+	tab_2.appendChild(tab_2_lb_3.create()); 
+
+	var tab_2_lb_4 = new Lable(24, 788, 'Map', 1000, 300);
+	tab_2.appendChild(tab_2_lb_4.create());
+
+	var tab_2_lb_5 = new Lable(1682, 91, 'Add Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_5.create());
+
+	var tab_2_lb_6 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
+	tab_2.appendChild(tab_2_lb_6.create()); 
+
+	var tab_2_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_7.create());
+
+	var tab_2_lb_8 = new Lable(1682, 939, 'Export Data', 1000, 300);
+	tab_2.appendChild(tab_2_lb_8.create()); 
+
+
+
+
+	
+
+	// var tab_1_lb_5 = new Lable(1680, 237, 'Edit Mark', 1000, 300);
+	// tab_1.appendChild(tab_1_lb_5.create());
+
+	// var tab_1_lb_6 = new Lable(1680, 531, 'Screenshot', 1000, 300);
+	// tab_1.appendChild(tab_1_lb_6.create()); 
+
+	// var tab_1_lb_7 = new Lable(1680, 939, 'Export Data', 1000, 300);
+	// tab_1.appendChild(tab_1_lb_7.create()); 
+
+
+	// // info lables
+	var tab_2_nf_1 = new Info('tab_1_nf_1', 'info', 13, 131, 'Final Duration', '1.6', 60, 'h', 'm.', '');
+	tab_2.appendChild(tab_2_nf_1.create());
+
+	var tab_2_nf_2 = new Info('tab_1_nf_2', 'info', 13, 164, 'Final Distance', '3', 0.621, 'km', 'mi.', '');
+	tab_2.appendChild(tab_2_nf_2.create());
+
+	var tab_2_nf_3 = new Info('tab_1_nf_3', 'info', 13, 198, 'Final Battery Usage', '78', 0.3, '%', 'h.', '');
+	tab_2.appendChild(tab_2_nf_3.create());
+
 
 
 

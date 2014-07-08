@@ -83,8 +83,8 @@ Lable = function(x, y, text, myDelay, myDuration)
 			.style('top', '0px')
 			.style('left', '0px')
 			.style("color","#FFF")
-			.style("font-family","400 14px Roboto")
-			.attr('font-size', 14);
+			.style("font-family","400 13px Roboto")
+			.attr('font-size', 8);
 
 		for (var i = 0; i < text.length; i++) {
 			myText += text[i];
@@ -92,7 +92,7 @@ Lable = function(x, y, text, myDelay, myDuration)
 				.transition()
 				.delay(myDelay/2+ 1*i/20)
 				.duration(myDuration)
-				.attr('font-size', 14)
+				.attr('class', 'lable_text')
 				.text(myText)
 		};
 

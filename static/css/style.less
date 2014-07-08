@@ -1,3 +1,5 @@
+
+
 * {
 	font-family: 'Roboto', sans-serif;
 	-webkit-touch-callout: none;
@@ -9,6 +11,7 @@
 }
 
 @base: #red;
+@ui_red: #FF5D4E;
 
 // body {
 // 	background: #ddd url('../img/bg_mission_planner.fw.png');
@@ -19,9 +22,14 @@
 // }
 
 html, body, #map-canvas {
+	background: #222222;
 	height: 100%;
 	margin: 0px;
 	padding: 0px
+}
+
+#map_canvas {
+	background-color:#222 !important
 }
 
 body {
@@ -41,13 +49,14 @@ body {
 .btn_text {
 	position: absolute;
 	width: 193px;
-	padding-left: 20px;
+	padding-left: 10px;
 	height: 25px;
 	top: 2px;
 	color: #FFF;
 	text-align: left;
 	font-size: 14px;
 	font-family: 'Roboto-Medium';
+	letter-spacing: 1px;
 }
 
 .btn_line {
@@ -84,7 +93,7 @@ nav {
 	position: absolute;
 	top: 11px;
 	height: 49px;
-	width: 570px;
+	width: 470px;
 	font-size: 25px;
 }
 
@@ -108,7 +117,7 @@ nav {
 .nav_btn article {
 	position: absolute;
 	top: 7px;
-	width: 470px;
+	width: 400px;
 	height: 42px;
 	left: 20px;
 	color: #FFF;
@@ -123,6 +132,10 @@ nav {
 	left: 10px;
 	width: 213px;
 	height: 25px;
+}
+
+.radio_btn article.btn_text {
+	padding-left: 20px; 
 }
 
 .unit_btn {
@@ -402,9 +415,64 @@ text {
 	// z-index: 1;
 	pointer-events: none;
 	background: url('../img/background/grid_gray.fw.png');
+	background-repeat: no-repeat;
 }
 
  #grid_white {
  	background: url('../img/background/grid_white.fw.png');	
- 	// display: none;
+ 	display: none;
  }
+
+
+ // TIME
+
+#time_info {
+	position: absolute;
+	left: 1682px;
+	top: 16px;
+	width: 213px;
+	height: 40px;
+}
+
+// #date span {
+// 	position: absolute;
+// 	left: 130px;
+// }
+
+#time_info section, #time_info section span {
+	font-family: "Roboto-Bold";
+	color: #FFF;
+	font-size: 14px;
+	display: inline;
+	letter-spacing: 1px;
+}
+
+#time_info section span {
+	position: absolute;
+	top: 24px;
+	left: 0px;
+	letter-spacing: 1px;
+	color: @ui_red;
+}
+
+#time_info  section:last-child {
+	position: absolute;
+	left: 130px;
+}
+
+.lable_text {
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+
+#leap_info {
+	position: absolute;
+	top: 500px; 
+	left: 500px;
+	width: 500px;
+	height: 10px;
+	border: 2px solid blue;
+	background: blue;
+	z-index: 10;
+}

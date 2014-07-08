@@ -2,28 +2,13 @@ Hello:
 
 
 Akutelle Datein:
-  ☐ Including actual time
-  ✔ gray Grid is not good to see on Satelite map - swap if you came to Satelite @done (14-07-08 02:18)
-  ☐ Including actual date
-  ☐ remove resolution on left side
-  ☐ wirte Waypoint-List-class
-  
-  ✔ fix Grid Resolution @done (14-07-07 21:51)
-  ✔ include Position lat & lng @done (14-07-07 23:48)
-  ✔ add Calculate Grid Button @done (14-07-07 23:48)
-  ✔ fix Flight Details @done (14-07-08 00:54)
-  ✔ remove duration @done (14-07-08 00:54)
-  ✔ remove distance @done (14-07-08 00:54)
-  ✔ remove Battery Ussage @done (14-07-08 00:54)
-  ✔ fix lable svg height @done (14-07-08 00:54)
-  ✔ fix info width @done (14-07-08 00:54)
-  ✔ Remove Slider Thing and other elements @done (14-07-07 19:33)
-  ☐ Update all color values.
-  ✔ Fix unit problem - sth. is wrong. @done (14-07-07 17:44)
-  ☐ Fix unit-factor problem
-  ☐ underlineing sections is different left side tab_0
-
-
+  ✔ Add all missing elements from tab_1 @done (14-07-08 05:04)
+  ✔ Add all missing elements from tab_2 @done (14-07-08 06:06)
+  ☐ Waypoint List Class
+  ☐ How do I get all the Waypoint-Data?
+  ☐ Update Lat & Lng while I am moving or zooming
+  ☐ Update Font Size
+ 
 
   UI-Elemente:
     ✔ Buttons @done (14-06-27 17:00)
@@ -31,10 +16,10 @@ Akutelle Datein:
     ✔ Lables @done (14-06-27 17:02)
     ✔ Radio @done (14-06-27 21:49)
     ✔ Unit @done (14-06-29 17:45)
-       ✔ hours / minutes @done (14-06-29 17:45)
-       ✔ km / ml @done (14-06-29 17:45)
-       ✔ % / m / h @done (14-06-29 17:45)
-       ✔ GPS / UTM Ref @done (14-06-29 17:45)
+    ✔ hours / minutes @done (14-06-29 17:45)
+    ✔ km / ml @done (14-06-29 17:45)
+    ✔ % / m / h @done (14-06-29 17:45)
+    ✔ GPS / UTM Ref @done (14-06-29 17:45)
     ✔ Information @done (14-06-29 21:08)
     ✔ Tab Functions Building @done (14-07-07 17:40)
     ☐ Login Screen
@@ -53,6 +38,11 @@ Akutelle Datein:
     ✔ Input @done (14-07-01 09:16)
     ☐ Zoom-Slider for the map
     ☐ Remove Typo from little map.
+    ☐ Update Grid - move numbers to line center.
+    ☐ wirte Waypoint-List-class
+    ☐ Move Calc Grid to left Tab Side to restor balance
+    ☐ Update all color values.
+    ☐ Lable Map springt bei tab_0 zu tab_1
 
 
 Fancy:
@@ -64,6 +54,7 @@ Fancy:
   ☐ Hover Effect more powerfull or less powerfull. I can not see differenct between act or hover
   ☐ Animation Unit-Swapping, type effect with amigo
   ☐ Show Grid on the map and point it to it
+  ☐ Nice text transistion for time, poping up or sth.
 
 
 
@@ -78,9 +69,9 @@ Questions:
 
 
  UI-Transistions:
-   ☐ Punkte die sich nacheinander aufbauen 
-   ☐ Glitch-Effekt
-   ☐ Button Redesign Transistion
+  ☐ Punkte die sich nacheinander aufbauen 
+  ☐ Glitch-Effekt
+  ☐ Button Redesign Transistion
 
 Andere Anliegen:
   ☐ Helligkeits-Slider
@@ -92,11 +83,11 @@ Feedback:
   ☐ Spieht nach einem Spiel aus.
   ☐ Wirkt noch nicht seriös.
   ☐ Teilweise lassen sich Icons verwenden. 
-          ☐ Energie-Anzeig
-          ☐ Verbindung
-          ☐ Signalstärke
-          ☐ Speichern
-          ☐ Löschen
+    ☐ Energie-Anzeig
+    ☐ Verbindung
+    ☐ Signalstärke
+    ☐ Speichern
+    ☐ Löschen
 
 Matze:
   ☐ Taktische Zeichen gestalten.
@@ -140,6 +131,8 @@ Anmerkungen:
   ✔ Add small maps @done (14-07-01 05:52)
   ✔ Höhenkarte auf allen Leveln anzeigen @done (14-07-01 08:44)
   ✔ Wie kann man verschieden Layer aus und dazu schalten? @done (14-07-01 08:44)
+   ✔ underlineing sections is different left side tab_0 @done (14-07-08 04:57)
+
   ✔ Lable fixen @done (14-07-01 14:33)
     ✔ Text einbauen @done (14-07-01 14:33)
   ✔ Webseite fertig machen @done (14-07-06 13:15)
@@ -156,3 +149,20 @@ Anmerkungen:
   
   ✔ Include Leap.js for swapping Tabs. (WITH ANIMATION!) @done (14-07-07 12:03)
   ✔ Label updaten, so das sie nicht mehr die Linie schneiden. @done (14-07-07 12:02)
+  ✔ Including actual time @done (14-07-08 04:43)
+  ✔ Fixed map bg color swapping @done (14-07-08 04:55)
+  ✔ gray Grid is not good to see on Satelite map - swap if you came to Satelite @done (14-07-08 02:18)
+  ✔ Including actual date @done (14-07-08 04:51)
+  ✔ remove resolution on left side @done (14-07-08 04:51)
+  ✔ fix Grid Resolution @done (14-07-07 21:51)
+  ✔ include Position lat & lng @done (14-07-07 23:48)
+  ✔ add Calculate Grid Button @done (14-07-07 23:48)
+  ✔ fix Flight Details @done (14-07-08 00:54)
+  ✔ remove duration @done (14-07-08 00:54)
+  ✔ remove distance @done (14-07-08 00:54)
+  ✔ remove Battery Ussage @done (14-07-08 00:54)
+  ✔ fix lable svg height @done (14-07-08 00:54)
+  ✔ fix info width @done (14-07-08 00:54)
+  ✔ Remove Slider Thing and other elements @done (14-07-07 19:33)
+  ✔ Fix unit problem - sth. is wrong. @done (14-07-07 17:44)
+  ✔ Fix unit-factor problem @done (14-07-08 04:51)
