@@ -85,41 +85,53 @@ function initialize() {
     mapOptions);
   map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
   var drawingManager = new google.maps.drawing.DrawingManager({
-    // drawingMode: google.maps.drawing.OverlayType.MARKER,
-    drawingControl: true,
-    drawingControlOptions: {
-      position: google.maps.ControlPosition.BOTTOM_CENTER,
-      drawingModes: [
-        google.maps.drawing.OverlayType.MARKER,
-        google.maps.drawing.OverlayType.POLYGON,
-        google.maps.drawing.OverlayType.POLYLINE,
-      ]
-    },
-    markerOptions: {
-      icon: '../img/map/marker_def.fw.png',
-      editable: true,
-      clickable: true,
-    },
-    polygonOptions: {
-    	strokeColor: '#56C9DC', 
-    	strokeWeight: 3,
-    	fillColor: "#31454D",
-    	fillOpacity: .6,
-    	editable: true,
-      	clickable: true,
-    },
-     polylineOptions: {
-		strokeColor: '#56C9DC', 
-		strokeOpacity: 0.7, 
-		strokeWeight: 15,
-		fillColor: "#31454D",
-		fillOpacity: .6,
-		editable: true,
-      	clickable: true,
-    },
+        // drawingMode: google.maps.drawing.OverlayType.MARKER,
+        drawingControl: true,
+        drawingControlOptions: {
+          position: google.maps.ControlPosition.BOTTOM_CENTER,
+          drawingModes: [
+            google.maps.drawing.OverlayType.MARKER,
+            google.maps.drawing.OverlayType.POLYGON,
+            google.maps.drawing.OverlayType.POLYLINE,
+          ]
+        },
+        markerOptions: {
+              icon: '../img/map/marker_def.fw.png',
+              editable: true,
+              clickable: true,
+        },
+        polygonOptions: {
+            	strokeColor: '#56C9DC', 
+            	strokeWeight: 3,
+            	fillColor: "#31454D",
+            	fillOpacity: .6,
+            	editable: true,
+              	clickable: true,
+        },
+         polylineOptions: {
+      		strokeColor: '#56C9DC', 
+      		strokeOpacity: 0.7, 
+      		strokeWeight: 15,
+      		fillColor: "#31454D",
+      		fillOpacity: .6,
+      		editable: true,
+            	clickable: true,
+        },
   });
   drawingManager.setMap(map);
   // Swap map vis
+
+
+  google.maps.event.addListener(drawingManager, 'insert_at', function(event) {
+          say('Sup!!! clicked!!!')
+  });
+
+  google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+          say('Sup!!! I completed a overlay!!!')
+  });
+
+
+
 
 
   	var mapOptions2 = {
@@ -300,6 +312,7 @@ function initialize() {
 		};
 	});
 
+
   $('body').on("custom", function(event, param1, param2){
         if (param1 == 'zoomin') {
           map.setZoom(16);
@@ -334,28 +347,22 @@ function initialize() {
 	});
 
 
-  // google.maps.event.addListener(map, 'dragend', function(event) {
-  //     // say(map.getCenter());
-  //     // say('Got it!')
-  //     say('dragend');
-  //     // $('#lat').html(event.latLng.lat());
-  //     // $('#lng').html(event.latLng.lng());
-  //     console.log(event.latLng.lat() + ', ' + event.latLng.lng());
-  // });
-
-
 
   google.maps.event.addListener(map,'click',function(event) {
     say('hello');
     $('#lat').html('<span>Lat:</span>' + event.latLng.lat().toFixed(8));
     $('#lng').html('<span>Lat:</span>' + event.latLng.lng().toFixed(8));
+  });
+
+    // detect if sth added or so
+    // DRAWINGS EVENT LISTENERS
+     google.maps.event.addListener(drawingManager, 'overlaycomplete ', function(event) {
+      alert('!');
+    });
 
 
-    // // console.log(document.getElementById('latlongclicked').value = event.latLng.lat() + ', ' + event.latLng.lng());
-    // // console.log(event.latLng.lat() + ', ' + event.latLng.lng());
-    // $('#lat').html(event.latLng.lat());
-    // $('#lng').html(event.latLng.lng());
-    // $('#lng').html('HELLO');
+   google.maps.event.addListener(map,'*',function(event) {
+    
   });
 }
 
@@ -381,21 +388,47 @@ function smoothZoom (map, max, cnt) {
 // Enable wihite or gray gitd
 
 function updateGridStatus (argument) {
-  // if (argument == 'gray') {
-  //   // animo
-  //   // $('#grid_gray').animo({animation: "fadeIn", duration: 0.2});
-  //   // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
-  //   $('#grid_gray').css('display', 'block');
-  //   $('#grid_white').css('display', 'none');
-  // } else {
-  //   // animo
-  //   // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
-  //   // $('#grid_white').animo({animation: "fadeIn", duration: 0.2});
+  if (argument == 'gray') {
+    // animo
+    // $('#grid_gray').animo({animation: "fadeIn", duration: 0.2});
+    // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
+    $('#grid_gray').css('display', 'block');
+    $('#grid_white').css('display', 'none');
+  } else {
+    // animo
+    // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
+    // $('#grid_white').animo({animation: "fadeIn", duration: 0.2});
 
-  //   $('#grid_gray').css('display', 'none');
-  //   $('#grid_white').css('display', 'block');
-  // };
+    $('#grid_gray').css('display', 'none');
+    $('#grid_white').css('display', 'block');
+  };
 };
+
+
+function showArrays(event) {
+
+  // Since this polygon has only one path, we can call getPath()
+  // to return the MVCArray of LatLngs.
+  var vertices = this.getPath();
+
+  var contentString = '<b>Bermuda Triangle polygon</b><br>' +
+      'Clicked location: <br>' + event.latLng.lat() + ',' + event.latLng.lng() +
+      '<br>';
+
+  // Iterate over the vertices.
+  for (var i =0; i < vertices.getLength(); i++) {
+    var xy = vertices.getAt(i);
+    contentString += '<br>' + 'Coordinate ' + i + ':<br>' + xy.lat() + ',' +
+        xy.lng();
+  }
+
+  // Replace the info window's content and position.
+  infoWindow.setContent(contentString);
+  infoWindow.setPosition(event.latLng);
+
+  infoWindow.open(map);
+}
+
    
 
 

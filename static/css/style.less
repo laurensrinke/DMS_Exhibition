@@ -35,6 +35,7 @@ html, body, #map-canvas {
 body {
 	// background: #ddd url('../img/bg_mission_planner.fw.png');
 	background-repeat: no-repeat;
+	 overflow:hidden;
 }
 
 
@@ -421,11 +422,11 @@ text {
 
  #grid_white {
  	background: url('../img/background/grid_white.fw.png');	
+ 	display: none;
  }
 
 
  // TIME
-
 #time_info {
 	position: absolute;
 	left: 1682px;
@@ -433,7 +434,6 @@ text {
 	width: 213px;
 	height: 40px;
 }
-
 
 #time_info section, #time_info section span {
 	font-family: "Roboto-Bold";
@@ -463,8 +463,7 @@ text {
 
 #leap_info {
 	position: absolute;
-	top: 1065px;
-	top: 500px;
+	top: 1048px;
 	left: 493px;
 	width: 310px;
 	height: 1px;

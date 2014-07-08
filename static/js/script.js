@@ -23,7 +23,7 @@ $(function(){
 
 
 	// GLOBAL STUFF
-	// startTime();
+	startTime();
 
 
 	// CREATE tab_0 CONTAINER /////////////////////////////////////////////////////////////////////
