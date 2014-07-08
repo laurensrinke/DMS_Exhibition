@@ -156,7 +156,7 @@ function initialize() {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
-            updateGridStatus('gray');
+                        updateGridStatus('gray');
 		        break;
 		    default:{
 		    }
@@ -174,7 +174,7 @@ function initialize() {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
-            updateGridStatus('gray');
+                        updateGridStatus('gray');
 		        break;
 		    default:{
 		    }
@@ -193,7 +193,7 @@ function initialize() {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
-            updateGridStatus('white');
+                        updateGridStatus('white');
 		    default:{
 		    }
 		}
@@ -210,7 +210,7 @@ function initialize() {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
-            updateGridStatus('white');
+                        updateGridStatus('white');
 		        break;
 		    default:{
 		    }
@@ -231,7 +231,7 @@ function initialize() {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
-              updateGridStatus('gray');
+                              updateGridStatus('gray');
 			        break;
 			    default:{
 			    }
@@ -251,7 +251,7 @@ function initialize() {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
-              updateGridStatus('gray');
+                              updateGridStatus('gray');
 			        break;
 			    default:{
 			    }
@@ -272,7 +272,7 @@ function initialize() {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
-              updateGridStatus('white');
+                              updateGridStatus('white');
 			        break;
 			    default:{
 			    }
@@ -292,7 +292,7 @@ function initialize() {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
-              updateGridStatus('white');
+                              updateGridStatus('white');
 			        break;
 			    default:{
 			    }
@@ -381,21 +381,20 @@ function smoothZoom (map, max, cnt) {
 // Enable wihite or gray gitd
 
 function updateGridStatus (argument) {
-  if (argument == 'gray') {
-    // animo
-    // $('#grid_gray').animo({animation: "fadeIn", duration: 0.2});
-    // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
+  // if (argument == 'gray') {
+  //   // animo
+  //   // $('#grid_gray').animo({animation: "fadeIn", duration: 0.2});
+  //   // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
+  //   $('#grid_gray').css('display', 'block');
+  //   $('#grid_white').css('display', 'none');
+  // } else {
+  //   // animo
+  //   // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
+  //   // $('#grid_white').animo({animation: "fadeIn", duration: 0.2});
 
-    $('#grid_gray').css('display', 'block');
-    $('#grid_white').css('display', 'none');
-  } else {
-    // animo
-    // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
-    // $('#grid_white').animo({animation: "fadeIn", duration: 0.2});
-
-    $('#grid_gray').css('display', 'none');
-    $('#grid_white').css('display', 'block');
-  };
+  //   $('#grid_gray').css('display', 'none');
+  //   $('#grid_white').css('display', 'block');
+  // };
 };
    
 
