@@ -76,10 +76,11 @@ function initialize() {
     styles: [{"stylers":[{"visibility":"on"},{"saturation":-100},{"gamma":0.54}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#000000"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"gamma":0.48}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"gamma":7.18}]}],
     disableDefaultUI: true,
     backgroundColor: "#DDD",
+    disableDoubleClickZoom: true,
 
     // styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
   };
-
+  var markers = [];
   var mapType =  ['ROADMAP', 'TERRAIN', 'HYBRID', 'SATELLITE',];
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
@@ -121,18 +122,76 @@ function initialize() {
   drawingManager.setMap(map);
   // Swap map vis
 
-
-  google.maps.event.addListener(drawingManager, 'insert_at', function(event) {
-          say('Sup!!! clicked!!!')
+  google.maps.event.addListener(map, 'click', function(event) {
+      // addMarker();
+      pathCoords.push(event.latLng);
+      say(markers);
+      myPolygon(event.latLng)
   });
 
-  google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
-          say('Sup!!! I completed a overlay!!!')
-  });
+
+  var pathCoords = new google.maps.MVCArray();
+  var area = new google.maps.Polygon({
+                    path: pathCoords,
+                    strokeColor: "#0000FF",
+                    strokeOpacity: 0.8,
+                    strokeWeight: 2,
+                    fillColor: "#0000FF",
+                    fillOpacity: 0.4,
+                    editable: true,
+                    clickable: true,
+    });
+    area.setMap(map);
+
+  function myPolygon (argument) {
+      area.getPath().insertAt(pathCoords.length, argument);
+  };
+
+//  function addMarker(location) {
+//         var marker = new google.maps.Marker({
+//             position: location,
+//             map: map,
+//             icon: '../img/map/marker_def.fw.png',
+//         });
+//         markers.push(marker);
+//         say(markers);
+// }
+
+// var bermudaTriangle;
+// bermudaTriangle = new google.maps.Polygon({
+//     paths: triangleCoords,
+//     strokeColor: '#FF0000',
+//     strokeOpacity: 0.8,
+//     strokeWeight: 2,
+//     fillColor: '#FF0000',
+//     fillOpacity: 0.35
+//   });
+
+ google.maps.event.addListener(map, 'dblclick', function(event) {
+      say('close');
+});
+
+ google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
+          say(event.type);
+          say(event.overlay.getPath().j);
+          // add event listener to overlay
+          google.maps.event.addListener(event.overlay, 'click', function(event) {
+            say("Hey!");
+          });
+ });
+
+ google.maps.event.addListener(drawingManager, 'click', function(event) {
+        say('test');
+ });
 
 
+function overlayClickListener(overlay) {
+    google.maps.event.addListener(overlay, "mouseup", function(event){
+        alert("!");
+    });
+}
 
-
+  // ADD MARKER ADDING - CUSTOM
 
   	var mapOptions2 = {
         zoom: 14,
@@ -349,7 +408,6 @@ function initialize() {
 
 
   google.maps.event.addListener(map,'click',function(event) {
-    say('hello');
     $('#lat').html('<span>Lat:</span>' + event.latLng.lat().toFixed(8));
     $('#lng').html('<span>Lat:</span>' + event.latLng.lng().toFixed(8));
   });
@@ -428,6 +486,9 @@ function showArrays(event) {
 
   infoWindow.open(map);
 }
+
+
+
 
    
 
