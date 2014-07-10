@@ -12,6 +12,8 @@
 
 @base: #red;
 @ui_red: #FF5D4E;
+@font_color: #FFF;
+@font_size: 14px;
 
 // body {
 // 	background: #ddd url('../img/bg_mission_planner.fw.png');
@@ -471,3 +473,40 @@ text {
 	background: #222;
 	z-index: 10;
 }
+
+.list {
+	height: auto;
+	width: 171px;
+}
+.list ul {
+	 list-style-type: none;
+}
+
+.list li{ 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-family: "Roboto-Bold";
+	color: @font_color;
+	font-size: @font_size;
+	// display: inline;
+	letter-spacing: 1px;
+	list-style-type: none;
+	width: 183px;
+	height: 22px;
+	background: url('../img/list/list.fw.png');
+	background-repeat: no-repeat; 
+	padding: 3px 0 0 30px;
+}
+
+.list li img {
+	position: absolute;
+	top: 5px;
+	left: 7px;
+} 
+
+// .list ul {
+// 	border: 1px solid green;
+// 	height: auto;
+// 	width: 171px;
+// }

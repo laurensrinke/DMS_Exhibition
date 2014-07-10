@@ -152,6 +152,11 @@ $(function(){
 	tab_0.appendChild(tab_0_npt_2.create());
 
 
+	// waypoint list
+	var tab_0_list_1 = new List('tab_0_list_1', 'list', 1682, 367);
+	tab_0.appendChild(tab_0_list_1.create());
+
+
 	// IIIIII		IIIIII
 	// IIIIII		IIIIII
 	// IIIIII		IIIIII

@@ -126,18 +126,22 @@ function initialize() {
       addMarker(event.latLng);
       pathCoords.push(event.latLng);
       say(markers);
-      myPolygon(event.latLng)
+      myPolygon(event.latLng);
+      // send new maker to list
+      $('#tab_0_list_1').trigger('custom', [0, markers.length]);
   });
 
-
-
  var image = new google.maps.MarkerImage('../img/map/marker_2.fw.png',
-      // This marker is 20 pixels wide by 32 pixels tall.
       null, 
-      // The origin for this image is 0,0.
       new google.maps.Point(0,0),
-      // The anchor for this image is the base of the flagpole at 0,32.
       new google.maps.Point(10, 28)
+);
+
+ // var image2 = new google.maps.MarkerImage('http://d3dsacqprgcsqh.cloudfront.net/photo/azbVp4p_460sa.gif',
+ var image2 = new google.maps.MarkerImage('../img/map/marker_2.fw.png',
+      null, 
+      new google.maps.Point(0,0),
+      new google.maps.Point(10, 70)
 );
 
 
@@ -168,36 +172,44 @@ function initialize() {
             animation: google.maps.Animation.DROP,
             anchorPoint: 10,
             draggable: true,
-            // clickable: true,
+            clickable: true,
+        });
+
+
+         google.maps.event.addListener(marker, 'mousedown', function(event) {
+                marker.setIcon(image2);
+                // update list
+                $('#tab_0_list_1').trigger('custom', [1, myArrayPosition]);
+        });
+
+          google.maps.event.addListener(marker, 'mouseup', function(event) {
+                marker.setIcon(image);
+                // update list
+                $('#tab_0_list_1').trigger('custom', [2, myArrayPosition]);
         });
 
         google.maps.event.addListener(marker, 'drag', function(event) {
-                // pathCoords.setAt(myArrayPosition, event.latLng);
-                // pathCoords.removeAt(myArrayPosition-1);
-                // pathCoords.removeAt(myArrayPosition);
-                // pathCoords.insertAt(event.latLng, myArrayPosition-1)
                 pathCoords.setAt(myArrayPosition-1, event.latLng);
+                marker.setIcon(image2);
         });
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
-              // remove old marker
-                // pathCoords.removeAt(myArrayPosition);
-                // add new marker
                 pathCoords.setAt(myArrayPosition-1, event.latLng);
-                // pathCoords.removeAt(myArrayPosition);
-                // pathCoords.setAt(myArrayPosition, event.latLng);
-                // pathCoords.removeAt(myArrayPosition-1);
-                // say(pathCoords.getArray());
-                say('I wannd know');
-                say(markers);
-                say(pathCoords)
+                marker.setIcon(image);
         });
 
 
+          // dblclick on marker removes marker
+          // LATER
 
         markers.push(marker);
         var myArrayPosition = markers.length;
 }
+
+function remove (from, to) {
+  // body...
+}
+
 
 // var bermudaTriangle;
 // bermudaTriangle = new google.maps.Polygon({
