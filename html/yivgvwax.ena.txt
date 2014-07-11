@@ -1,0 +1,20 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   index.html
+#	modified:   jos.todo
+#	modified:   static/css/style.less
+#	modified:   static/img/bg_mission_planner.fw.png
+#	modified:   static/js/lable.js
+#	modified:   static/js/script.js
+#	modified:   static/js/unit.js
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	static/js/info.js
+
