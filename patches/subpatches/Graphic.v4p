@@ -1,0 +1,207 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
+   <PATCH nodename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\Patches\subpatches\Graphic.v4p" systemname="Graphic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Graphic.v4p">
+   <NODE id="0" nodename="Group (EX9)" systemname="Group (EX9)" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Layer 9" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="1502" top="12552" width="13965" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1502" top="12552" width="2400" height="1800">
+   </BOUNDS>
+   <PIN pinname="Layer Template Count" slicecount="1" pintype="Configuration" values="9">
+   </PIN>
+   <PIN pinname="Layer" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="0" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="3" systemname="PerfMeter (Debug)" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" nodename="PerfMeter (Debug)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="13862" top="11937" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="-928" top="-4848" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6810" top="7065" width="11760" height="8685">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="fps" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 9">
+   </LINK>
+   <NODE id="4" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1502" top="13322" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1502" top="13322" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   <BOUNDS type="Window" left="20175" top="6840" width="16965" height="14310">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE id="2" systemname="drone" filename="graphic\drone.v4p" nodename="graphic\drone.v4p" componentmode="InAWindow" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="1500" top="1500" width="1800" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="-928" top="-2737" width="5095" height="8475">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8445" top="7545" width="10980" height="13605">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
+   </LINK>
+   <NODE id="1" componentmode="Hidden" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Window" left="18360" top="6495" width="13080" height="11250">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3032" top="3857" width="4335" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="-928" top="-628" width="8080" height="8970">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Layer" pintype="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="14790" top="11370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Globals-Helpers">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="WithinViewport (Transform)" nodename="WithinViewport (Transform)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="13845" top="10710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Input Value" dstnodeid="3" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="4575" top="10470" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="4680" top="9135" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   <PIN pinname="ScaleZ" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pitch" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.85">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Yaw" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="9" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5610" top="8625" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5610" top="8625" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1.72">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="10" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="10" dstpinname="ScaleX">
+   </LINK>
+   <NODE systemname="VideoIn (EX9.Texture)" filename="%VVVV%\lib\nodes\modules\EX9.Texture\VideoIn (EX9.Texture).v4p" nodename="VideoIn (EX9.Texture)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="4875" top="8055" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Video Format" slicecount="1" values="YUY2">
+   </PIN>
+   <PIN pinname="Property Page" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Driver" slicecount="1" values="|FaceTime HD Camera (Display)|">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="640">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="480">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Texture Out" dstnodeid="9" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 3">
+   </LINK>
+   </PATCH>
