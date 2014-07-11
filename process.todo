@@ -1,0 +1,60 @@
+ ☐ splash screen
+   ☐ icon is constructing
+ ✔ Mission Planner baut sich auf @done (14-07-10 21:12)
+ ✔ Karte wird geladen @done (14-07-10 21:12)
+ ☐ Ort wird eingetippt
+ ☐ Karte zoomt zu dem Ort hin
+ ✔ Flight Mode wird festgelegt @done (14-07-10 21:12)
+ ✔ 3D wird ausgewählt @done (14-07-10 21:12)
+ ☐ Auflösung wird verändert, die Zahlen darunter verändern sich
+ ☐ Grid berechnen lassen
+ ✔ Daten von m. auf km umschalten @done (14-07-10 21:12)
+ ✔ Upload to Drone @done (14-07-10 21:37)
+ ☐ Ladebalken erscheint
+ ✔ auto. wird in den nächsten Modus geschalten @done (14-07-10 21:37)
+ ☐ man sieht Copter auf Map und man zoomt hinein
+ ✔ man befindet sich in der Live View @done (14-07-11 00:05)
+ ✔ Grid wird versteckt @done (14-07-11 00:05)
+ ✔ Video einbindn @done (14-07-10 23:47)
+ ✔ Drohne hebt ab und beginnt mit dem Flug @done (14-07-10 23:47)
+ ✔ Flug beobachten @done (14-07-10 23:47)
+ ☐ Bei der Zeitleiste veränderen sich die Zahlenwerte
+ ✔ ebenso bei der Duration und Battery @done (14-07-10 23:47)
+ ☐ Daten werden visualisiert
+ ☐ Sensor zeigt was an
+ ✔ Screenshot wird gemacht @done (14-07-11 03:07)
+ ✔ Screenshot wird in Liste hinzugefügt @done (14-07-11 03:07)
+ ☐ Video wird pausiert
+ ☐ Video-Handler bewegt sich langsam nach links
+ ☐ Screenshot bekommt Name
+ ☐ Name ändert sich bei Namen
+ ☐ Taktisches Zeichen wird ausgewählt
+ ☐ Taktisches zeichen wird zu Screenshot hinzugefügt
+ ☐ Kommentar wird verfasst
+ ☐ Abgespeichert
+ ☐ Flug beended
+ ☐ wechsel auf Post Editing
+ ☐ 2D Karte wird dargestellt
+ ☐ Area wird auf der Karte makiert
+ ☐ Area wird benannt
+ ☐ Taktisches Zeichen zur Area wird ausgewählt
+ ☐ Kommentar verfasst
+ ☐ Area wird abgespeichert
+ ☐ In Video Timeline wird Screenshot ausgewählt
+ ☐ Map aktualisiert sich 
+ ☐ Screenshot wird in Liste geheilightet
+ ☐ Es wird herangezoomt
+ ☐ Es wird auf 3D umgestellt
+ ☐ 3D Karte wird dargestellt
+ ☐ auf 3D Karte befindete sich ebenfalls die Screenshot-Position
+ ☐ Zoom zu der Position
+ ☐ um die Position rotieren
+ ☐ Screenshot editieren
+ ☐ Taktisches Zeichen hinzufügen
+ ☐ Kommentar verfassen
+ ☐ Abspeichern
+ ☐ Daten übermitteln
+ ☐ Es erscheint ein Ladebalken, Daten werden hochgeladen
+
+Was passiert wenn man die Area abspeichert?
+Wird das alles wieder leer?

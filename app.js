@@ -11,9 +11,13 @@ app.get('/', function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });
 
-// app.get('/client', function(req, res) {
-//     res.sendfile(__dirname + '/client.html');
-// });
+app.get('/3d', function(req, res) {
+    res.sendfile(__dirname + '/3d.html');
+});
+
+app.get('/test', function(req, res) {
+    res.sendfile(__dirname + '/test.html');
+});
 
 // app.get('/server', function(req, res) {
 //     res.sendfile(__dirname + '/server.html');

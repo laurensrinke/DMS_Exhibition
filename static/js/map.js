@@ -198,32 +198,13 @@ function initialize() {
                 marker.setIcon(image);
         });
 
-
-          // dblclick on marker removes marker
-          // LATER
-
         markers.push(marker);
         var myArrayPosition = markers.length;
 }
 
-function remove (from, to) {
-  // body...
-}
-
-
-// var bermudaTriangle;
-// bermudaTriangle = new google.maps.Polygon({
-//     paths: triangleCoords,
-//     strokeColor: '#FF0000',
-//     strokeOpacity: 0.8,
-//     strokeWeight: 2,
-//     fillColor: '#FF0000',
-//     fillOpacity: 0.35
-//   });
-
- google.maps.event.addListener(map, 'dblclick', function(event) {
-      say('close');
-});
+//  google.maps.event.addListener(map, 'dblclick', function(event) {
+//       say('close');
+// });
 
  google.maps.event.addListener(drawingManager, 'overlaycomplete', function(event) {
           say(event.type);
@@ -506,13 +487,15 @@ function updateGridStatus (argument) {
     // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
     $('#grid_gray').css('display', 'block');
     $('#grid_white').css('display', 'none');
-  } else {
+  } else if(argument == 'white'){
     // animo
     // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
     // $('#grid_white').animo({animation: "fadeIn", duration: 0.2});
 
     $('#grid_gray').css('display', 'none');
     $('#grid_white').css('display', 'block');
+  } else {
+    
   };
 };
 

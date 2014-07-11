@@ -16,7 +16,7 @@ Wie macht man es mit den 3 oder 4?
 	
 */
 
-Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, unit_3)
+Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, unit_3, myValue)
 {
 	// Variables /////////////////////////////////
 	var container;
@@ -67,7 +67,7 @@ Input = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, 
 		text_input.style.fontWeight  = "800";
 		text_input.style.fontFamily  = "Roboto-Bold";
 		text_input.type = 'text';
-		text_input.value = '800';
+		text_input.value = myValue;
 		text_input.style.width = "35px";
 
 		// create unit object

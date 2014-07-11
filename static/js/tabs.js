@@ -177,31 +177,28 @@ Tabs = function(img_def, img_act, img_hover)
 	function hideElements (argument) {
 		switch(state) {
 			    case 0:
-			    	say(0);
-					$('#tab_0' ).css('display', 'inline');
-					$('#tab_1').css('display', 'none');
-					$('#tab_2').css('display', 'none');
-					$('#tab_v_0' ).css('display', 'inline');
-					$('#tab_v_1').css('display', 'none');
-					$('#tab_v_2').css('display', 'none');
+				$('#tab_0' ).css('display', 'inline');
+				$('#tab_1').css('display', 'none');
+				$('#tab_2').css('display', 'none');
+				$('#tab_v_0' ).css('display', 'inline');
+				$('#tab_v_1').css('display', 'none');
+				$('#tab_v_2').css('display', 'none');
 			        break;
 			    case 1:
-			    	say(1);
 			    	$('#tab_0').css('display', 'none');
-					$('#tab_1').css('display', 'inline');
-					$('#tab_2').css('display', 'none');
-					$('#tab_v_0').css('display', 'none');
-					$('#tab_v_1').css('display', 'inline');
-					$('#tab_v_2').css('display', 'none');
+				$('#tab_1').css('display', 'inline');
+				$('#tab_2').css('display', 'none');
+				$('#tab_v_0').css('display', 'none');
+				$('#tab_v_1').css('display', 'inline');
+				$('#tab_v_2').css('display', 'none');
 			        break;
 			    case 2:
-			    	say(2);
 			      	$('#tab_0').css('display', 'none');
-					$('#tab_1').css('display', 'none');
-					$('#tab_2').css('display', 'inline');
-					$('#tab_v_0').css('display', 'none');
-					$('#tab_v_1').css('display', 'none');
-					$('#tab_v_2').css('display', 'inline');
+				$('#tab_1').css('display', 'none');
+				$('#tab_2').css('display', 'inline');
+				$('#tab_v_0').css('display', 'none');
+				$('#tab_v_1').css('display', 'none');
+				$('#tab_v_2').css('display', 'inline');
 			        break;
 			    default:{
 			        alert('!');

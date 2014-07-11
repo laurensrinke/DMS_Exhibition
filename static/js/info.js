@@ -100,7 +100,7 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 	}
 
 	function setValue(argument) {
-		text_value.innerHTML = parseFloat(argument);
+		text_value.innerHTML = parseFloat(argument).toFixed(1);
 	}
 
 	function getValue(argument) {
@@ -113,6 +113,8 @@ Info = function(id, myClass, x, y, description, value, factor, unit_1, unit_2, u
 	var exposed = {
 		create: create,
 		updateValue: updateValue,
+		setValue: setValue,
+		getValue: getValue,
 	}
 	return exposed;
 }

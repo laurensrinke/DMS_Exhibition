@@ -6,7 +6,7 @@ Created: 26.06.2014
 Version: c0.1
 */
 
-List = function(id, myClass, x, y)
+List = function(id, myClass, x, y, title, icon)
 {
 	// Variables //////////////////////////////////////////////////////////////////
 	var i_container = 0;
@@ -36,8 +36,13 @@ List = function(id, myClass, x, y)
 				childContent.style.top = ((waypointArray.length-1) * 30) + 'px';
 				markerIcon = document.createElement('img');
 				markerIcon.src = '../img/list/maker_icon.fw.png';
-				childContent.innerHTML = 'Waypoint ' + param2;
-				childContent.appendChild(markerIcon);
+				childContent.innerHTML = title + ' ' + param2;
+				if (icon > 0 ) {
+					childContent.appendChild(markerIcon); 
+				} else {
+					childContent.style.paddingLeft =" 11px";
+					childContent.style.width = "213px";
+				};
 				$(markerIcon).animo({ animation: 'bounceIn', duration: .8});
 				i_container.appendChild(childContent);
 			} else if(param1 == 1) {

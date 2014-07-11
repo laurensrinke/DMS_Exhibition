@@ -178,11 +178,11 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 			if (p_value < 213) {
 	    		p_value = p_value + 1;
 	    		i_prozess.style.width = p_value + 'px';
-	    	} else {
-	    		clearInterval(myVar)
-	    	}
-	    	// console.log(p_value);
-	    }, 2);
+		    	} else {
+		    		clearInterval(myVar)
+		    	}
+		    	// console.log(p_value);
+		    }, 2);
 		
 
 		// add elements to DOM

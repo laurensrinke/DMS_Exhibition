@@ -27,28 +27,28 @@
 // 	}
 // });
 
-var controller = Leap.loop(function(frame){
-    if(frame.hands.length > 0)
-    {
-        var hand = frame.hands[0];
-        var position = hand.palmPosition;
-        var velocity = hand.palmVelocity;
-        var direction = hand.direction;
+// var controller = Leap.loop(function(frame){
+//     if(frame.hands.length > 0)
+//     {
+//         var hand = frame.hands[0];
+//         var position = hand.palmPosition;
+//         var velocity = hand.palmVelocity;
+//         var direction = hand.direction;
 
-        console.log(position[1]);
-        if (position[1] < 100) {
-        	say('zoom in');
-        	$('body').trigger('custom', ['zoomin', 0]);
-        } if (position[1] > 150) {
-        	say('zoom out');
-        	$('body').trigger('custom', ['zoomout', 0]);
-        } else{
-        	// say('nothing');
-        };
-        $('#leap_info').css('width', position[1] + 'px');
-        // 70 / 300
-    }
-});
+//         console.log(position[1]);
+//         if (position[1] < 100) {
+//         	say('zoom in');
+//         	$('body').trigger('custom', ['zoomin', 0]);
+//         } if (position[1] > 150) {
+//         	say('zoom out');
+//         	$('body').trigger('custom', ['zoomout', 0]);
+//         } else{
+//         	// say('nothing');
+//         };
+//         $('#leap_info').css('width', position[1] + 'px');
+//         // 70 / 300
+//     }
+// });
 
 
 /*
