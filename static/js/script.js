@@ -90,13 +90,14 @@ $(function(){
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
 	// function(x, y, text, myDelay, myDuration)
-	var tab_0_lb_1 = new Lable(24, 87, 'Flight Mode', 1000, 300);
+	// 170px
+	var tab_0_lb_1 = new Lable(24, 170, 'Flight Mode', 1000, 300);
 	tab_0.appendChild(tab_0_lb_1.create());
 	// tab_0_array.push(tab_0_lb_1);
 	// tab_0.appendChild(lable_1.create());
 
 	// add Lable stuff
-	var tab_0_lb_2 = new Lable(24, 268, 'Attachment', 1000, 300);
+	var tab_0_lb_2 = new Lable(24, 351, 'Attachment', 1000, 300);
 	tab_0.appendChild(tab_0_lb_2.create());
 	// tab_0_array.push(tab_0_lb_2);
 
@@ -125,19 +126,21 @@ $(function(){
 	tab_0.appendChild(tab_0_lb_8.create());
 	// tab_0_array.push(tab_0_lb_8);
 
-	// var tab_0_lb_9 = new Lable(24, 87, 'Search', 1000, 300);
-	// // tab_0.appendChild(tab_0_lb_9.create());
+	var tab_0_lb_9 = new Lable(24, 87, 'Search', 1000, 300);
+	tab_0.appendChild(tab_0_lb_9.create());
+	// tab_0_array.push(tab_0_lb_9);
+
 	
 	// tab_0_array.push(tab_0_lb_9);
 	// tab_0.appendChild(lable_1.create());
 
 
 	// RADIO ///////////////////////////////////////////////////////////////////////////////
-	var tab_0_rd_1 = new Radio('r_1', 24, 130, 'Manual', 'Route', 'Area', '', '');
+	var tab_0_rd_1 = new Radio('r_1', 24, 213, 'Manual', 'Route', 'Area', '', '');
 	tab_0.appendChild(tab_0_rd_1.create());
 	// tab_0_array.push(tab_0_rd_1);
 
-	var tab_0_rd_2 = new Radio('r_2', 24, 310, '360° Camera', 'Toxicity', '3D Map', 'Infrared', '');
+	var tab_0_rd_2 = new Radio('r_2', 24, 393, '360° Camera', 'Toxicity', '3D Map', 'Infrared', '');
 	tab_0.appendChild(tab_0_rd_2.create());
 	// tab_0_array.push(tab_0_rd_2);
 
@@ -389,29 +392,29 @@ $(function(){
 
 
 	// // add Lable stuff
-	var tab_3_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
-	tab_3.appendChild(tab_3_lb_1.create());
+	var tab_2_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
+	tab_2.appendChild(tab_2_lb_1.create());
 
-	var tab_3_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
-	tab_3.appendChild(tab_3_lb_2.create());
+	var tab_2_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
+	tab_2.appendChild(tab_2_lb_2.create());
 
-	var tab_3_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
-	tab_3.appendChild(tab_3_lb_3.create()); 
+	var tab_2_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
+	tab_2.appendChild(tab_2_lb_3.create()); 
 
-	var tab_3_lb_4 = new Lable(24, 788, 'Map', 1000, 300);
-	tab_3.appendChild(tab_3_lb_4.create());
+	var tab_2_lb_4 = new Lable(24, 788, 'Map', 1000, 300);
+	tab_2.appendChild(tab_2_lb_4.create());
 
-	var tab_3_lb_5 = new Lable(1682, 91, 'Add Marks', 1000, 300);
-	tab_3.appendChild(tab_3_lb_5.create());
+	var tab_2_lb_5 = new Lable(1682, 91, 'Add Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_5.create());
 
-	var tab_3_lb_6 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
-	tab_3.appendChild(tab_3_lb_6.create()); 
+	var tab_2_lb_6 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
+	tab_2.appendChild(tab_2_lb_6.create()); 
 
-	var tab_3_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
-	tab_3.appendChild(tab_3_lb_7.create());
+	var tab_2_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_7.create());
 
-	var tab_3_lb_8 = new Lable(1682, 939, 'Export Data', 1000, 300);
-	tab_3.appendChild(tab_3_lb_8.create()); 
+	var tab_2_lb_8 = new Lable(1682, 939, 'Export Data', 1000, 300);
+	tab_2.appendChild(tab_2_lb_8.create()); 
 
 
 
@@ -500,7 +503,7 @@ $(function(){
 		});
 	});
 
-
+	var myInt;
 	$('#nav_b2').click(function( event) {
 		// update values of the messure
 		var tab_2_interval = setInterval(function() {

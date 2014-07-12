@@ -7,16 +7,19 @@ Akutelle Datein:
   ✔ style list animation @done (14-07-10 02:13)
   ✔ create list @done (14-07-10 03:43)
   ✔ style list @done (14-07-10 03:43)
-  ☐ animate list
-  ☐ feed waypoint data to list
+  ✔ animate list @done (14-07-12 00:50)
+  ✔ feed waypoint data to list @done (14-07-12 00:50)
   ✔ Fix Lable SVG Size problem @done (14-07-08 18:03)
   ✔ Add all missing elements from tab_1 @done (14-07-08 05:04)
   ✔ Add all missing elements from tab_2 @done (14-07-08 06:06)
-  ☐ Waypoint List Class
+  ✔ Waypoint List Class @done (14-07-12 00:50)
   ✔ How do I get all the Waypoint-Data? @done (14-07-10 01:35)
   ✔ Update Lat & Lng while I am moving or zooming @done (14-07-10 01:35)
+  ✔ map courser @done (14-07-12 00:58)
+  ✔ map cursor add contrast @done (14-07-12 01:55)
+  ☐ Add search
   ☐ Update Font Size
-  ☐ map courser
+  ☐ erst Satelit, dann Standart
  
 
   UI-Elemente:

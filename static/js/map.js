@@ -77,6 +77,10 @@ function initialize() {
     disableDefaultUI: true,
     backgroundColor: "#DDD",
     disableDoubleClickZoom: true,
+    // draggableCursor : url('../img/cursor/points.fw.png, auto');
+    draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
+    draggingCursor: "url(../img/cursor/draggingCursor.fw.png), auto",
+    // cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default;
 
     // styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
   };
@@ -123,9 +127,10 @@ function initialize() {
   // Swap map vis
 
   google.maps.event.addListener(map, 'click', function(event) {
+      say(event.latLng);
       addMarker(event.latLng);
       pathCoords.push(event.latLng);
-      say(markers);
+      // say(markers);
       myPolygon(event.latLng);
       // send new maker to list
       $('#tab_0_list_1').trigger('custom', [0, markers.length]);
@@ -173,6 +178,7 @@ function initialize() {
             anchorPoint: 10,
             draggable: true,
             clickable: true,
+            cursor: 'crosshair',
         });
 
 
@@ -190,13 +196,51 @@ function initialize() {
 
         google.maps.event.addListener(marker, 'drag', function(event) {
                 pathCoords.setAt(myArrayPosition-1, event.latLng);
-                marker.setIcon(image2);
+                marker.setOptions({
+                    cursor: "url(../img/cursor/cursorDragging.png), auto",
+                });
+                say('drag');
         });
 
-          google.maps.event.addListener(marker, 'dragend', function(event) {
+        google.maps.event.addListener(marker, 'dragend', function(event) {
                 pathCoords.setAt(myArrayPosition-1, event.latLng);
                 marker.setIcon(image);
         });
+
+        // cursorDragging.png
+
+        google.maps.event.addListener(marker, 'mouseover', function(event) {
+                // set cursor
+                map.setOptions({draggableCursor: icon_hover});
+                marker.setOptions({
+                    cursor: "url(../img/cursor/cursorOver.fw.png), auto",
+                });
+                // draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
+        });
+
+         google.maps.event.addListener(marker, 'mousedown', function(event) {
+                // set cursor
+                say('down');
+                marker.setOptions({
+                    cursor: "url(../img/cursor/cursorDragging.png), auto",
+                });
+                // draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
+        });
+
+          // marker hover effect
+          var icon_hover = "../img/cursor/cursorOver.fw.png";
+
+          // var marker = new google.maps.Marker({
+          //     position: event.latLng,
+          //     map: map,
+          //     icon: icon_hover,
+          //     title: "some marker"
+          // });
+
+          // google.maps.event.addListener(marker, 'mouseover', function() {
+          //     // marker.setIcon(icon_hover);
+          //     say('hover');
+          // });
 
         markers.push(marker);
         var myArrayPosition = markers.length;
@@ -244,7 +288,43 @@ function overlayClickListener(overlay) {
     map2.setZoom(map.getZoom()-5);
     map2.setCenter(map.getCenter());
 
+    // HEATMAP ////////////////////////////////////////////////////////////////////////
 
+    // var heatmapPointarray, heatmap_1;
+    var taxiData = [
+          new google.maps.LatLng(18.570432886461624, -72.33747661113739),
+          new google.maps.LatLng(18.57013286481179, -72.33694553375244),
+          new google.maps.LatLng(18.569949800494996, -72.3365592956543),
+          new google.maps.LatLng(18.56975656572519, -72.33601748943329),
+          new google.maps.LatLng(18.56964977799533, -72.33570098876953),
+          new google.maps.LatLng(18.570056588037012, -72.33822226524353),
+          new google.maps.LatLng(18.569863353388207, -72.33768582344055),
+          new google.maps.LatLng(18.569700629303608, -72.33726739883423),
+          ];
+      var heatmapPointarray = new google.maps.MVCArray(taxiData);
+      heatmap_1 = new google.maps.visualization.HeatmapLayer({
+            data: heatmapPointarray,
+            // radius: 201,
+      });
+      // say(heatmap_1.getRadius());
+      var gradient = [
+              'rgba(0, 255, 255, 0)',
+              'rgba(0, 255, 255, 1)',
+              'rgba(0, 191, 255, 1)',
+              'rgba(0, 127, 255, 1)',
+              'rgba(0, 63, 255, 1)',
+              'rgba(0, 0, 255, 1)',
+              'rgba(0, 0, 223, 1)',
+              'rgba(0, 0, 191, 1)',
+              'rgba(0, 0, 159, 1)',
+              'rgba(0, 0, 127, 1)',
+              'rgba(63, 0, 91, 1)',
+              'rgba(127, 0, 63, 1)',
+              'rgba(191, 0, 31, 1)',
+              'rgba(255, 0, 0, 1)',
+      ];
+      heatmap_1.set('gradient', heatmap_1.get('gradient') ? null : gradient);
+      heatmap_1.setMap(map);
 
 
     // EVENT LISTENERS ///////////////////////////////////////////////////////////////
@@ -460,9 +540,6 @@ function overlayClickListener(overlay) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
 
 function smoothZoom (map, max, cnt) {
     if (cnt >= max) {
