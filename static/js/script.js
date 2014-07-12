@@ -168,7 +168,7 @@ $(function(){
 	tab_0.appendChild(tab_0_nf_2.create());
 	// tab_0_array.push(tab_0_nf_2);
 
-	var tab_0_nf_3 = new Info('r_3', 'info', 1671, 956 + y_fix, 'Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_0_nf_3 = new Info('r_3', 'info', 1671, 956 + y_fix, 'Battery Usage', '23', 0.3, '%', 'h.', '');
 	tab_0.appendChild(tab_0_nf_3.create());
 	// tab_0_array.push(tab_0_nf_3);
 
@@ -226,7 +226,7 @@ $(function(){
 
 	// TAB 2
 	// right side
-	var radio_5 = new Radio('r_5', 23, 832 + y_fix, 'Live', 'Pilot', 'Map', '', '');
+	var radio_5 = new Radio('r_5', 24, 853 + y_fix, 'Live', 'Pilot', 'Map', '', '');
 	tab_1.appendChild(radio_5.create());
 
 	var tab_1_btn_1 = new Button(
@@ -267,13 +267,13 @@ $(function(){
 	var tab_1_lb_2 = new Lable(24, 271 + y_fix, 'Sensor Data', 2000, 300);
 	tab_1.appendChild(tab_1_lb_2.create());
 
-	var tab_1_lb_3 = new Lable(24, 788 + y_fix, 'Map', 1000, 300);
+	var tab_1_lb_3 = new Lable(24, 819 + y_fix, 'Map', 1000, 300);
 	tab_1.appendChild(tab_1_lb_3.create()); 
 
 	var tab_1_lb_4 = new Lable(1682, 81 + y_fix, 'Add Marks', 1000, 300);
 	tab_1.appendChild(tab_1_lb_4.create()); 
 
-	var tab_1_lb_5 = new Lable(1682, 227 + y_fix, 'Edit Mark', 1000, 300);
+	var tab_1_lb_5 = new Lable(1682, 241 + y_fix, 'Edit Mark', 1000, 300);
 	tab_1.appendChild(tab_1_lb_5.create());
 
 	var tab_1_lb_6 = new Lable(1682, 521 + y_fix, 'Screenshot', 1000, 300);
@@ -290,14 +290,20 @@ $(function(){
 	var tab_1_nf_2 = new Info('tab_1_nf_2', 'info', 13, 147 + y_fix, 'Distance', '3', 0.001, 'm', 'km', '');
 	tab_1.appendChild(tab_1_nf_2.create());
 
-	var tab_1_nf_3 = new Info('tab_1_nf_3', 'info', 13, 179 + y_fix, 'Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_1_nf_3 = new Info('tab_1_nf_3', 'info', 13, 179 + y_fix, 'Battery Usage', '23', 0.3, '%', 'h.', '');
 	tab_1.appendChild(tab_1_nf_3.create());
 
 
 	// LIST
-	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 615 + y_fix, 'Screenshot', 0);
+	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 590 + y_fix, 'Screenshot', 0);
 	tab_1.appendChild(tab_1_list_1.create());
 	// tab_1_array.push(tab_1_list_1);
+
+
+	// EDIT
+	var tab_1_edit_1 = new Edit('tab_1_edit_1', 'edit', 1682, 277 + y_fix);
+	tab_1.appendChild(tab_1_edit_1.create());
+
 
 
 	// Screenshot button pressed
@@ -310,6 +316,9 @@ $(function(){
 		};
 		screenshotArray.push(screenshot);
 		$('#tab_1_list_1').trigger('custom', [0, screenshotArray.length]);
+		tab_1_edit_1.setValue('Screenshot ' +  screenshotArray.length, screenshotArray.length);
+		say(screenshotArray);
+
 	});
 	// add screenshot to list
 	 // $('#tab_1_list_1').trigger('custom', [0, 0]);
@@ -322,25 +331,24 @@ $(function(){
 
 
 
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	
 
 	// Radio
-	var tab_2_rd_1 = new Radio('tab_3_rd_1', 23, 832, '2D', '3D', 'Video', '', '');
+	var tab_2_rd_1 = new Radio('tab_3_rd_1', 24, 853, '2D', '3D', 'Video', '', '');
 	tab_2.appendChild(tab_2_rd_1.create());
 
 	// Buttons
@@ -350,7 +358,7 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 130, true, 'btn_def');
+		1681, 115, true, 'btn_def');
 	tab_2.appendChild(tab_2_btn_1.create());
 
 	var tab_2_btn_2 = new Button(
@@ -410,7 +418,7 @@ $(function(){
 
 
 	// // add Lable stuff
-	var tab_2_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
+	var tab_2_lb_1 = new Lable(24, 81, 'Flight Details', 2000, 300);
 	tab_2.appendChild(tab_2_lb_1.create());
 
 	var tab_2_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
@@ -419,19 +427,19 @@ $(function(){
 	var tab_2_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
 	tab_2.appendChild(tab_2_lb_3.create()); 
 
-	var tab_2_lb_4 = new Lable(24, 788, 'Map', 1000, 300);
+	var tab_2_lb_4 = new Lable(24, 819, 'Map', 1000, 300);
 	tab_2.appendChild(tab_2_lb_4.create());
 
-	var tab_2_lb_5 = new Lable(1682, 91, 'Add Marks', 1000, 300);
+	var tab_2_lb_5 = new Lable(1682, 81, 'Add Marks', 1000, 300);
 	tab_2.appendChild(tab_2_lb_5.create());
 
-	var tab_2_lb_6 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
+	var tab_2_lb_6 = new Lable(1682, 241, 'Edit Mark', 1000, 300);
 	tab_2.appendChild(tab_2_lb_6.create()); 
 
 	var tab_2_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
 	tab_2.appendChild(tab_2_lb_7.create());
 
-	var tab_2_lb_8 = new Lable(1682, 939, 'Export Data', 1000, 300);
+	var tab_2_lb_8 = new Lable(1682, 929, 'Export Data', 1000, 300);
 	tab_2.appendChild(tab_2_lb_8.create()); 
 
 
@@ -450,13 +458,13 @@ $(function(){
 
 
 	// // info lables
-	var tab_2_nf_1 = new Info('tab_1_nf_1', 'info', 13, 131, 'Final Duration', '1.6', 60, 'h', 'm.', '');
+	var tab_2_nf_1 = new Info('tab_1_nf_1', 'info', 13, 115, 'Final Duration', '1.6', 60, 'h', 'm.', '');
 	tab_2.appendChild(tab_2_nf_1.create());
 
-	var tab_2_nf_2 = new Info('tab_1_nf_2', 'info', 13, 164, 'Final Distance', '3', 0.621, 'km', 'mi.', '');
+	var tab_2_nf_2 = new Info('tab_1_nf_2', 'info', 13, 147, 'Final Distance', '3', 0.621, 'km', 'mi.', '');
 	tab_2.appendChild(tab_2_nf_2.create());
 
-	var tab_2_nf_3 = new Info('tab_1_nf_3', 'info', 13, 198, 'Final Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_2_nf_3 = new Info('tab_1_nf_3', 'info', 13, 179, 'Final Battery Usage', '78', 0.3, '%', 'h.', '');
 	tab_2.appendChild(tab_2_nf_3.create());
 
 
@@ -499,7 +507,7 @@ $(function(){
 
 	// $('#' + id).trigger( "custom", ["up", id]);
 
-	$('#tab_0_btn_3').click(function( event) {
+	$('#tab_0_btn_1').click(function( event) {
 		say('I was clicked!');
 		$('#nav_b2').trigger( "custom", ["up", 0]);
 		$('#nav_b2').trigger( "click");
@@ -511,9 +519,9 @@ $(function(){
 	// click Tab 0
 	$('#nav_b1').click(function( event) {
 		// grid wieder anzeigen
-		$('#grid_gray').css('display', 'block');
+		$('#grid_gray').show();
 		$('#grid_gray').animo( { animation: 'fadeIn', duration: 1 }, function() {
-			$('#grid_gray').css('display', 'block');
+			$('#grid_gray').shoe();
 		});
 		
 		$('#video_1').animo( { animation: 'fadeOut', duration: .4 }, function() {
@@ -521,24 +529,45 @@ $(function(){
 		});
 	});
 
-	var myInt;
+	var myInt = 0;
+	var myInt_2 = 0;
+	var myInt_3 = 0;
 	$('#nav_b2').click(function( event) {
 		// update values of the messure
-		var tab_2_interval = setInterval(function() {
-			if (myInt < 100) {
-				// myInt = myInt + 1;
-				// say(tab_1_nf_1.getValue());
+		say('CLIUCKEDDD');
+		var tab_2_interval_1 = setInterval(function() {
+			if (myInt < 1000) {
+				myInt = myInt + 1;
 				tab_1_nf_2.setValue(tab_1_nf_2.getValue() + 1 + Math.random());
 		    	} else {
-		    		clearInterval(tab_2_interval)
+		    		clearInterval(tab_2_interval_1)
 		    	}
 		 }, 800);
+
+		var tab_2_interval_2 = setInterval(function() {
+			if (myInt_2 < 1000) {
+				myInt_2 = myInt_2 + 1;
+				tab_1_nf_1.setValue(tab_1_nf_1.getValue() + 1 + Math.random());
+		    	} else {
+		    		clearInterval(tab_2_interval_2)
+		    	}
+		 }, 2000);
+
+		var tab_2_interval_3 = setInterval(function() {
+			if (myInt_3 < 1000) {
+				myInt_3 = myInt_3 + 1;
+				tab_1_nf_3.setValue(tab_1_nf_3.getValue() + .01 + Math.random());
+		    	} else {
+		    		clearInterval(tab_2_interval_3)
+		    	}
+		 }, 2000);
+
 		// start video
 		$('#video_1').animo( { animation: 'fadeIn', duration: .4 }, function() {
 			myVideo.style.display = "block";
 		});
 		myVideo.style.display = "block";
-		// myVideo.play();
+		myVideo.play();
 		myVideo.loop=true;
 		// hide grid of map
 		$('#grid_gray').animo( { animation: 'fadeOut', duration: .4 }, function() {
@@ -563,18 +592,23 @@ $(function(){
 		// init();
 	});
 
+	say('HELLOOOO');
 
-	// setTimeout(function () {
-	// 	var tab_2_interval = setInterval(function() {
-	// 		if (myInt < tab_0_array.length-1) {
-	// 			myInt = myInt + 1;
-	// 			tab_0.appendChild(tab_0_array[myInt].create());
-	// 	    	} else {
-	// 	    		clearInterval(myVar)
-	// 	    	}
-	// 	    	say('myInt: ' + myInt);
-	// 	 }, 500* myInt);
-	// }, 2000)
+	$(r_5_nav_b0).click(function( event) {
+		// hide video
+		$(myVideo).show();
+	});
+
+	$(r_5_nav_b1).click(function( event) {
+		// hide video
+		$(myVideo).show();
+	});
+
+	$(r_5_nav_b2).click(function( event) {
+		// hide video
+		$(myVideo).hide();
+		$('#grid_white').css('display', 'block');
+	});
 
 	
 	

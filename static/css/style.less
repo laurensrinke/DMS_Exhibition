@@ -265,20 +265,52 @@ text {
 }
 
 
+#mapRadio {
+	position: absolute;
+	top: 335px;
+	left: 24px;
+	height: 118px;
+	width: 211px;
+	border: 1px solid rgba(200, 200, 200, 1);
+	background: #000;
+	z-index: 100;
+}
 
-// .tab {
-// 	position: absolute;
-// 	top: 0px;
-// 	left: 0px;
-// 	width: 1920px;
-// 	height: 1080px;
-// }
+#mapRadio .gmnoprint{
+	display: none;
+}
 
-// .tab section {
-// 	// background: rgba(0, 100, 0, 0.5);
-// 	height: 30px;
-// }
+#mapRadio a{
+	display: none;
+}
 
+#mapRadio a img{
+	display: none;
+}
+
+#mapChemic {
+	position: absolute;
+	top: 487px;
+	left: 24px;
+	height: 118px;
+	width: 211px;
+	border: 1px solid rgba(200, 200, 200, 1);
+	background: #333;
+	z-index: 100;
+}
+
+
+#mapChemic .gmnoprint{
+	display: none;
+}
+
+#mapChemic a{
+	display: none;
+}
+
+#mapChemic a img{
+	display: none;
+}
 
 .gmnoprint {
 	// display: none;
@@ -571,8 +603,9 @@ video {
 	width: 0px;
 }
 
+// SEARCH
 .search {
-	width: 216px;
+	width: 201px;
 	height: 32px;
 	background: url('../img/search/search.fw.png');
 	background-repeat: no-repeat;
@@ -580,6 +613,27 @@ video {
 }
 
 input.search { 
+	color: #FFF;
+	border: none;
+	box-shadow: none;
+	outline: 0;
+	padding: 0 0 0 12px;
+	font-size: 12px;
+	font-family: "Roboto-Bold";
+	margin: 0px;
+	letter-spacing: 1px;
+}
+
+// EDIT
+.edit {
+	width: 201px;
+	height: 32px;
+	background: url('../img/search/search.fw.png');
+	background-repeat: no-repeat;
+	background-position: 0 4px;
+}
+
+input.edit { 
 	color: #FFF;
 	border: none;
 	box-shadow: none;

@@ -27,11 +27,18 @@ Akutelle Datein:
   ✔ Change color of cursor @done (14-07-12 08:29)
   ✔ Hide Draw Controles @done (14-07-12 08:29)
   ✔ Swap color of Lat & Lng @done (14-07-12 08:34)
-  ☐ Update all new positions
+  ✔ Update all new positions @done (14-07-12 11:33)
   ✔ Fix timeline position @done (14-07-12 07:40)
-  ☐ Fix timeline position tab_2
-  ☐ Update Font Size
+  ✔ Fix timeline position tab_2 @done (14-07-12 11:33)
+  ✔ Update Font Size @done (14-07-12 11:33)
   ✔ erst Satelit, dann Standart @done (14-07-12 07:40)
+  ✔ sync all maps together @done (14-07-12 12:25)
+  ✔ Werte animieren @done (14-07-12 14:14)
+  ✔ create input field @done (14-07-12 14:14)
+  ☐ click auf maps, swap tp map!
+  ☐ Click on Video to create Screenshot!
+  ☐ Video-FilmPosition nehmen und damit die Radio&Chem animieren
+  ☐ 
  
 
   UI-Elemente:
@@ -66,11 +73,14 @@ Akutelle Datein:
     ☐ wirte Waypoint-List-class
     ☐ Move Calc Grid to left Tab Side to restor balance
     ☐ Update all color values.
-    ☐ Lable Map springt bei tab_0 zu tab_1
+    ✔ Lable Map springt bei tab_0 zu tab_1 @done (14-07-12 13:01)
 
 
 Fancy:
+  ☐ Input mit pre-text versehen
   ☐ Design custom cusor
+  ☐ So lange kein Weg besteht kann man nicht hochladen
+  ☐ Button auf inaktiv schalten
   ☐ Three JS Leap Motion
   ☐ Animate marker - simply add a give animation
   ☐ Three JS Import 3D Model

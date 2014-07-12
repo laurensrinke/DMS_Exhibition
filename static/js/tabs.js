@@ -184,6 +184,9 @@ Tabs = function(img_def, img_act, img_hover)
 				$('#tab_v_0' ).css('display', 'inline');
 				$('#tab_v_1').css('display', 'none');
 				$('#tab_v_2').css('display', 'none');
+
+				$('#mapRadio').hide();
+				$('#mapChemic').hide();
 			        break;
 			    case 1:
 			    	$('#tab_0').css('display', 'none');
@@ -192,6 +195,8 @@ Tabs = function(img_def, img_act, img_hover)
 				$('#tab_v_0').css('display', 'none');
 				$('#tab_v_1').css('display', 'inline');
 				$('#tab_v_2').css('display', 'none');
+				$('#mapRadio').show();
+				$('#mapChemic').show();
 			        break;
 			    case 2:
 			      	$('#tab_0').css('display', 'none');
@@ -200,6 +205,8 @@ Tabs = function(img_def, img_act, img_hover)
 				$('#tab_v_0').css('display', 'none');
 				$('#tab_v_1').css('display', 'none');
 				$('#tab_v_2').css('display', 'inline');
+				$('#mapRadio').show();
+				$('#mapChemic').show();
 			        break;
 			    default:{
 			        alert('!');
