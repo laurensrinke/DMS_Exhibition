@@ -40,7 +40,7 @@ Tabs = function(img_def, img_act, img_hover)
 	// Buttons
 	var nav_button_1, nav_button_2, nav_button_3; 
 	var i_container = 0;
-	var y_fix = 31;
+	var y_fix = 15;
 	// var nav_text_1, nav_text_2, nav_text_3; 
 	
 

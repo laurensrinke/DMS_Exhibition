@@ -35,11 +35,24 @@ Search = function(id, myClass, x, y)
 	// functions //////////////////////////////////////////////////////////////////
 	function create()
 	{
-		i_container = document.createElement('section');
+		i_container = document.createElement('input');
 		i_container.className += myClass;
+		i_container.id = id;
 		i_container.style.position = 'absolute';
 		i_container.style.left = x + 'px';
 		i_container.style.top = y + 'px';
+
+		// ON ENTER 
+		$(i_container).keyup(function (e) {
+		    if (e.keyCode == 13) {
+		        $('body').trigger( "custom", ["location", 0]);
+		    }
+		});
+
+		
+
+
+
 
 		// create button
 		// count radio elements

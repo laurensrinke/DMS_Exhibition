@@ -104,7 +104,7 @@ $(function(){
 	// tab_0_array.push(tab_0_lb_2);
 
 	// add Lable stuff
-	var tab_0_lb_4 = new Lable(24, 755 + y_fix, 'Map', 1000, 300);
+	var tab_0_lb_4 = new Lable(24, 789 + y_fix, 'Map', 1000, 300);
 	tab_0.appendChild(tab_0_lb_4.create()); 
 	// tab_0_array.push(tab_0_lb_4);
 
@@ -146,7 +146,8 @@ $(function(){
 	tab_0.appendChild(tab_0_rd_2.create());
 	// tab_0_array.push(tab_0_rd_2);
 
-	var tab_0_rd_3 = new Radio('r_3', 24, 803 + y_fix, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	// var tab_0_rd_3 = new Radio('r_3', 24, 803 + y_fix, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	var tab_0_rd_3 = new Radio('r_3', 24, 825 + y_fix, 'Satelitte', 'Hybrid', 'Terrain', 'Roadmap', '');
 	tab_0.appendChild(tab_0_rd_3.create());
 	// tab_0_array.push(tab_0_rd_3);
 
@@ -188,7 +189,7 @@ $(function(){
 
 
 	// SEARCH
-	var tab_0_search = new Search('tab_0_search', 'search', 24, 113 + y_fix, 'Waypoint', 1);
+	var tab_0_search = new Search('tab_0_search', 'search', 24, 109 + y_fix);
 	tab_0.appendChild(tab_0_search.create());
 
 	// create all elements on screen
@@ -253,6 +254,9 @@ $(function(){
 	// add Lable stuff
 	var tab_1_lb_1 = new Lable(24, 81 + y_fix, 'Flight Details', 2000, 300);
 	tab_1.appendChild(tab_1_lb_1.create());
+
+	var tab_1_lb_8 = new Lable(285, 81 + y_fix, 'Time Line', 2000, 300);
+	tab_1.appendChild(tab_1_lb_8.create());
 
 	var tab_1_lb_2 = new Lable(24, 271 + y_fix, 'Sensor Data', 2000, 300);
 	tab_1.appendChild(tab_1_lb_2.create());
@@ -566,10 +570,10 @@ $(function(){
 	// 	 }, 500* myInt);
 	// }, 2000)
 
-	// na gut Laurens - da passt es! ;)
-
-
-
+	
+	
+	//SET FOCUS
+	document.getElementById('tab_0_search').focus();
 
 	// DETECT OS
 	var OSName="Unknown OS";

@@ -71,7 +71,9 @@
 function initialize() {
   var mapOptions = {
     center: new google.maps.LatLng( 18.539414200742875, -72.33416863568742),
-    zoom: 14,
+    // center: new google.maps.LatLng( 16.404206195302862, -41.03952714093645),
+    // zoom: 14,
+    zoom: 3,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     styles: [{"stylers":[{"visibility":"on"},{"saturation":-100},{"gamma":0.54}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#000000"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"simplified"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"gamma":0.48}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"gamma":7.18}]}],
     disableDefaultUI: true,
@@ -85,7 +87,8 @@ function initialize() {
     // styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
   };
   var markers = [];
-  var mapType =  ['ROADMAP', 'TERRAIN', 'HYBRID', 'SATELLITE',];
+  // var mapType =  ['ROADMAP', 'TERRAIN', 'HYBRID', 'SATELLITE',];
+  var mapType =  ['SATELLITE', 'HYBRID', 'TERRAIN', 'ROADMAP'];
   var map = new google.maps.Map(document.getElementById('map-canvas'),
     mapOptions);
   map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
@@ -123,7 +126,7 @@ function initialize() {
             	clickable: true,
         },
   });
-  drawingManager.setMap(map);
+  // drawingManager.setMap(map);
   // Swap map vis
 
   google.maps.event.addListener(map, 'click', function(event) {
@@ -309,7 +312,7 @@ function overlayClickListener(overlay) {
               'rgba(255, 0, 0, 1)',
       ];
       heatmap_1.set('gradient', heatmap_1.get('gradient') ? null : gradient);
-      heatmap_1.setMap(map);
+      // heatmap_1.setMap(map);
 
 
     // EVENT LISTENERS ///////////////////////////////////////////////////////////////
@@ -327,7 +330,7 @@ function overlayClickListener(overlay) {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
-                        updateGridStatus('gray');
+                        updateGridStatus('white');
 		        break;
 		    default:{
 		    }
@@ -345,7 +348,7 @@ function overlayClickListener(overlay) {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
-                        updateGridStatus('gray');
+                        updateGridStatus('white');
 		        break;
 		    default:{
 		    }
@@ -364,7 +367,7 @@ function overlayClickListener(overlay) {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
-                        updateGridStatus('white');
+                        updateGridStatus('gray');
 		    default:{
 		    }
 		}
@@ -381,7 +384,7 @@ function overlayClickListener(overlay) {
 		    case 'up':
 		      	map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
 		      	map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
-                        updateGridStatus('white');
+                        updateGridStatus('gray');
 		        break;
 		    default:{
 		    }
@@ -402,7 +405,7 @@ function overlayClickListener(overlay) {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[0]]);
-                              updateGridStatus('gray');
+                              updateGridStatus('white');
 			        break;
 			    default:{
 			    }
@@ -422,7 +425,7 @@ function overlayClickListener(overlay) {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[1]]);
-                              updateGridStatus('gray');
+                              updateGridStatus('white');
 			        break;
 			    default:{
 			    }
@@ -443,7 +446,7 @@ function overlayClickListener(overlay) {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[2]]);
-                              updateGridStatus('white');
+                              updateGridStatus('gray');
 			        break;
 			    default:{
 			    }
@@ -463,13 +466,43 @@ function overlayClickListener(overlay) {
 			    case 'up':
 			      	map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
 			      	map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
-                              updateGridStatus('white');
+                              updateGridStatus('gray');
 			        break;
 			    default:{
 			    }
 			}
 		};
 	});
+
+
+  // smoothZoom
+
+  $('body').on("custom", function(event, param1, param2){
+    if (param1 == 'location') {
+      say('Smooth Zoom now!');
+      //  center: new google.maps.LatLng( 16.404206195302862, -41.03952714093645),
+      // zoom: 14,
+      map.setCenter(new google.maps.LatLng(18.563703363952172, -72.35412427075822));
+      smoothZoom(map, 14, map.getZoom());
+
+
+      // switch(param1) {
+      //     case 'over':
+      //         break;
+      //     case 'out':
+      //         break;
+      //     case 'down':
+      //         break;
+      //     case 'up':
+      //         map.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
+      //         map2.setMapTypeId(google.maps.MapTypeId[mapType[3]]);
+      //                         updateGridStatus('white');
+      //         break;
+      //     default:{
+      //     }
+      // }
+    };
+  });
 
 
   $('body').on("custom", function(event, param1, param2){
@@ -493,16 +526,14 @@ function overlayClickListener(overlay) {
 
 
 	// SYNC MAPS 
-
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 	  	map2.setZoom(map.getZoom()-5);
-    	// say(map.getZoom());
+    	     say(map.getZoom());
 	});
 
 	google.maps.event.addListener(map, 'center_changed', function() {
 	  	map2.setCenter(map.getCenter());
-    	// say(map.getCenter());
-    	// say('Got it!')
+    	     say(map.getCenter());
 	});
 
 
@@ -535,7 +566,7 @@ function smoothZoom (map, max, cnt) {
             google.maps.event.removeListener(z);
             smoothZoom(map, max, cnt + 1);
         });
-        setTimeout(function(){map.setZoom(cnt)}, 80); // 80ms is what I found to work well on my system -- it might not work well on all systems
+        setTimeout(function(){map.setZoom(cnt)}, 120); // 80ms is what I found to work well on my system -- it might not work well on all systems
     }
 }
 
@@ -584,7 +615,9 @@ function showArrays(event) {
   infoWindow.setPosition(event.latLng);
 
   infoWindow.open(map);
-}
+
+
+}  // END OF MAP
 
 
 
@@ -601,3 +634,5 @@ function showArrays(event) {
 //     document.getElementById('latlong').innerHTML = event.latLng.lat() + ', ' + event.latLng.lng()
 //   }); 
 // }
+
+

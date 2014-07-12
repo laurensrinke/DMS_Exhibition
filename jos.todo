@@ -18,11 +18,18 @@ Akutelle Datein:
   ✔ map courser @done (14-07-12 00:58)
   ✔ map cursor add contrast @done (14-07-12 01:55)
   ✔ Add search @done (14-07-12 04:11)
-  ☐ Update Nav Position
+  ✔ Update Nav Position @done (14-07-12 07:30)
+  ✔ Set Focus to InputBox @done (14-07-12 07:37)
+  ☐ Gird Position fix
+  ☐ fix position of Lat & Lnt
+  ☐ Hide Leap Vis
+  ☐ Change color of cursor
+  ☐ Hide Draw Controles
   ☐ Update all new positions
-  ☐ Fix timeline position
+  ✔ Fix timeline position @done (14-07-12 07:40)
+  ☐ Fix timeline position tab_2
   ☐ Update Font Size
-  ☐ erst Satelit, dann Standart
+  ✔ erst Satelit, dann Standart @done (14-07-12 07:40)
  
 
   UI-Elemente:
