@@ -68,6 +68,11 @@
 
 // ________________________________________________________________________enable_this___________
 
+var latValue =  document.getElementById('lat');
+var lngValue =  document.getElementById('lng');
+
+var gridPath = [];
+
 function initialize() {
   var mapOptions = {
     center: new google.maps.LatLng( 18.539414200742875, -72.33416863568742),
@@ -181,6 +186,17 @@ function initialize() {
             clickable: true,
             cursor: "url(../img/cursor/cursorOver.fw.png), auto",
         });
+
+        say('location')
+        say(location.lat())
+        say(location.lng())
+        gridPath.push( new google.maps.LatLng(location.lat(), location.lng()));
+        say(gridPath);
+
+        // push marker location into array
+        // gridPath.push(new google.maps.LatLng(location.lat(), location.lng()));
+
+        
 
          google.maps.event.addListener(marker, 'mousedown', function(event) {
                 marker.setIcon(image2);
@@ -474,6 +490,136 @@ function overlayClickListener(overlay) {
 		};
 	});
 
+  // fill with structure
+
+   PolyLineFill.prototype = new google.maps.OverlayView();
+
+    function PolyLineFill(poly, map, fill, stroke) {
+     var bounds = new google.maps.LatLngBounds();
+     for (var i = 0; i < poly.length; i++) {
+         bounds.extend(poly[i]);
+     }
+
+     //initialize all properties.
+     this.bounds_ = bounds;
+     this.map_ = map;
+     this.div_ = null;
+     this.poly_ = poly;
+     this.polysvg_ = null;
+     this.fill_ = fill;
+     this.stroke_ = stroke;
+
+     // Explicitly call setMap on this overlay
+     this.setMap(map);
+ }
+
+ PolyLineFill.prototype.onAdd = function () {
+     // Create the DIV and set some basic attributes.
+     var div = document.createElement('div');
+     div.style.borderStyle = 'none';
+     div.style.borderWidth = '0px';
+     div.style.position = 'absolute';
+
+     //createthe svg element
+     var svgns = "http://www.w3.org/2000/svg";
+     var svg = document.createElementNS(svgns, "svg");
+     svg.setAttributeNS(null, "preserveAspectRatio", "xMidYMid meet");
+
+     var def = document.createElementNS(svgns, "defs");
+
+     //create the pattern fill 
+     var pattern = document.createElementNS(svgns, "pattern");
+     pattern.setAttributeNS(null, "id", "lineFill");
+     pattern.setAttributeNS(null, "patternUnits", "userSpaceOnUse");
+     pattern.setAttributeNS(null, "patternTransform", "rotate(-45)");
+     pattern.setAttributeNS(null, "height", "7");
+     pattern.setAttributeNS(null, "width", "7");
+     def.appendChild(pattern);
+
+     var rect = document.createElementNS(svgns, "rect");
+     rect.setAttributeNS(null, "id", "rectFill");
+     rect.setAttributeNS(null, "fill", this.fill_ || "red");
+     rect.setAttributeNS(null, "fill-opacity", "0.3");
+     rect.setAttributeNS(null, "stroke", this.stroke_ || "#000");
+     rect.setAttributeNS(null, "stroke-dasharray", "7,7");
+     rect.setAttributeNS(null, "height", "7");
+     rect.setAttributeNS(null, "width", "7");
+     pattern.appendChild(rect);
+
+     svg.appendChild(def);
+
+     //add polygon to the div
+     var p = document.createElementNS(svgns, "polygon");
+     p.setAttributeNS(null, "fill", "url(#lineFill)");
+     p.setAttributeNS(null, "stroke", "#000");
+     p.setAttributeNS(null, "stroke-width", "1");
+     //set a reference to this element;
+     this.polysvg_ = p;
+     svg.appendChild(p);
+
+     div.appendChild(svg);
+
+     // Set the overlay's div_ property to this DIV
+     this.div_ = div;
+
+     // We add an overlay to a map via one of the map's panes.
+     // We'll add this overlay to the overlayLayer pane.
+     var panes = this.getPanes();
+     panes.overlayLayer.appendChild(div);
+ }
+
+ PolyLineFill.prototype.AdjustPoints = function () {
+     //adjust the polygon points based on the projection.
+     var proj = this.getProjection();
+     var sw = proj.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+     var ne = proj.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+
+     var points = "";
+     for (var i = 0; i < this.poly_.length; i++) {
+         var point = proj.fromLatLngToDivPixel(this.poly_[i]);
+         if (i == 0) {
+             points += (point.x - sw.x) + ", " + (point.y - ne.y);
+         } else {
+             points += " " + (point.x - sw.x) + ", " + (point.y - ne.y);
+         }
+     }
+     return points;
+ }
+
+ PolyLineFill.prototype.draw = function () {
+     // Size and position the overlay. We use a southwest and northeast
+     // position of the overlay to peg it to the correct position and size.
+     // We need to retrieve the projection from this overlay to do this.
+     var overlayProjection = this.getProjection();
+
+     // Retrieve the southwest and northeast coordinates of this overlay
+     // in latlngs and convert them to pixels coordinates.
+     // We'll use these coordinates to resize the DIV.
+     var sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+     var ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+
+     // Resize the image's DIV to fit the indicated dimensions.
+     var div = this.div_;
+     div.style.left = sw.x + 'px';
+     div.style.top = ne.y + 'px';
+     div.style.width = (ne.x - sw.x) + 'px';
+     div.style.height = (sw.y - ne.y) + 'px';
+
+     this.polysvg_.setAttributeNS(null, "points", this.AdjustPoints());
+ }
+
+ PolyLineFill.prototype.onRemove = function () {
+     this.div_.parentNode.removeChild(this.div_);
+     this.div_ = null;
+ }
+
+  window.BW = {};
+  window.BW.PolyLineFill = PolyLineFill;
+
+
+
+
+
 
   // smoothZoom
 
@@ -482,8 +628,26 @@ function overlayClickListener(overlay) {
       say('Smooth Zoom now!');
       //  center: new google.maps.LatLng( 16.404206195302862, -41.03952714093645),
       // zoom: 14,
-      map.setCenter(new google.maps.LatLng(18.563703363952172, -72.35412427075822));
-      smoothZoom(map, 14, map.getZoom());
+      // enable later again
+      // map.panTo(new google.maps.LatLng(18.563703363952172, -72.35412427075822));
+      // smoothZoom(map, 14, map.getZoom());
+
+      say(pathCoords);
+
+
+
+      // var overlay = new BW.PolyLineFill(taxiData, map, "red", "#000")
+     //  var path = [
+     // new google.maps.LatLng(41.983994270935625, -111.02783203125),
+     // new google.maps.LatLng(42.00032514831621, -114.01611328125),
+     // new google.maps.LatLng(36.96744946416931, -114.01611328125),
+     // new google.maps.LatLng(37.00255267215955, -109.0283203125),
+     // new google.maps.LatLng(40.97989806962013, -109.0283203125),
+     // new google.maps.LatLng(41.0130657870063, -111.02783203125)];
+
+     //custom overlay created
+     //BW.PolyLineFill(path, map, fillColor?, strokeColor?); 
+     var overlay = new BW.PolyLineFill(pathCoords, map, "red", "#000");
 
 
       // switch(param1) {
@@ -524,35 +688,35 @@ function overlayClickListener(overlay) {
 		}
 	});
 
+    // CALC RATIO
+    // var GLOBE_WIDTH = 1920; // a constant in Google's map projection
+    // var west = sw.lng();
+    // var east = ne.lng();
+    // var angle = east - west;
+    // if (angle < 0) {
+    //   angle += 360;
+    // }
+    // var zoom = Math.round(Math.log(pixelWidth * 360 / angle / GLOBE_WIDTH) / Math.LN2);
+
 
 	// SYNC MAPS 
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 	  	map2.setZoom(map.getZoom()-5);
     	     say(map.getZoom());
+          
 	});
+  
 
-	google.maps.event.addListener(map, 'center_changed', function() {
-	  	map2.setCenter(map.getCenter());
-    	     say(map.getCenter());
+	google.maps.event.addListener(map, 'center_changed', function(event) {
+       map2.setCenter(map.getCenter());
+       say(map.getCenter().lat());
+       latValue.innerHTML  = '<span>Lat:</span>' +  map.getCenter().lat().toFixed(6);
+       lngValue.innerHTML = '<span>Lng:</span>' + map.getCenter().lng().toFixed(6);
+        // $('#lng').html('<span>Lng:</span>' + event.latLng.lng().toFixed(6));
 	});
-
-
-
-  google.maps.event.addListener(map,'click',function(event) {
-    $('#lat').html('<span>Lat:</span>' + event.latLng.lat().toFixed(8));
-    $('#lng').html('<span>Lat:</span>' + event.latLng.lng().toFixed(8));
-  });
 
     // detect if sth added or so
     // DRAWINGS EVENT LISTENERS
-     google.maps.event.addListener(drawingManager, 'overlaycomplete ', function(event) {
-      alert('!');
-    });
-
-
-   google.maps.event.addListener(map,'*',function(event) {
-    
-  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -580,6 +744,8 @@ function updateGridStatus (argument) {
     // $('#grid_white').animo({animation: "fadeOut", duration: 0.2});
     $('#grid_gray').css('display', 'block');
     $('#grid_white').css('display', 'none');
+    latValue.style.color = '#333';
+    lngValue.style.color = '#333';
   } else if(argument == 'white'){
     // animo
     // $('#grid_gray').animo({animation: "fadeOut", duration: 0.2});
@@ -587,38 +753,12 @@ function updateGridStatus (argument) {
 
     $('#grid_gray').css('display', 'none');
     $('#grid_white').css('display', 'block');
+    latValue.style.color = '#FFF';
+    lngValue.style.color = '#FFF';
   } else {
     
   };
 };
-
-
-function showArrays(event) {
-
-  // Since this polygon has only one path, we can call getPath()
-  // to return the MVCArray of LatLngs.
-  var vertices = this.getPath();
-
-  var contentString = '<b>Bermuda Triangle polygon</b><br>' +
-      'Clicked location: <br>' + event.latLng.lat() + ',' + event.latLng.lng() +
-      '<br>';
-
-  // Iterate over the vertices.
-  for (var i =0; i < vertices.getLength(); i++) {
-    var xy = vertices.getAt(i);
-    contentString += '<br>' + 'Coordinate ' + i + ':<br>' + xy.lat() + ',' +
-        xy.lng();
-  }
-
-  // Replace the info window's content and position.
-  infoWindow.setContent(contentString);
-  infoWindow.setPosition(event.latLng);
-
-  infoWindow.open(map);
-
-
-}  // END OF MAP
-
 
 
 

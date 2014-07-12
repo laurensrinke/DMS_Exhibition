@@ -20,11 +20,13 @@ Akutelle Datein:
   ✔ Add search @done (14-07-12 04:11)
   ✔ Update Nav Position @done (14-07-12 07:30)
   ✔ Set Focus to InputBox @done (14-07-12 07:37)
-  ☐ Gird Position fix
-  ☐ fix position of Lat & Lnt
-  ☐ Hide Leap Vis
-  ☐ Change color of cursor
-  ☐ Hide Draw Controles
+  ✔ Gird Position fix (White) @done (14-07-12 08:02)
+  ✔ Gird Position fix @done (14-07-12 08:16)
+  ✔ fix position of Lat & Lnt @done (14-07-12 08:29)
+  ✔ Hide Leap Vis @done (14-07-12 08:29)
+  ✔ Change color of cursor @done (14-07-12 08:29)
+  ✔ Hide Draw Controles @done (14-07-12 08:29)
+  ✔ Swap color of Lat & Lng @done (14-07-12 08:34)
   ☐ Update all new positions
   ✔ Fix timeline position @done (14-07-12 07:40)
   ☐ Fix timeline position tab_2
@@ -68,6 +70,7 @@ Akutelle Datein:
 
 
 Fancy:
+  ☐ Design custom cusor
   ☐ Three JS Leap Motion
   ☐ Animate marker - simply add a give animation
   ☐ Three JS Import 3D Model
@@ -78,6 +81,7 @@ Fancy:
   ☐ Animation Unit-Swapping, type effect with amigo
   ☐ Show Grid on the map and point it to it
   ☐ Nice text transistion for time, poping up or sth.
+  ☐ Clac Ratio and display it.
 
 
 

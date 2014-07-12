@@ -76,18 +76,18 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1682, 769 + y_fix, true, 'btn_def');
+		1682, 761 + y_fix, true, 'btn_def');
 	tab_0.appendChild(tab_0_btn_2.create());
 
 
-	var tab_0_btn_3 = new Button(
-		'tab_0_btn_3', 
-		'Upload to Drone', 
-		'img/button/button_def.fw.png', 
-		'img/button/button_over.fw.png', 
-		'img/button/button_down.fw.png', 
-		1682, 1019 + y_fix, true, 'btn_def');
-	tab_0.appendChild(tab_0_btn_3.create());
+	// var tab_0_btn_3 = new Button(
+	// 	'tab_0_btn_3', 
+	// 	'Upload to Drone', 
+	// 	'img/button/button_def.fw.png', 
+	// 	'img/button/button_over.fw.png', 
+	// 	'img/button/button_down.fw.png', 
+	// 	1682, 797 + y_fix, true, 'btn_def');
+	// tab_0.appendChild(tab_0_btn_3.create());
 
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
@@ -119,7 +119,7 @@ $(function(){
 	// tab_0_array.push(tab_0_lb_6);
 
 	// add Lable stuff
-	var tab_0_lb_7 = new Lable(1682, 733 + y_fix, 'Grid Resolution', 1000, 300);
+	var tab_0_lb_7 = new Lable(1682, 697 + y_fix, 'Grid Resolution', 1000, 300);
 	tab_0.appendChild(tab_0_lb_7.create());
 	// tab_0_array.push(tab_0_lb_7);
 
@@ -174,11 +174,11 @@ $(function(){
 
 
 	// Input ///////////////////////////////////////////////////////////////////////////////
-	var tab_0_npt_1 = new Input('tab_0_npt_1', 'info', 1671, 181 + y_fix, 'Rel. Altitude', '6', 0.621, 'm', 'km.', '', '-', 200);
+	var tab_0_npt_1 = new Input('tab_0_npt_1', 'info', 1671, 181 + y_fix, 'Rel. Altitude', '6', 0.621, 'm', 'km.', '', '400', 200);
 	tab_0.appendChild(tab_0_npt_1.create());
 	// tab_0_array.push(tab_0_npt_1);
 
-	var tab_0_npt_2 = new Input('tab_0_npt_2', 'info', 1671, 217 + y_fix, 'Rel. Speed', '3', 0.621, 'km/h', 'mph', '', '-', 40);
+	var tab_0_npt_2 = new Input('tab_0_npt_2', 'info', 1671, 217 + y_fix, 'Rel. Speed', '3', 0.621, 'km/h', 'mph', '', '40', 40);
 	tab_0.appendChild(tab_0_npt_2.create());
 	// tab_0_array.push(tab_0_npt_2);
 
@@ -191,6 +191,12 @@ $(function(){
 	// SEARCH
 	var tab_0_search = new Search('tab_0_search', 'search', 24, 109 + y_fix);
 	tab_0.appendChild(tab_0_search.create());
+
+	// Slider
+	var tab_0_slider_1 = new Slider('tab_0_slider_1', 'slider', 1682, 731 + y_fix);
+	tab_0.appendChild(tab_0_slider_1.create());
+	// tab_1_array.push(tab_1_slider_1);
+
 
 	// create all elements on screen
 	// var myInt = 0;
@@ -293,10 +299,10 @@ $(function(){
 	tab_1.appendChild(tab_1_list_1.create());
 	// tab_1_array.push(tab_1_list_1);
 
-	var screenshotArray = [];
-
 
 	// Screenshot button pressed
+	var screenshotArray = [];
+
 	$('#tab_1_btn_1').click(function( event) {
 		var screenshot = {
 		    nr: screenshotArray.length,
@@ -532,7 +538,7 @@ $(function(){
 			myVideo.style.display = "block";
 		});
 		myVideo.style.display = "block";
-		myVideo.play();
+		// myVideo.play();
 		myVideo.loop=true;
 		// hide grid of map
 		$('#grid_gray').animo( { animation: 'fadeOut', duration: .4 }, function() {
