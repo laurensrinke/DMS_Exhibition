@@ -40,6 +40,7 @@ Tabs = function(img_def, img_act, img_hover)
 	// Buttons
 	var nav_button_1, nav_button_2, nav_button_3; 
 	var i_container = 0;
+	var y_fix = 31;
 	// var nav_text_1, nav_text_2, nav_text_3; 
 	
 
@@ -56,7 +57,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		260, 17, false, 'nav_btn');
+		260, y_fix, false, 'nav_btn');
 
 		buttons[1][2] = new Button(
 			'nav_b2', 
@@ -64,7 +65,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		725, 17, false, 'nav_btn');
+		725, y_fix, false, 'nav_btn');
 
 		buttons[2][2] = new Button(
 			'nav_b3', 
@@ -72,7 +73,7 @@ Tabs = function(img_def, img_act, img_hover)
 			'img/tabs/tabs_def.fw.png', 
 			'img/tabs/tabs_hover.fw.png', 
 			'img/tabs/tabs_act.fw.png', 
-		1189, 17, false, 'nav_btn');
+		1189, y_fix, false, 'nav_btn');
 
 		// create buttons
 		for (var i = 0; i < buttons.length; i++) {

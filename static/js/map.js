@@ -79,7 +79,7 @@ function initialize() {
     disableDoubleClickZoom: true,
     // draggableCursor : url('../img/cursor/points.fw.png, auto');
     draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
-    draggingCursor: "url(../img/cursor/draggingCursor.fw.png), auto",
+    draggingCursor:    "url(../img/cursor/draggingCursor.fw.png), auto",
     // cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default;
 
     // styles: [{"stylers":[{"saturation":-100},{"gamma":1}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"saturation":50},{"gamma":0},{"hue":"#50a5d1"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#333333"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"weight":0.5},{"color":"#333333"}]},{"featureType":"transit.station","elementType":"labels.icon","stylers":[{"gamma":1},{"saturation":50}]}]
@@ -167,8 +167,6 @@ function initialize() {
       // area.getPath().insertAt(pathCoords.length, argument);
   };
 
-
-
  function addMarker(location) {
         var marker = new google.maps.Marker({
             position: location,
@@ -178,9 +176,8 @@ function initialize() {
             anchorPoint: 10,
             draggable: true,
             clickable: true,
-            cursor: 'crosshair',
+            cursor: "url(../img/cursor/cursorOver.fw.png), auto",
         });
-
 
          google.maps.event.addListener(marker, 'mousedown', function(event) {
                 marker.setIcon(image2);
@@ -196,10 +193,7 @@ function initialize() {
 
         google.maps.event.addListener(marker, 'drag', function(event) {
                 pathCoords.setAt(myArrayPosition-1, event.latLng);
-                marker.setOptions({
-                    cursor: "url(../img/cursor/cursorDragging.png), auto",
-                });
-                say('drag');
+                marker.setIcon(image2);
         });
 
         google.maps.event.addListener(marker, 'dragend', function(event) {
@@ -209,26 +203,17 @@ function initialize() {
 
         // cursorDragging.png
 
-        google.maps.event.addListener(marker, 'mouseover', function(event) {
-                // set cursor
-                map.setOptions({draggableCursor: icon_hover});
-                marker.setOptions({
-                    cursor: "url(../img/cursor/cursorOver.fw.png), auto",
-                });
-                // draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
-        });
-
-         google.maps.event.addListener(marker, 'mousedown', function(event) {
-                // set cursor
-                say('down');
-                marker.setOptions({
-                    cursor: "url(../img/cursor/cursorDragging.png), auto",
-                });
-                // draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
-        });
+        // google.maps.event.addListener(marker, 'mouseover', function(event) {
+        //         // set cursor
+        //         map.setOptions({draggableCursor: icon_hover});
+        //         marker.setOptions({
+        //             cursor: "url(../img/cursor/cursorOver.fw.png), auto",
+        //         });
+        //         // draggableCursor : "url(../img/cursor/draggableCursor.fw.png), auto",
+        // });
 
           // marker hover effect
-          var icon_hover = "../img/cursor/cursorOver.fw.png";
+          // var icon_hover = "../img/cursor/cursorOver.fw.png";
 
           // var marker = new google.maps.Marker({
           //     position: event.latLng,
