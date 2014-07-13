@@ -25,6 +25,8 @@ $(function(){
 	// GLOBAL STUFF
 	startTime();
 
+	var y_fix = 0;
+
 
 	// CREATE tab_0 CONTAINER /////////////////////////////////////////////////////////////////////
 	var tab_0 = document.getElementById('tab_0');
@@ -63,7 +65,7 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1682, 1019, true, 'btn_def');
+		1682, 1019 + y_fix, true, 'btn_def');
 	tab_0_array.push(tab_0_btn_1);
 
 	tab_0.appendChild(tab_0_btn_1.create());
@@ -74,79 +76,83 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1682, 769, true, 'btn_def');
+		1682, 761 + y_fix, true, 'btn_def');
 	tab_0.appendChild(tab_0_btn_2.create());
 
 
-	var tab_0_btn_3 = new Button(
-		'tab_0_btn_3', 
-		'Upload to Drone', 
-		'img/button/button_def.fw.png', 
-		'img/button/button_over.fw.png', 
-		'img/button/button_down.fw.png', 
-		1682, 1019, true, 'btn_def');
-	tab_0.appendChild(tab_0_btn_3.create());
+	// var tab_0_btn_3 = new Button(
+	// 	'tab_0_btn_3', 
+	// 	'Upload to Drone', 
+	// 	'img/button/button_def.fw.png', 
+	// 	'img/button/button_over.fw.png', 
+	// 	'img/button/button_down.fw.png', 
+	// 	1682, 797 + y_fix, true, 'btn_def');
+	// tab_0.appendChild(tab_0_btn_3.create());
 
 	// LABLES ////////////////////////////////////////////////////////////////////////////////////////////////////
 	// add Lable stuff
 	// function(x, y, text, myDelay, myDuration)
-	var tab_0_lb_1 = new Lable(24, 87, 'Flight Mode', 1000, 300);
+	// 170px
+	var tab_0_lb_1 = new Lable(24, 205 + y_fix, 'Flight Mode', 1000, 300);
 	tab_0.appendChild(tab_0_lb_1.create());
 	// tab_0_array.push(tab_0_lb_1);
 	// tab_0.appendChild(lable_1.create());
 
 	// add Lable stuff
-	var tab_0_lb_2 = new Lable(24, 268, 'Attachment', 1000, 300);
+	var tab_0_lb_2 = new Lable(24, 385 + y_fix, 'Attachment', 1000, 300);
 	tab_0.appendChild(tab_0_lb_2.create());
 	// tab_0_array.push(tab_0_lb_2);
 
 	// add Lable stuff
-	var tab_0_lb_4 = new Lable(24, 755, 'Map', 1000, 300);
+	var tab_0_lb_4 = new Lable(24, 789 + y_fix, 'Map', 1000, 300);
 	tab_0.appendChild(tab_0_lb_4.create()); 
 	// tab_0_array.push(tab_0_lb_4);
 
 	// add Lable stuff
-	var tab_0_lb_5 = new Lable(1682, 91, 'Flight Options', 1000, 300);
+	var tab_0_lb_5 = new Lable(1682, 81 + y_fix, 'Flight Options', 1000, 300);
 	tab_0.appendChild(tab_0_lb_5.create());
 	// tab_0_array.push(tab_0_lb_5);
 
 	// add Lable stuff
-	var tab_0_lb_6 = new Lable(1682, 316, 'Waypoint List', 1000, 300);
+	var tab_0_lb_6 = new Lable(1682, 307 + y_fix, 'Waypoint List', 1000, 300);
 	tab_0.appendChild(tab_0_lb_6.create());
 	// tab_0_array.push(tab_0_lb_6);
 
 	// add Lable stuff
-	var tab_0_lb_7 = new Lable(1682, 733, 'Grid Resolution', 1000, 300);
+	var tab_0_lb_7 = new Lable(1682, 697 + y_fix, 'Grid Resolution', 1000, 300);
 	tab_0.appendChild(tab_0_lb_7.create());
 	// tab_0_array.push(tab_0_lb_7);
 
 	// add Lable stuff
-	var tab_0_lb_8 = new Lable(1682, 851, 'Flight Details', 1000, 300);
+	var tab_0_lb_8 = new Lable(1682, 851 + y_fix, 'Flight Details', 1000, 300);
 	tab_0.appendChild(tab_0_lb_8.create());
 	// tab_0_array.push(tab_0_lb_8);
 
-	// var tab_0_lb_9 = new Lable(24, 87, 'Search', 1000, 300);
-	// // tab_0.appendChild(tab_0_lb_9.create());
+	var tab_0_lb_9 = new Lable(24, 81+ y_fix, 'Search', 1000, 300);
+	tab_0.appendChild(tab_0_lb_9.create());
+	// tab_0_array.push(tab_0_lb_9);
+
 	
 	// tab_0_array.push(tab_0_lb_9);
 	// tab_0.appendChild(lable_1.create());
 
 
 	// RADIO ///////////////////////////////////////////////////////////////////////////////
-	var tab_0_rd_1 = new Radio('r_1', 24, 130, 'Manual', 'Route', 'Area', '', '');
+	var tab_0_rd_1 = new Radio('r_1', 24, 239 + y_fix, 'Manual', 'Route', 'Area', '', '');
 	tab_0.appendChild(tab_0_rd_1.create());
 	// tab_0_array.push(tab_0_rd_1);
 
-	var tab_0_rd_2 = new Radio('r_2', 24, 310, '360° Camera', 'Toxicity', '3D Map', 'Infrared', '');
+	var tab_0_rd_2 = new Radio('r_2', 24, 419 + y_fix, '360° Camera', 'Toxicity', '3D Map', 'Infrared', '');
 	tab_0.appendChild(tab_0_rd_2.create());
 	// tab_0_array.push(tab_0_rd_2);
 
-	var tab_0_rd_3 = new Radio('r_3', 24, 803, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	// var tab_0_rd_3 = new Radio('r_3', 24, 803 + y_fix, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
+	var tab_0_rd_3 = new Radio('r_3', 24, 825 + y_fix, 'Satelitte', 'Hybrid', 'Terrain', 'Roadmap', '');
 	tab_0.appendChild(tab_0_rd_3.create());
 	// tab_0_array.push(tab_0_rd_3);
 
 	// right side
-	var tab_0_rd_4 = new Radio('r_4', 1682, 130, 'Waypoints', 'Flight Zone', '', '', '');
+	var tab_0_rd_4 = new Radio('r_4', 1682, 115 + y_fix, 'Waypoints', 'Flight Zone', '', '', '');
 	tab_0.appendChild(tab_0_rd_4.create());
 	// tab_0_array.push(tab_0_rd_4);
 
@@ -154,33 +160,43 @@ $(function(){
 
 
 	// Info ///////////////////////////////////////////////////////////////////////////////
-	var tab_0_nf_1 = new Info('r_1', 'info', 1671, 886, 'Duration', '1.6', 60, 'h', 'm.', '');
+	var tab_0_nf_1 = new Info('r_1', 'info', 1671, 886 + y_fix, 'Duration', '1.6', 60, 'h', 'm.', '');
 	tab_0.appendChild(tab_0_nf_1.create());
 	// tab_0_array.push(tab_0_nf_1);
 
-	var tab_0_nf_2 = new Info('r_2', 'info', 1671, 922, 'Distance', '3', 0.621, 'km', 'mi.', '');
+	var tab_0_nf_2 = new Info('r_2', 'info', 1671, 922 + y_fix, 'Distance', '3', 0.621, 'km', 'mi.', '');
 	tab_0.appendChild(tab_0_nf_2.create());
 	// tab_0_array.push(tab_0_nf_2);
 
-	var tab_0_nf_3 = new Info('r_3', 'info', 1671, 958, 'Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_0_nf_3 = new Info('r_3', 'info', 1671, 956 + y_fix, 'Battery Usage', '23', 0.3, '%', 'h.', '');
 	tab_0.appendChild(tab_0_nf_3.create());
 	// tab_0_array.push(tab_0_nf_3);
 
 
 	// Input ///////////////////////////////////////////////////////////////////////////////
-	var tab_0_npt_1 = new Input('tab_0_npt_1', 'info', 1671, 195, 'Rel. Altitude', '6', 0.621, 'm', 'km.', '', '-', 200);
+	var tab_0_npt_1 = new Input('tab_0_npt_1', 'info', 1671, 181 + y_fix, 'Rel. Altitude', '6', 0.621, 'm', 'km.', '', '400', 200);
 	tab_0.appendChild(tab_0_npt_1.create());
 	// tab_0_array.push(tab_0_npt_1);
 
-	var tab_0_npt_2 = new Input('tab_0_npt_2', 'info', 1671, 223, 'Rel. Speed', '3', 0.621, 'km/h', 'mph', '', '-', 40);
+	var tab_0_npt_2 = new Input('tab_0_npt_2', 'info', 1671, 217 + y_fix, 'Rel. Speed', '3', 0.621, 'km/h', 'mph', '', '40', 40);
 	tab_0.appendChild(tab_0_npt_2.create());
 	// tab_0_array.push(tab_0_npt_2);
 
 
 	// waypoint list
-	var tab_0_list_1 = new List('tab_0_list_1', 'list', 1682, 367, 'Waypoint', 1);
+	var tab_0_list_1 = new List('tab_0_list_1', 'list', 1682, 325 + y_fix, 'Waypoint', 1);
 	tab_0.appendChild(tab_0_list_1.create());
-	// tab_0_array.push(tab_0_list_1);
+
+
+	// SEARCH
+	var tab_0_search = new Search('tab_0_search', 'search', 24, 109 + y_fix);
+	tab_0.appendChild(tab_0_search.create());
+
+	// Slider
+	var tab_0_slider_1 = new Slider('tab_0_slider_1', 'slider', 1682, 731 + y_fix);
+	tab_0.appendChild(tab_0_slider_1.create());
+	// tab_1_array.push(tab_1_slider_1);
+
 
 	// create all elements on screen
 	// var myInt = 0;
@@ -210,7 +226,7 @@ $(function(){
 
 	// TAB 2
 	// right side
-	var radio_5 = new Radio('r_5', 23, 832, 'Live', 'Pilot', 'Map', '', '');
+	var radio_5 = new Radio('r_5', 24, 853 + y_fix, 'Live', 'Pilot', 'Map', '', '');
 	tab_1.appendChild(radio_5.create());
 
 	var tab_1_btn_1 = new Button(
@@ -219,7 +235,7 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 130, true, 'btn_def');
+		1681, 115 + y_fix, true, 'btn_def');
 	tab_1.appendChild(tab_1_btn_1.create());
 
 	var tab_1_btn_2 = new Button(
@@ -228,7 +244,7 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 982, true, 'btn_def');
+		1681, 982 + y_fix, true, 'btn_def');
 	tab_1.appendChild(tab_1_btn_2.create());
 
 	var tab_1_btn_3 = new Button(
@@ -237,51 +253,62 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 1018, true, 'btn_def');
+		1681, 1018 + y_fix, true, 'btn_def');
 	tab_1.appendChild(tab_1_btn_3.create());
 
 
 	// add Lable stuff
-	var tab_1_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
+	var tab_1_lb_1 = new Lable(24, 81 + y_fix, 'Flight Details', 2000, 300);
 	tab_1.appendChild(tab_1_lb_1.create());
 
-	var tab_1_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
+	var tab_1_lb_8 = new Lable(285, 81 + y_fix, 'Time Line', 2000, 300);
+	tab_1.appendChild(tab_1_lb_8.create());
+
+	var tab_1_lb_2 = new Lable(24, 271 + y_fix, 'Sensor Data', 2000, 300);
 	tab_1.appendChild(tab_1_lb_2.create());
 
-	var tab_1_lb_3 = new Lable(24, 788, 'Map', 1000, 300);
+	var tab_1_lb_3 = new Lable(24, 819 + y_fix, 'Map', 1000, 300);
 	tab_1.appendChild(tab_1_lb_3.create()); 
 
-	var tab_1_lb_4 = new Lable(1682, 91, 'Add Marks', 1000, 300);
+	var tab_1_lb_4 = new Lable(1682, 81 + y_fix, 'Add Marks', 1000, 300);
 	tab_1.appendChild(tab_1_lb_4.create()); 
 
-	var tab_1_lb_5 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
+	var tab_1_lb_5 = new Lable(1682, 241 + y_fix, 'Edit Mark', 1000, 300);
 	tab_1.appendChild(tab_1_lb_5.create());
 
-	var tab_1_lb_6 = new Lable(1682, 531, 'Screenshot', 1000, 300);
+	var tab_1_lb_6 = new Lable(1682, 521 + y_fix, 'Screenshot', 1000, 300);
 	tab_1.appendChild(tab_1_lb_6.create()); 
 
-	var tab_1_lb_7 = new Lable(1682, 939, 'Export Data', 1000, 300);
+	var tab_1_lb_7 = new Lable(1682, 929 + y_fix, 'Export Data', 1000, 300);
 	tab_1.appendChild(tab_1_lb_7.create()); 
 
 
 	// info lables
-	var tab_1_nf_1 = new Info('tab_1_nf_1', 'info', 13, 131, 'Duration', '7', 60, 'm', 'h.', '');
+	var tab_1_nf_1 = new Info('tab_1_nf_1', 'info', 13, 115 + y_fix, 'Duration', '7', 60, 'm', 'h.', '');
 	tab_1.appendChild(tab_1_nf_1.create());
 
-	var tab_1_nf_2 = new Info('tab_1_nf_2', 'info', 13, 164, 'Distance', '3', 0.001, 'm', 'km', '');
+	var tab_1_nf_2 = new Info('tab_1_nf_2', 'info', 13, 147 + y_fix, 'Distance', '3', 0.001, 'm', 'km', '');
 	tab_1.appendChild(tab_1_nf_2.create());
 
-	var tab_1_nf_3 = new Info('tab_1_nf_3', 'info', 13, 198, 'Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_1_nf_3 = new Info('tab_1_nf_3', 'info', 13, 179 + y_fix, 'Battery Usage', '23', 0.3, '%', 'h.', '');
 	tab_1.appendChild(tab_1_nf_3.create());
 
-	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 615, 'Screenshot', 0);
+
+	// LIST
+	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 590 + y_fix, 'Screenshot', 0);
 	tab_1.appendChild(tab_1_list_1.create());
 	// tab_1_array.push(tab_1_list_1);
 
-	var screenshotArray = [];
+
+	// EDIT
+	var tab_1_edit_1 = new Edit('tab_1_edit_1', 'edit', 1682, 277 + y_fix);
+	tab_1.appendChild(tab_1_edit_1.create());
+
 
 
 	// Screenshot button pressed
+	var screenshotArray = [];
+
 	$('#tab_1_btn_1').click(function( event) {
 		var screenshot = {
 		    nr: screenshotArray.length,
@@ -289,6 +316,9 @@ $(function(){
 		};
 		screenshotArray.push(screenshot);
 		$('#tab_1_list_1').trigger('custom', [0, screenshotArray.length]);
+		tab_1_edit_1.setValue('Screenshot ' +  screenshotArray.length, screenshotArray.length);
+		say(screenshotArray);
+
 	});
 	// add screenshot to list
 	 // $('#tab_1_list_1').trigger('custom', [0, 0]);
@@ -301,25 +331,24 @@ $(function(){
 
 
 
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
-	// IIIIII		IIIIII      IIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	// IIIIIIIIIIIII	IIIIIIIIIIII          IIIIIIIIIIII
+	
 
 	// Radio
-	var tab_2_rd_1 = new Radio('tab_3_rd_1', 23, 832, '2D', '3D', 'Video', '', '');
+	var tab_2_rd_1 = new Radio('tab_3_rd_1', 24, 853, '2D', '3D', 'Video', '', '');
 	tab_2.appendChild(tab_2_rd_1.create());
 
 	// Buttons
@@ -329,7 +358,7 @@ $(function(){
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 130, true, 'btn_def');
+		1681, 115, true, 'btn_def');
 	tab_2.appendChild(tab_2_btn_1.create());
 
 	var tab_2_btn_2 = new Button(
@@ -389,29 +418,29 @@ $(function(){
 
 
 	// // add Lable stuff
-	var tab_3_lb_1 = new Lable(24, 87, 'Flight Details', 2000, 300);
-	tab_3.appendChild(tab_3_lb_1.create());
+	var tab_2_lb_1 = new Lable(24, 81, 'Flight Details', 2000, 300);
+	tab_2.appendChild(tab_2_lb_1.create());
 
-	var tab_3_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
-	tab_3.appendChild(tab_3_lb_2.create());
+	var tab_2_lb_2 = new Lable(24, 271, 'Sensor Data', 2000, 300);
+	tab_2.appendChild(tab_2_lb_2.create());
 
-	var tab_3_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
-	tab_3.appendChild(tab_3_lb_3.create()); 
+	var tab_2_lb_3 = new Lable(24, 642, 'Functions', 1000, 300);
+	tab_2.appendChild(tab_2_lb_3.create()); 
 
-	var tab_3_lb_4 = new Lable(24, 788, 'Map', 1000, 300);
-	tab_3.appendChild(tab_3_lb_4.create());
+	var tab_2_lb_4 = new Lable(24, 819, 'Map', 1000, 300);
+	tab_2.appendChild(tab_2_lb_4.create());
 
-	var tab_3_lb_5 = new Lable(1682, 91, 'Add Marks', 1000, 300);
-	tab_3.appendChild(tab_3_lb_5.create());
+	var tab_2_lb_5 = new Lable(1682, 81, 'Add Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_5.create());
 
-	var tab_3_lb_6 = new Lable(1682, 237, 'Edit Mark', 1000, 300);
-	tab_3.appendChild(tab_3_lb_6.create()); 
+	var tab_2_lb_6 = new Lable(1682, 241, 'Edit Mark', 1000, 300);
+	tab_2.appendChild(tab_2_lb_6.create()); 
 
-	var tab_3_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
-	tab_3.appendChild(tab_3_lb_7.create());
+	var tab_2_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
+	tab_2.appendChild(tab_2_lb_7.create());
 
-	var tab_3_lb_8 = new Lable(1682, 939, 'Export Data', 1000, 300);
-	tab_3.appendChild(tab_3_lb_8.create()); 
+	var tab_2_lb_8 = new Lable(1682, 929, 'Export Data', 1000, 300);
+	tab_2.appendChild(tab_2_lb_8.create()); 
 
 
 
@@ -429,13 +458,13 @@ $(function(){
 
 
 	// // info lables
-	var tab_2_nf_1 = new Info('tab_1_nf_1', 'info', 13, 131, 'Final Duration', '1.6', 60, 'h', 'm.', '');
+	var tab_2_nf_1 = new Info('tab_1_nf_1', 'info', 13, 115, 'Final Duration', '1.6', 60, 'h', 'm.', '');
 	tab_2.appendChild(tab_2_nf_1.create());
 
-	var tab_2_nf_2 = new Info('tab_1_nf_2', 'info', 13, 164, 'Final Distance', '3', 0.621, 'km', 'mi.', '');
+	var tab_2_nf_2 = new Info('tab_1_nf_2', 'info', 13, 147, 'Final Distance', '3', 0.621, 'km', 'mi.', '');
 	tab_2.appendChild(tab_2_nf_2.create());
 
-	var tab_2_nf_3 = new Info('tab_1_nf_3', 'info', 13, 198, 'Final Battery Usage', '78', 0.3, '%', 'h.', '');
+	var tab_2_nf_3 = new Info('tab_1_nf_3', 'info', 13, 179, 'Final Battery Usage', '78', 0.3, '%', 'h.', '');
 	tab_2.appendChild(tab_2_nf_3.create());
 
 
@@ -478,7 +507,7 @@ $(function(){
 
 	// $('#' + id).trigger( "custom", ["up", id]);
 
-	$('#tab_0_btn_3').click(function( event) {
+	$('#tab_0_btn_1').click(function( event) {
 		say('I was clicked!');
 		$('#nav_b2').trigger( "custom", ["up", 0]);
 		$('#nav_b2').trigger( "click");
@@ -490,9 +519,9 @@ $(function(){
 	// click Tab 0
 	$('#nav_b1').click(function( event) {
 		// grid wieder anzeigen
-		$('#grid_gray').css('display', 'block');
+		$('#grid_gray').show();
 		$('#grid_gray').animo( { animation: 'fadeIn', duration: 1 }, function() {
-			$('#grid_gray').css('display', 'block');
+			$('#grid_gray').shoe();
 		});
 		
 		$('#video_1').animo( { animation: 'fadeOut', duration: .4 }, function() {
@@ -500,18 +529,39 @@ $(function(){
 		});
 	});
 
-
+	var myInt = 0;
+	var myInt_2 = 0;
+	var myInt_3 = 0;
 	$('#nav_b2').click(function( event) {
 		// update values of the messure
-		var tab_2_interval = setInterval(function() {
-			if (myInt < 100) {
-				// myInt = myInt + 1;
-				// say(tab_1_nf_1.getValue());
+		say('CLIUCKEDDD');
+		var tab_2_interval_1 = setInterval(function() {
+			if (myInt < 1000) {
+				myInt = myInt + 1;
 				tab_1_nf_2.setValue(tab_1_nf_2.getValue() + 1 + Math.random());
 		    	} else {
-		    		clearInterval(tab_2_interval)
+		    		clearInterval(tab_2_interval_1)
 		    	}
 		 }, 800);
+
+		var tab_2_interval_2 = setInterval(function() {
+			if (myInt_2 < 1000) {
+				myInt_2 = myInt_2 + 1;
+				tab_1_nf_1.setValue(tab_1_nf_1.getValue() + 1 + Math.random());
+		    	} else {
+		    		clearInterval(tab_2_interval_2)
+		    	}
+		 }, 2000);
+
+		var tab_2_interval_3 = setInterval(function() {
+			if (myInt_3 < 1000) {
+				myInt_3 = myInt_3 + 1;
+				tab_1_nf_3.setValue(tab_1_nf_3.getValue() + .01 + Math.random());
+		    	} else {
+		    		clearInterval(tab_2_interval_3)
+		    	}
+		 }, 2000);
+
 		// start video
 		$('#video_1').animo( { animation: 'fadeIn', duration: .4 }, function() {
 			myVideo.style.display = "block";
@@ -539,26 +589,31 @@ $(function(){
 			$('#grid_white').css('display', 'none');
 		});
 		$('canvas').css('display', 'block');
-		init();
+		// init();
 	});
 
+	say('HELLOOOO');
 
-	// setTimeout(function () {
-	// 	var tab_2_interval = setInterval(function() {
-	// 		if (myInt < tab_0_array.length-1) {
-	// 			myInt = myInt + 1;
-	// 			tab_0.appendChild(tab_0_array[myInt].create());
-	// 	    	} else {
-	// 	    		clearInterval(myVar)
-	// 	    	}
-	// 	    	say('myInt: ' + myInt);
-	// 	 }, 500* myInt);
-	// }, 2000)
+	$(r_5_nav_b0).click(function( event) {
+		// hide video
+		$(myVideo).show();
+	});
 
-	// na gut Laurens - da passt es! ;)
+	$(r_5_nav_b1).click(function( event) {
+		// hide video
+		$(myVideo).show();
+	});
 
+	$(r_5_nav_b2).click(function( event) {
+		// hide video
+		$(myVideo).hide();
+		$('#grid_white').css('display', 'block');
+	});
 
-
+	
+	
+	//SET FOCUS
+	document.getElementById('tab_0_search').focus();
 
 	// DETECT OS
 	var OSName="Unknown OS";

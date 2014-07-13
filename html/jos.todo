@@ -7,16 +7,38 @@ Akutelle Datein:
   ✔ style list animation @done (14-07-10 02:13)
   ✔ create list @done (14-07-10 03:43)
   ✔ style list @done (14-07-10 03:43)
-  ☐ animate list
-  ☐ feed waypoint data to list
+  ✔ animate list @done (14-07-12 00:50)
+  ✔ feed waypoint data to list @done (14-07-12 00:50)
   ✔ Fix Lable SVG Size problem @done (14-07-08 18:03)
   ✔ Add all missing elements from tab_1 @done (14-07-08 05:04)
   ✔ Add all missing elements from tab_2 @done (14-07-08 06:06)
-  ☐ Waypoint List Class
+  ✔ Waypoint List Class @done (14-07-12 00:50)
   ✔ How do I get all the Waypoint-Data? @done (14-07-10 01:35)
   ✔ Update Lat & Lng while I am moving or zooming @done (14-07-10 01:35)
-  ☐ Update Font Size
-  ☐ map courser
+  ✔ map courser @done (14-07-12 00:58)
+  ✔ map cursor add contrast @done (14-07-12 01:55)
+  ✔ Add search @done (14-07-12 04:11)
+  ✔ Update Nav Position @done (14-07-12 07:30)
+  ✔ Set Focus to InputBox @done (14-07-12 07:37)
+  ✔ Gird Position fix (White) @done (14-07-12 08:02)
+  ✔ Gird Position fix @done (14-07-12 08:16)
+  ✔ fix position of Lat & Lnt @done (14-07-12 08:29)
+  ✔ Hide Leap Vis @done (14-07-12 08:29)
+  ✔ Change color of cursor @done (14-07-12 08:29)
+  ✔ Hide Draw Controles @done (14-07-12 08:29)
+  ✔ Swap color of Lat & Lng @done (14-07-12 08:34)
+  ✔ Update all new positions @done (14-07-12 11:33)
+  ✔ Fix timeline position @done (14-07-12 07:40)
+  ✔ Fix timeline position tab_2 @done (14-07-12 11:33)
+  ✔ Update Font Size @done (14-07-12 11:33)
+  ✔ erst Satelit, dann Standart @done (14-07-12 07:40)
+  ✔ sync all maps together @done (14-07-12 12:25)
+  ✔ Werte animieren @done (14-07-12 14:14)
+  ✔ create input field @done (14-07-12 14:14)
+  ☐ click auf maps, swap tp map!
+  ☐ Click on Video to create Screenshot!
+  ☐ Video-FilmPosition nehmen und damit die Radio&Chem animieren
+  ☐ 
  
 
   UI-Elemente:
@@ -51,10 +73,14 @@ Akutelle Datein:
     ☐ wirte Waypoint-List-class
     ☐ Move Calc Grid to left Tab Side to restor balance
     ☐ Update all color values.
-    ☐ Lable Map springt bei tab_0 zu tab_1
+    ✔ Lable Map springt bei tab_0 zu tab_1 @done (14-07-12 13:01)
 
 
 Fancy:
+  ☐ Input mit pre-text versehen
+  ☐ Design custom cusor
+  ☐ So lange kein Weg besteht kann man nicht hochladen
+  ☐ Button auf inaktiv schalten
   ☐ Three JS Leap Motion
   ☐ Animate marker - simply add a give animation
   ☐ Three JS Import 3D Model
@@ -65,6 +91,7 @@ Fancy:
   ☐ Animation Unit-Swapping, type effect with amigo
   ☐ Show Grid on the map and point it to it
   ☐ Nice text transistion for time, poping up or sth.
+  ☐ Clac Ratio and display it.
 
 
 

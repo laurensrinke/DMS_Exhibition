@@ -16,6 +16,8 @@
 		</video>
 		 <canvas width=1920 height=1080 id="cnvs" style="background-color:black"></canvas>
 		 <section id="small-map-canvas"></section>
+		 <section id="mapRadio"></section>
+		 <section id="mapChemic"></section>
 		 <section id="map_rect"></section>
 
 		 <section id="header"></section>
@@ -32,13 +34,10 @@
 		 <section id="tab_0"></section>
 		 <section id="tab_1"></section>
 		 <section id="tab_2"></section>
-
-		 <!-- <canvas id="screenshot"></canvas> -->
-		 <section id="leap_info"></section>
-
+		 <!-- <section id="leap_info"></section> -->
 		<section id="location">
-		 	<section id="lat"><span>Lat:</span>48.78884015</section>
-		 	<section id="lng"><span>Lng:</span>9.75791126</section>
+		 	<section id="lat"><span>Lat:</span>48.788840</section>
+		 	<section id="lng"><span>Lng:</span>9.757911</section>
 		</section>
 
 		<section id="time_info">
@@ -51,7 +50,7 @@
 		<!-- js files -->
 		<script src="js/lib/jquery-2.1.1.min.js"></script>
 		<script src="js/lib/d3.v3.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing"></script>
+		<script src="js/lib/googleMapApi.js"></script>
 		<script src="js/lib/svg.min.js"></script>
 		<script src="js/lib/svg.filter.js"></script>
 		<script src="js/lib/animo.js"></script>
@@ -61,11 +60,14 @@
 		<script src="js/lib/jo.js"></script>
 
 		<!-- classes -->
+		<script src="js/search.js"></script>
 		<script src="js/video.js"></script>
+		<script src="js/slider.js"></script>
+		<script src="js/input.js"></script>
 		<script src="js/map.js"></script>
 		<script src="js/grid.js"></script>
 		<script src="js/unit.js"></script>
-		<script src="js/input.js"></script>
+		<script src="js/edit.js"></script>
 		<script src="js/info.js"></script>
 		<script src="js/tabs.js"></script>
 		<script src="js/lable.js"></script>
@@ -80,5 +82,6 @@
 		<script src="js/myThree.js"></script>
 		<script src="js/lib/less-1.7.3.min.js"></script>
 		<script src="js/3d.js"></script>
+		<script src="js/small_maps.js"></script>
 	</body>
 </html>
