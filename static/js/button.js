@@ -106,6 +106,7 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 	{
 		b_def.style.opacity = 1;
 		b_hover.style.opacity = 0;
+		b_act.style.opacity = 0;
 		$('#' + id).trigger( "custom", ["out", id]);
 		// if not active, set inacitve
 		if (isActive == false) {setInactive()};
