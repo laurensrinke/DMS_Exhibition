@@ -5,3 +5,7 @@
 function say (argument) {
   console.log(argument);
 }
+
+function map(v, a, b, x, y) {
+    return (v == a) ? x : (v - a) * (y - x) / (b - a) + x;
+};
