@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\_Root.v4p" systemname="root" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\root.v4p">
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\_Root.v4p" systemname="root" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\root.v4p" locked="0">
    <BOUNDS type="Window" left="14295" top="0" width="10905" height="15930">
    </BOUNDS>
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="18">
@@ -155,8 +155,10 @@
    </PIN>
    <BOUNDS type="Box" left="525" top="9585">
    </BOUNDS>
-   <BOUNDS type="Window" left="10020" top="2760" width="16965" height="14310">
+   <BOUNDS type="Window" left="7050" top="315" width="16965" height="14310">
    </BOUNDS>
+   <PIN pinname="Layer2" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="Logic" filename="subpatches\Logic.v4p" nodename="subpatches\Logic.v4p" componentmode="Hidden" id="90">
    <BOUNDS type="Node" left="495" top="6630" width="8295" height="270">
@@ -321,7 +323,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4140" top="15330" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="43650" top="14340" width="6240" height="5085">
+   <BOUNDS type="Window" left="7290" top="8370" width="6240" height="5085">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -338,6 +340,8 @@
    <PIN pinname="Fullscreen" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1680 x 1050|">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Layer" dstnodeid="123" dstpinname="Layers">
@@ -623,7 +627,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1965" top="15060" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0" visible="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -657,7 +661,7 @@
    <LINK srcnodeid="135" srcpinname="Position Out" dstnodeid="18" dstpinname="Initial Interest">
    </LINK>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="145">
-   <BOUNDS type="Node" left="6030" top="17085" width="100" height="100">
+   <BOUNDS type="Node" left="5370" top="17265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1">
    </PIN>
@@ -667,7 +671,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" id="146">
-   <BOUNDS type="Node" left="6015" top="16305" width="100" height="100">
+   <BOUNDS type="Node" left="5385" top="16890" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Device" visible="1">
    </PIN>
@@ -675,7 +679,7 @@
    <LINK srcnodeid="146" srcpinname="Device" dstnodeid="145" dstpinname="Keyboard">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="148">
-   <BOUNDS type="Node" left="6045" top="17625" width="100" height="100">
+   <BOUNDS type="Node" left="5385" top="17805" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -685,7 +689,7 @@
    <LINK srcnodeid="145" srcpinname="F4" dstnodeid="148" dstpinname="Input">
    </LINK>
    <NODE systemname="Toggle (Animation)" nodename="Toggle (Animation)" componentmode="Hidden" id="149">
-   <BOUNDS type="Node" left="5985" top="18015" width="100" height="100">
+   <BOUNDS type="Node" left="5325" top="18195" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -695,5 +699,45 @@
    <LINK srcnodeid="148" srcpinname="Up Edge" dstnodeid="149" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="149" srcpinname="Output" dstnodeid="143" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="150">
+   <BOUNDS type="Node" left="8655" top="18615" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8655" top="18615" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5595" top="10065" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Fullscreen" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Layer2" dstnodeid="150" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Output" dstnodeid="150" dstpinname="Fullscreen">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="151">
+   <BOUNDS type="Node" left="6540" top="15975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Width" visible="1" pintype="Input" slicecount="1" values="1920">
+   </PIN>
+   <PIN pinname="Height" visible="1" pintype="Input" slicecount="1" values="1080">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="123" srcpinname="EX9 Out" dstnodeid="151" dstpinname="Source">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="152">
+   <BOUNDS type="Node" left="6540" top="16335" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" slicecount="1" values="FPV">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Texture Out" dstnodeid="152" dstpinname="Input Value">
    </LINK>
    </PATCH>

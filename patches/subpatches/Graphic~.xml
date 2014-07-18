@@ -36,7 +36,7 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="10020" top="2760" width="16965" height="14310">
+   <BOUNDS type="Window" left="7050" top="315" width="16965" height="14310">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -205,5 +205,35 @@
    <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="html-proto" filename="graphic\html-proto.v4p" componentmode="Hidden" id="13" nodename="graphic\html-proto.v4p">
+   <BOUNDS type="Node" left="9030" top="6300" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9030" top="6300" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7020" top="4995" width="12135" height="10155">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="14" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="9090" top="13485" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9090" top="13485" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Layer" dstnodeid="14" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="9045" top="5745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="FPV">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Input Value" dstnodeid="13" dstpinname="Texture">
    </LINK>
    </PATCH>

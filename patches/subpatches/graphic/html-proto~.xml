@@ -1,0 +1,139 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\graphic\html-proto.v4p" systemname="html-proto" filename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\html-proto.v4p">
+   <BOUNDS type="Window" left="7020" top="4995" width="12135" height="10155">
+   </BOUNDS>
+   <NODE systemname="HTMLTexture (EX9.Texture URL)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.Texture.HTML.dll" nodename="HTMLTexture (EX9.Texture URL)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="3390" top="1755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1920">
+   </PIN>
+   <PIN pinname="Height" slicecount="1" values="1080">
+   </PIN>
+   <PIN pinname="Url" slicecount="1" values="http://vvvv.org">
+   </PIN>
+   <PIN pinname="Key Event" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Event" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3060" top="3765" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="1" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Scale (Transform)" nodename="Scale (Transform)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="3210" top="3315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="1920">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="1080">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="Group (EX9)" id="4" systemname="Group (EX9)">
+   <BOUNDS type="Node" left="3060" top="6150" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3060" top="6150" width="2400" height="1800">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Billboard (Transform)" nodename="Billboard (Transform)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="2460" top="2700" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Object Space" slicecount="1" values="Pixel">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="2" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="5490" top="3780" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="8" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="5880" top="2745" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5880" top="2745" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output Node" dstnodeid="7" dstpinname="Texture">
+   </LINK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="10" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="2925" top="7140" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2925" top="7140" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3360" top="900" width="3225" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3360" top="900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="http://127.0.0.1:4000">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="http://vvvv.org">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="0" dstpinname="Url">
+   </LINK>
+   <NODE systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="7830" top="975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Device" dstnodeid="0" dstpinname="Key Event">
+   </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="7845" top="570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Device" dstnodeid="0" dstpinname="Mouse Event">
+   </LINK>
+   </PATCH>
