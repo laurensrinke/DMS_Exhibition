@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
-   <PATCH nodename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\Patches\subpatches\ProjectSetup.v4p" filename="D:\Development\Folderstructur\Patches\Modules\ProjectParser\ProjectSetup.v4p" systemname="ProjectSetup">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\ProjectSetup.v4p" filename="D:\Development\Folderstructur\Patches\Modules\ProjectParser\ProjectSetup.v4p" systemname="ProjectSetup">
    <BOUNDS height="15480" left="0" top="1710" type="Window" width="26115">
    </BOUNDS>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -193,7 +193,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="10425" top="4635" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="2880" left="0" top="18270" type="Window" width="12975">
+   <BOUNDS height="2880" left="0" top="11970" type="Window" width="12975">
    </BOUNDS>
    <PIN pinname="String Output" visible="1">
    </PIN>

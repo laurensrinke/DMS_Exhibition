@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\Patches\subpatches\devices\Prototyp01.v4p" systemname="Prototyp01" filename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\patches\subpatches\devices\Prototyp01.v4p">
-   <BOUNDS type="Window" left="23475" top="3225" width="13785" height="16380">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\devices\Prototyp01.v4p" systemname="Prototyp01" filename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\patches\subpatches\devices\Prototyp01.v4p">
+   <BOUNDS type="Window" left="13425" top="1425" width="13785" height="16050">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -43,7 +43,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="6" values="531,527,512,498,480,476">
+   <PIN pinname="Y Input Value" visible="1" slicecount="6" values="0.71,0.4,0.13,0,0,0">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="6">
    </PIN>
@@ -196,6 +196,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="IsConnected">
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
@@ -643,7 +645,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="6660" top="9135" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   <PIN pinname="Switch" visible="1" slicecount="0" values="0">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -732,18 +734,28 @@
    </LINK>
    <LINK srcnodeid="10" srcpinname="Digital In" dstnodeid="25" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Analog In" dstnodeid="24" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="7" srcpinname="Output Enum" dstnodeid="10" dstpinname="Pin Modes">
    </LINK>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Analog In" dstnodeid="26" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Firmware Version" dstnodeid="60" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Capabilities" dstnodeid="61" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="On Data" dstnodeid="64" dstpinname="Switch">
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="5550" top="8280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Output" dstnodeid="64" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Analog In" dstnodeid="24" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Analog In" dstnodeid="26" dstpinname="Input">
    </LINK>
    </PATCH>

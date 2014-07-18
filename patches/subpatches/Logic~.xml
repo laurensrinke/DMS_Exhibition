@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\Patches\subpatches\Logic.v4p" systemname="Logic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Logic.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Logic.v4p" systemname="Logic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Logic.v4p">
    <BOUNDS type="Window" left="14925" top="270" width="14475" height="16800">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">

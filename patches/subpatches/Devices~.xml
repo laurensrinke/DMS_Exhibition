@@ -1,31 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
-   <PATCH nodename="D:\Dropbox\Projects\Bachelor-Umsetzung\20140520-AusstellungSystem\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
-   <BOUNDS type="Window" left="17415" top="5655" width="15090" height="12945">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
+   <BOUNDS type="Window" left="15075" top="3000" width="15090" height="12945">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
-   <NODE systemname="CyborgJoystick" filename="devices\CyborgJoystick.v4p" nodename="devices\CyborgJoystick.v4p" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1800" top="3420" width="3285" height="270">
-   </BOUNDS>
-   <PIN pinname="setOff" visible="1">
-   </PIN>
-   <PIN pinname="gaz" visible="1">
-   </PIN>
-   <PIN pinname="emergency" visible="1">
-   </PIN>
-   <PIN pinname="roll" visible="1">
-   </PIN>
-   <PIN pinname="pitch" visible="1">
-   </PIN>
-   <PIN pinname="Yaw" visible="1">
-   </PIN>
-   <PIN pinname="Device Type" slicecount="1" values="Undefined">
-   </PIN>
-   <BOUNDS type="Window" left="13920" top="7215" width="17790" height="12480">
-   </BOUNDS>
-   <PIN pinname="Enable" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="5025" top="6000" width="100" height="100">
    </BOUNDS>
@@ -39,21 +17,17 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="setOff">
    </PIN>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="setOff" dstnodeid="2" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="2445" top="7740" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="emergency">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="emergency" dstnodeid="3" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="3090" top="7335" width="100" height="100">
    </BOUNDS>
@@ -101,5 +75,27 @@
    <LINK srcnodeid="7" srcpinname="roll" dstnodeid="4" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="7" srcpinname="pitch" dstnodeid="5" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8490" top="2565" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8490" top="2565" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enable">
    </LINK>
    </PATCH>
