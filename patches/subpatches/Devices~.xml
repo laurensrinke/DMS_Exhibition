@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
+   <PATCH nodename="C:\Users\Medialab\Desktop\DMS_Exhibition\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
    <BOUNDS type="Window" left="15075" top="3000" width="15090" height="12945">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="gaz">
    </PIN>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="-2.52">
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="2">
@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6690" top="3540" width="4800" height="3600">
    </BOUNDS>
-   <BOUNDS type="Window" left="23475" top="3225" width="13785" height="16380">
+   <BOUNDS type="Window" left="13425" top="1425" width="13785" height="16050">
    </BOUNDS>
    <PIN pinname="yaw" visible="1">
    </PIN>
@@ -67,10 +67,12 @@
    </PIN>
    <PIN pinname="pitch" visible="1">
    </PIN>
+   <PIN pinname="ComPort" slicecount="1" values="COM3">
+   </PIN>
+   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="yaw" dstnodeid="6" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="gaz" dstnodeid="1" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="7" srcpinname="roll" dstnodeid="4" dstpinname="Input Value">
    </LINK>
@@ -93,9 +95,11 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enable">
+   <LINK srcnodeid="7" srcpinname="gaz" dstnodeid="1" dstpinname="Input Value">
    </LINK>
    </PATCH>
