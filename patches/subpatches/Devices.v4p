@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\Medialab\Desktop\DMS_Exhibition\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Devices.v4p" systemname="Devices" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\Devices.v4p">
    <BOUNDS type="Window" left="15075" top="3000" width="15090" height="12945">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
@@ -52,7 +52,7 @@
    <PIN pinname="Send String" slicecount="1" values="yaw">
    </PIN>
    </NODE>
-   <NODE systemname="Prototyp01" filename="devices\Prototyp01.v4p" componentmode="InAWindow" id="7" nodename="devices\Prototyp01.v4p">
+   <NODE systemname="Prototyp01" filename="devices\Prototyp01.v4p" componentmode="Hidden" id="7" nodename="devices\Prototyp01.v4p">
    <BOUNDS type="Node" left="6690" top="3540" width="2745" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="6690" top="3540" width="4800" height="3600">

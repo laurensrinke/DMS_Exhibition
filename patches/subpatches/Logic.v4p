@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Logic.v4p" systemname="Logic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Logic.v4p">
-   <BOUNDS type="Window" left="14925" top="270" width="14475" height="16800">
+   <BOUNDS type="Window" left="12780" top="300" width="14475" height="16050">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -109,7 +109,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4440" top="3240" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.08">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -133,7 +133,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3585" top="3240" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.04">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.23">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -169,7 +169,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5430" top="3270" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.04">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.23">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -183,7 +183,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6300" top="3270" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.002">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.01">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3330" top="10530" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>

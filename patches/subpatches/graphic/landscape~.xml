@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\Medialab\Desktop\DMS_Exhibition\Patches\subpatches\graphic\landscape.v4p" systemname="landscape" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\landscape.v4p">
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\graphic\landscape.v4p" systemname="landscape" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\subpatches\landscape.v4p">
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\ColladaLoader.dll" id="0" nodename="ColladaFile (EX9.Geometry)" systemname="ColladaFile (EX9.Geometry)">
    <BOUNDS height="0" left="3045" top="825" type="Node" width="0">
    </BOUNDS>
@@ -55,7 +55,7 @@
    </BOUNDS>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="..\..\..\assets\3d\Landscape\Landschaft01.dae">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="..\..\..\assets\3d\Landscape\Landschaft02.dae">
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="1">
    </PIN>
@@ -97,7 +97,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4035" top="4020" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" values="0.52,2.67,0">
+   <PIN pinname="Y Input Value" slicecount="3" values="0.14,3.77,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -129,7 +129,7 @@
    </PIN>
    <PIN pinname="Enable" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Density (for modes Exp and Exp2)" slicecount="1" values="0.006">
+   <PIN pinname="Density (for modes Exp and Exp2)" slicecount="1" values="0.011">
    </PIN>
    <PIN pinname="Pixel Fog Mode" slicecount="1" values="Exp">
    </PIN>
@@ -264,12 +264,10 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="8" dstpinname="Light Position">
    </LINK>
-   <BOUNDS type="Window" left="8445" top="315" width="15375" height="13665">
+   <BOUNDS type="Window" left="13425" top="1875" width="15375" height="13665">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
-   <LINK srcnodeid="1" srcpinname="Transforms" dstnodeid="3" dstpinname="Transform In 1">
-   </LINK>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="6360" top="5955" width="100" height="100">
    </BOUNDS>
@@ -331,11 +329,13 @@
    <NODE systemname="HSV (Color Join)" nodename="HSV (Color Join)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="1155" top="3585" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Saturation" slicecount="1" values="0.79">
+   <PIN pinname="Saturation" slicecount="1" values="0.99">
    </PIN>
    <PIN pinname="Hue" slicecount="1" values="0.59">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Value" slicecount="1" values="1.16">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="22" systemname="IOBox (Color)">
@@ -377,26 +377,12 @@
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="20" dstpinname="Filename">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Former Slice" dstnodeid="29" dstpinname="Index">
-   </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4200" top="2670" width="480" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="4200" top="2670" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="C:\Users\Medialab\Desktop\DMS_Exhibition\assets\3d\Landscape\tex\Houses.png">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="29" dstpinname="Input">
    </LINK>
    <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="36">
    <BOUNDS type="Node" left="3990" top="2025" width="100" height="100">
@@ -427,7 +413,7 @@
    </PIN>
    <PIN pinname="Mesh" visible="1" pintype="Input">
    </PIN>
-   <PIN pinname="Transform" visible="1" pintype="Input">
+   <PIN pinname="Transform" visible="1" pintype="Input" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Light Direction XYZ" visible="1" pintype="Input">
    </PIN>
@@ -472,16 +458,50 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Mesh" dstnodeid="13" dstpinname="Mesh">
-   </LINK>
    <LINK srcnodeid="8" srcpinname="Light Position Out" dstnodeid="13" dstpinname="Light Direction XYZ">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Layer" dstnodeid="15" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Transforms" dstnodeid="13" dstpinname="Transform">
-   </LINK>
    <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="13" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Render State Out" dstnodeid="13" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Mesh" dstnodeid="13" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Transforms" dstnodeid="13" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="R (String)" nodename="R (String)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="6255" top="1245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="ProjectRoot">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="6255" top="1680" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="assets\">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="Input Value" dstnodeid="48" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="4185" top="2745" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="3d\Landscape\tex\Houses.png">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output" dstnodeid="49" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Output" dstnodeid="29" dstpinname="Input">
    </LINK>
    </PATCH>

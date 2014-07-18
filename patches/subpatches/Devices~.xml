@@ -52,7 +52,7 @@
    <PIN pinname="Send String" slicecount="1" values="yaw">
    </PIN>
    </NODE>
-   <NODE systemname="Prototyp01" filename="devices\Prototyp01.v4p" componentmode="Hidden" id="7" nodename="devices\Prototyp01.v4p">
+   <NODE systemname="Prototyp01" filename="devices\Prototyp01.v4p" componentmode="InAWindow" id="7" nodename="devices\Prototyp01.v4p">
    <BOUNDS type="Node" left="6690" top="3540" width="2745" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="6690" top="3540" width="4800" height="3600">
@@ -69,7 +69,7 @@
    </PIN>
    <PIN pinname="ComPort" slicecount="1" values="COM3">
    </PIN>
-   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
+   <PIN pinname="Enable" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="7" srcpinname="yaw" dstnodeid="6" dstpinname="Input Value">
@@ -78,28 +78,6 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="pitch" dstnodeid="5" dstpinname="Input Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8490" top="2565" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8490" top="2565" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="7" srcpinname="gaz" dstnodeid="1" dstpinname="Input Value">
    </LINK>
    </PATCH>
