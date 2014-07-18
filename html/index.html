@@ -7,6 +7,7 @@
 		<link rel="stylesheet/less" type="text/css" href="css/fonts.less" />
 		<link rel="stylesheet/less" type="text/css" href="css/style.less" />
 		<link rel="stylesheet" type="text/css" href="css/button.css">
+		<link href="css/jquery-letterfx.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<p style="color:#A00; font-weight: bold" id="message"></p>
@@ -44,12 +45,17 @@
 		 	<section>Time<span id="time">00:00:00</span></section>
 		 	<section>Date<span id="date">00.00.0000</span></section>
 		</section>
+		<!-- <section id='map3DCanvas'></section> -->
 
-		
 
 		<!-- js files -->
 		<script src="js/lib/jquery-2.1.1.min.js"></script>
 		<script src="js/lib/d3.v3.min.js"></script>
+		<!-- 
+			drawing,heatmap,places,visualization 
+		-->
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=drawing,heatmap,places,visualization"></script>
+
 		<script src="js/lib/googleMapApi.js"></script>
 		<script src="js/lib/svg.min.js"></script>
 		<script src="js/lib/svg.filter.js"></script>
@@ -60,6 +66,8 @@
 		<script src="js/lib/jo.js"></script>
 
 		<!-- classes -->
+		<script src="js/tuxsudo.min.js"></script>
+		<script src="js/jquery-letterfx.js"></script>
 		<script src="js/search.js"></script>
 		<script src="js/video.js"></script>
 		<script src="js/slider.js"></script>
@@ -70,13 +78,14 @@
 		<script src="js/edit.js"></script>
 		<script src="js/info.js"></script>
 		<script src="js/tabs.js"></script>
+		<script src="js/date.js"></script>
 		<script src="js/lable.js"></script>
 		<script src="js/radio.js"></script>
 		<script src="js/button.js"></script>
 		<script src="js/list.js"></script>
 		<script src="js/script.js"></script>
 		<script src="js/myLeap.js"></script>
-		<script src="js/date.js"></script>
+		<!-- // <script src="js/tuxsudo.min.js"></script> -->
 		<script src="js/lib/three.min.js"></script>
 		<script src="js/lib/ColladaLoader.js"></script>
 		<script src="js/myThree.js"></script>

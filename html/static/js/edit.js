@@ -59,7 +59,7 @@ Edit = function(id, myClass, x, y)
 			say(('#tab_1_list_1 ul li:nth-child(' + (target-1) + ')'));
 			// $('#tab_1_list_1 li:nth-child(' + target + ')').css('border', '1px solid green');
 			$('#tab_1_list_1 li:nth-child(' + target + ')').html(i_container.value);
-			$('#tab_1_list_1 li:nth-child(' + target + ')').html('<img src="https://i.chzbgr.com/maxW500/8244506112/h0BDFEEB6/" width="25px">');
+			// $('#tab_1_list_1 li:nth-child(' + target + ')').html('<img src="https://i.chzbgr.com/maxW500/8244506112/h0BDFEEB6/" width="25px">');
 		})
 		return i_container;
 	}

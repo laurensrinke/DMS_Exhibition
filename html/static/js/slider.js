@@ -43,69 +43,13 @@ Slider = function(id, myClass, x, y)
 		i_container.style.left = x + 'px';
 		i_container.style.top = y + 'px';
 
-		// set trigger on move
-		// $('#' + id).trigger( "changed", ["over", id]);
-
 		$(i_container).on('change' ,function(){
 			say(i_container.value=parseInt(this.value));
 		});
-
-
-		
-
-		// create button
-		// count radio elements
-		// for (var i = 0; i < unitArray.length; i++) {
-		// 	if (unitArray[i][0] != '') {myLength++};
-		// };
-
-		// // add buttons
-		// // write construction manual
-		// if (size == 0) {
-		// 	button = new Button( 
-		// 		'unit_' + id, 
-		// 		unitArray[0][0], 
-		// 		'img/unit/unit_def.fw.png', 
-		// 		'img/unit/unit_hover.fw.png', 
-		// 		'img/unit/unit_act.fw.png', 
-		// 		0, 0, false, 'unit_small_btn');
-
-		// } else{
-		// 	button = new Button( 
-		// 		'unit_' + id, 
-		// 		unitArray[0][0],
-		// 		'img/unit/unit2_def.fw.png', 
-		// 		'img/unit/unit2_hover.fw.png', 
-		// 		'img/unit/unit2_act.fw.png', 
-		// 		0, 0, false, 'unit2_btn');
-		// };
-
-		// // add event listener
-		
-		// // create & append buttons 
-		// i_container.appendChild(button.create());
-		// child = $(i_container).find('#unit_' + id).on( "custom", function(event, param1, param2){
-		// 	switch(param1) {
-		// 	    case 'over':
-		// 	        break;
-		// 	    case 'out':
-		// 	        break;
-		// 	    case 'down':
-		// 	        break;
-		// 	    case 'up':
-		// 	      	switchUnit();
-		// 	        break;
-		// 	    default:{
-		// 	        alert('unknow event! unit button' + i);
-		// 	    }
-		// 	}
-		// });
-		// return object
 		return i_container;
 	}
 
 	function switchUnit () {
-		// say($('#unit_' + id).find('.btn_text').text(':)'));
 		if (status <= myLength-2) {
 			status++;
 		} else{

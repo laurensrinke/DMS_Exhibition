@@ -2,6 +2,10 @@
 // Datum: 2014_06_18
 // Projekt: Drone Monitoring System
 
+
+// TEXT ANIMATION
+
+
 function map(v, a, b, x, y) {
 	return (v == a) ? x : (v - a) * (y - x) / (b - a) + x;
 };
@@ -147,7 +151,7 @@ $(function(){
 	// tab_0_array.push(tab_0_rd_2);
 
 	// var tab_0_rd_3 = new Radio('r_3', 24, 803 + y_fix, 'Standart', 'Terrain', 'Hybrid', 'Satelitte', '');
-	var tab_0_rd_3 = new Radio('r_3', 24, 825 + y_fix, 'Satelitte', 'Hybrid', 'Terrain', 'Roadmap', '');
+	var tab_0_rd_3 = new Radio('r_3', 24, 825 + y_fix, 'Satellite', 'Hybrid', 'Terrain', 'Roadmap', '');
 	tab_0.appendChild(tab_0_rd_3.create());
 	// tab_0_array.push(tab_0_rd_3);
 
@@ -521,7 +525,7 @@ $(function(){
 		// grid wieder anzeigen
 		$('#grid_gray').show();
 		$('#grid_gray').animo( { animation: 'fadeIn', duration: 1 }, function() {
-			$('#grid_gray').shoe();
+			$('#grid_gray').show();
 		});
 		
 		$('#video_1').animo( { animation: 'fadeOut', duration: .4 }, function() {
@@ -534,11 +538,11 @@ $(function(){
 	var myInt_3 = 0;
 	$('#nav_b2').click(function( event) {
 		// update values of the messure
-		say('CLIUCKEDDD');
 		var tab_2_interval_1 = setInterval(function() {
 			if (myInt < 1000) {
 				myInt = myInt + 1;
 				tab_1_nf_2.setValue(tab_1_nf_2.getValue() + 1 + Math.random());
+				$('.info').letterfx({"fx":"fade"});
 		    	} else {
 		    		clearInterval(tab_2_interval_1)
 		    	}
@@ -567,6 +571,7 @@ $(function(){
 			myVideo.style.display = "block";
 		});
 		myVideo.style.display = "block";
+		myVideo.playbackRate=0.5;
 		myVideo.play();
 		myVideo.loop=true;
 		// hide grid of map
@@ -623,7 +628,7 @@ $(function(){
 	if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
 
 	if (OSName == 'MacOS') {
-		alert('Warning! Wrong Operation System<br> Will remove content');
+		// alert('Warning! Wrong Operation System<br> Will remove content');
 		// $('body').remove();
 	};
 

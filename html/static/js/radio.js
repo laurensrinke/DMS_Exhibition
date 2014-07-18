@@ -67,6 +67,7 @@ Radio = function(id, x, y, text_1, text_2, text_3, text_4, text_5)
 				    case 'over':
 				        break;
 				    case 'out':
+				    		updateStatus();
 				        break;
 				    case 'down':
 				        break;
