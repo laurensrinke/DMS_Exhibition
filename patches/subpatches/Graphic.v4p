@@ -36,7 +36,7 @@
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="15255" top="4860" width="16965" height="14310">
+   <BOUNDS type="Window" left="9705" top="375" width="16965" height="14310">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -61,7 +61,7 @@
    </PIN>
    </NODE>
    <NODE id="1" componentmode="Hidden" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Window" left="15600" top="3300" width="13080" height="11250">
+   <BOUNDS type="Window" left="8445" top="315" width="15375" height="13665">
    </BOUNDS>
    <BOUNDS type="Node" left="3737" top="4172" width="4335" height="270">
    </BOUNDS>

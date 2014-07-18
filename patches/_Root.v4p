@@ -155,7 +155,7 @@
    </PIN>
    <BOUNDS type="Box" left="525" top="9585">
    </BOUNDS>
-   <BOUNDS type="Window" left="15255" top="4860" width="16965" height="14310">
+   <BOUNDS type="Window" left="9705" top="375" width="16965" height="14310">
    </BOUNDS>
    </NODE>
    <NODE systemname="Logic" filename="subpatches\Logic.v4p" nodename="subpatches\Logic.v4p" componentmode="Hidden" id="90">

@@ -148,7 +148,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="Graphic" filename="subpatches\Graphic.v4p" nodename="subpatches\Graphic.v4p" componentmode="InAWindow" id="89">
+   <NODE systemname="Graphic" filename="subpatches\Graphic.v4p" nodename="subpatches\Graphic.v4p" componentmode="Hidden" id="89">
    <BOUNDS type="Node" left="525" top="9585" width="8220" height="270">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">

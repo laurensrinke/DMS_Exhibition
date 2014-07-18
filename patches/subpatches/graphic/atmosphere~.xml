@@ -9,7 +9,7 @@
    </BOUNDS>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="Radius" slicecount="1" values="400">
+   <PIN pinname="Radius" slicecount="1" values="300">
    </PIN>
    </NODE>
    <NODE systemname="PhongDirectional (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\PhongDirectional.fx" nodename="PhongDirectional (EX9.Effect)" componentmode="Hidden" id="95">
@@ -123,7 +123,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Y" slicecount="1" values="200">
+   <PIN pinname="Y" slicecount="1" values="150">
    </PIN>
    </NODE>
    <LINK srcnodeid="107" srcpinname="Transform Out" dstnodeid="95" dstpinname="Transform">

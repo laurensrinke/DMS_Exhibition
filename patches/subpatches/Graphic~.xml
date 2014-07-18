@@ -60,7 +60,7 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <NODE id="1" componentmode="InAWindow" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
+   <NODE id="1" componentmode="Hidden" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Window" left="15600" top="3300" width="13080" height="11250">
    </BOUNDS>
    <BOUNDS type="Node" left="3737" top="4172" width="4335" height="270">

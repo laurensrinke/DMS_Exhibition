@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\atmosphere.v4p" systemname="atmosphere" filename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\atmosphere.v4p">
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\graphic\atmosphere.v4p" systemname="atmosphere" filename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\atmosphere.v4p">
    <BOUNDS type="Window" left="11520" top="4170" width="12015" height="10275">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
