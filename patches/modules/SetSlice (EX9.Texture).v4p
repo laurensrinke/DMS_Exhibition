@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Projects\DMS_Exhibition\patches\modules\SetSlice (EX9.Texture).v4p" systemname="SetSlice (EX9.Texture)" filename="C:\Projects\DMS_Exhibition\patches\modules\SetSlice (EX9.Texture).v4p">
+   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\modules\SetSlice (EX9.Texture).v4p" systemname="SetSlice (EX9.Texture)" filename="C:\Projects\DMS_Exhibition\patches\modules\SetSlice (EX9.Texture).v4p">
    <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1140" top="1815" width="100" height="100">
    </BOUNDS>
@@ -91,10 +91,12 @@
    <NODE id="8" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Index">
    </PIN>
-   <BOUNDS type="Box" left="3315" top="500" width="750" height="240">
+   <BOUNDS type="Box" left="4170" top="470" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3315" top="500" width="750" height="240">
+   <BOUNDS type="Node" left="4170" top="470" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Index">
    </LINK>
@@ -142,4 +144,22 @@
    </LINK>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3210" top="510" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3210" top="510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="18">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Bin Size|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="3" dstpinname="Bin Size">
+   </LINK>
    </PATCH>

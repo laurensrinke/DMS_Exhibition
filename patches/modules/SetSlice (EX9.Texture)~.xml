@@ -51,7 +51,7 @@
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="4" dstpinname="Index">
    </LINK>
    <NODE id="5" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Output Node|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
    </PIN>
    <BOUNDS type="Box" left="1065" top="4140" width="750" height="240">
    </BOUNDS>
@@ -61,7 +61,7 @@
    <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="5" dstpinname="Input Node">
    </LINK>
    <NODE id="6" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Input - Texture In 1|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="TextureSpread">
    </PIN>
    <BOUNDS type="Box" left="1020" top="515" width="750" height="240">
    </BOUNDS>
@@ -71,7 +71,7 @@
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="2" dstpinname="Texture In 1">
    </LINK>
    <NODE id="7" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture In 2|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <BOUNDS type="Box" left="2415" top="500" width="750" height="240">
    </BOUNDS>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\graphic\atmosphere.v4p" systemname="atmosphere" filename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\atmosphere.v4p">
-   <BOUNDS type="Window" left="13185" top="3960" width="12015" height="10275">
+   <BOUNDS type="Window" left="15315" top="3690" width="12015" height="10275">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -12,32 +12,6 @@
    <PIN pinname="Radius" slicecount="1" visible="1" values="0.91">
    </PIN>
    </NODE>
-   <NODE systemname="PhongDirectional (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\PhongDirectional.fx" nodename="PhongDirectional (EX9.Effect)" componentmode="Hidden" id="95">
-   <BOUNDS type="Node" left="2250" top="5385" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Mesh" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="| TPhongDirectional|">
-   </PIN>
-   <PIN pinname="Specular Color" slicecount="1" values="|0.00572,0.00572,0.00572,1.00000|">
-   </PIN>
-   <PIN pinname="Diffuse Color" slicecount="1" values="|0.67016,0.67016,0.67016,1.00000|">
-   </PIN>
-   <PIN pinname="Ambient Color" slicecount="1" values="|0.61694,0.61694,0.61694,1.00000|">
-   </PIN>
-   <PIN pinname="Power" slicecount="1" values="25.71">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Light Direction XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="93" srcpinname="Mesh" dstnodeid="95" dstpinname="Mesh">
-   </LINK>
    <NODE id="98" nodename="DynamicTexture (EX9.Texture Color)" systemname="DynamicTexture (EX9.Texture Color)">
    <BOUNDS height="0" left="3495" top="4560" type="Node" width="0">
    </BOUNDS>
@@ -47,21 +21,21 @@
    </PIN>
    <PIN pinname="Width" slicecount="1" values="128">
    </PIN>
-   <PIN pinname="Height" slicecount="1" values="2">
+   <PIN pinname="Height" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Depth" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE id="97" nodename="HSL (Color Join)" systemname="HSL (Color Join)">
-   <BOUNDS height="0" left="4575" top="3825" type="Node" width="0">
+   <BOUNDS height="0" left="4575" top="3960" type="Node" width="0">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Hue" visible="1">
    </PIN>
-   <PIN pinname="Lightness" slicecount="1" values="0.5">
+   <PIN pinname="Lightness" slicecount="1" values="0.72" visible="1">
    </PIN>
-   <PIN pinname="Saturation" slicecount="1" values="1">
+   <PIN pinname="Saturation" slicecount="1" values="1.21">
    </PIN>
    </NODE>
    <LINK dstnodeid="98" dstpinname="Color" srcnodeid="97" srcpinname="Output">
@@ -75,16 +49,14 @@
    </PIN>
    <PIN pinname="Alignment" slicecount="1" values="LeftJustified">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0.57">
+   <PIN pinname="Input" visible="1" slicecount="1" values="1.57">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.04">
+   <PIN pinname="Width" slicecount="1" values="-0.01">
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="97" dstpinname="Hue" srcnodeid="96" srcpinname="Output">
-   </LINK>
-   <LINK srcnodeid="98" srcpinname="Texture Out" dstnodeid="95" dstpinname="Texture">
    </LINK>
    <NODE nodename="Group (EX9)" id="99" systemname="Group (EX9)">
    <BOUNDS type="Node" left="2250" top="5820" width="0" height="0">
@@ -93,9 +65,9 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Layer 1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="95" srcpinname="Layer" dstnodeid="99" dstpinname="Layer 1">
-   </LINK>
    <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="102">
    <BOUNDS type="Node" left="4095" top="4965" width="100" height="100">
    </BOUNDS>
@@ -108,8 +80,6 @@
    <PIN pinname="Y" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="102" srcpinname="Transform Out" dstnodeid="95" dstpinname="Texture Transform">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="106" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="2265" top="6930" width="795" height="240">
    </BOUNDS>
@@ -117,15 +87,17 @@
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="99" srcpinname="Layer" dstnodeid="106" dstpinname="Input Node">
-   </LINK>
    <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="107">
    <BOUNDS type="Node" left="3165" top="3225" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="Y" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.18">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="109" systemname="IOBox (Value Advanced)">
@@ -172,8 +144,6 @@
    </NODE>
    <LINK srcnodeid="107" srcpinname="Transform Out" dstnodeid="114" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="114" srcpinname="Transform Out" dstnodeid="95" dstpinname="Transform">
-   </LINK>
    <LINK srcnodeid="110" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Radius">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="116" systemname="IOBox (Value Advanced)">
@@ -194,8 +164,56 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="116" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Light Direction XYZ">
-   </LINK>
    <LINK srcnodeid="109" srcpinname="Y Output Value" dstnodeid="107" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Layer" dstnodeid="106" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Constant (EX9.Effect)" filename="%VVVV%\lib\nodes\effects\Constant.fx" nodename="Constant (EX9.Effect)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="2250" top="5385" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="| TConstant|">
+   </PIN>
+   <PIN pinname="Specular Color">
+   </PIN>
+   <PIN pinname="Diffuse Color">
+   </PIN>
+   <PIN pinname="Ambient Color">
+   </PIN>
+   <PIN pinname="Power">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="93" srcpinname="Mesh" dstnodeid="95" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Texture Out" dstnodeid="95" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="95" srcpinname="Layer" dstnodeid="99" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Transform Out" dstnodeid="95" dstpinname="Texture Transform">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="Transform Out" dstnodeid="95" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="118">
+   <BOUNDS type="Node" left="4725" top="2910" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="128">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.79">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.99">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="118" srcpinname="Output" dstnodeid="97" dstpinname="Lightness">
    </LINK>
    </PATCH>
