@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
    <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\graphic\atmosphere.v4p" systemname="atmosphere" filename="C:\Projects\DMS_Exhibition\patches\subpatches\graphic\atmosphere.v4p">
-   <BOUNDS type="Window" left="15315" top="3690" width="12015" height="10275">
+   <BOUNDS type="Window" left="13185" top="3960" width="12015" height="10275">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
@@ -33,7 +33,7 @@
    </PIN>
    <PIN pinname="Hue" visible="1">
    </PIN>
-   <PIN pinname="Lightness" slicecount="1" values="0.72" visible="1">
+   <PIN pinname="Lightness" slicecount="1" visible="1" values="0.72">
    </PIN>
    <PIN pinname="Saturation" slicecount="1" values="1.21">
    </PIN>
@@ -49,9 +49,9 @@
    </PIN>
    <PIN pinname="Alignment" slicecount="1" values="LeftJustified">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="1.6">
+   <PIN pinname="Input" visible="1" slicecount="1" values="1.57">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="-0.15">
+   <PIN pinname="Width" slicecount="1" values="-0.01">
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0">
    </PIN>
@@ -119,7 +119,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2280" top="3255" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="300">
+   <PIN pinname="Y Input Value" slicecount="1" values="400">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -209,7 +209,9 @@
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="128">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="0.84">
+   <PIN pinname="Input" slicecount="1" values="0.79">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="0.99">
    </PIN>
    </NODE>
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="97" dstpinname="Lightness">

@@ -53,9 +53,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Prototyp01" filename="devices\Prototyp01.v4p" componentmode="Hidden" id="7" nodename="devices\Prototyp01.v4p">
-   <BOUNDS type="Node" left="6690" top="3540" width="2745" height="270">
+   <BOUNDS type="Node" left="1320" top="4125" width="2745" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="6690" top="3540" width="4800" height="3600">
+   <BOUNDS type="Box" left="1320" top="4125" width="4800" height="3600">
    </BOUNDS>
    <BOUNDS type="Window" left="13425" top="1425" width="13785" height="16050">
    </BOUNDS>

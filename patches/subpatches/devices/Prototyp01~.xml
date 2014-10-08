@@ -57,7 +57,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8640" top="6000" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -543,7 +543,7 @@
    </PIN>
    </NODE>
    <NODE systemname="MinMax (Value 1.0)" filename="..\..\plugins\1.0ValueMinMax\1.0ValueMinMax.csproj" nodename="MinMax (Value 1.0)" componentmode="Hidden" id="72">
-   <BOUNDS type="Node" left="6615" top="6405" width="100" height="100">
+   <BOUNDS type="Node" left="6675" top="6060" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="6" values="578,542,504,446,434,432">
    </PIN>
@@ -580,8 +580,6 @@
    <PIN pinname="Set" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="72" srcpinname="Min" dstnodeid="74" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Output" dstnodeid="73" dstpinname="Source Minimum">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Set">
@@ -589,15 +587,13 @@
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="75">
    <BOUNDS type="Node" left="7260" top="6810" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" visible="1" slicecount="6" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="72" srcpinname="Max" dstnodeid="75" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Source Maximum">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Set">
@@ -669,5 +665,49 @@
    <LINK srcnodeid="81" srcpinname="Analog In" dstnodeid="73" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="81" srcpinname="Digital In" dstnodeid="25" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="8550" top="4155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="Globals-Refresh">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Input Value" dstnodeid="38" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6390" top="6450" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6390" top="6450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Min" dstnodeid="83" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7260" top="6420" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7260" top="6420" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Max" dstnodeid="84" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input">
    </LINK>
    </PATCH>
