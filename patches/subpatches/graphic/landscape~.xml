@@ -224,22 +224,10 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="12810" top="4725" width="15375" height="13665">
+   <BOUNDS type="Window" left="8385" top="1485" width="15375" height="13665">
    </BOUNDS>
    <PACK Name="addonpack" Version="31.9.0">
    </PACK>
-   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="5655" top="11550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" visible="1" slicecount="1882" values="..\..\..\assets\3d\Landscape\hügel_landscape\_3_2.png,..\..\..\assets\3d\Landscape\hügel_landscape\Concrete_Form_4x8.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\lanscape.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\material_1.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\RooftilesWood0005_2_thumbhuge.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\Wood_Lumber_ButtJoined.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\woodwall2.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\woodwall2_0.jpg,..\..\..\assets\3d\Landscape\hügel_landscape\lanscape.jpg">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Reload" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Up And Running" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="63">
    <BOUNDS type="Node" left="5340" top="5160" width="100" height="100">
    </BOUNDS>
@@ -350,8 +338,6 @@
    <PIN pinname="Alpha Reference Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Render State Out" dstnodeid="6" dstpinname="Render State In">
-   </LINK>
    <NODE systemname="ConstantDiffusionMap (EX9.Effect)" filename="..\Effects\ConstantDiffusionMap.fx" nodename="ConstantDiffusionMap (EX9.Effect)" componentmode="Hidden" id="96">
    <BOUNDS type="Node" left="2910" top="12525" width="3360" height="270">
    </BOUNDS>
@@ -359,9 +345,9 @@
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
-   <PIN pinname="Render State" visible="1">
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -370,8 +356,6 @@
    <PIN pinname="DiffPow" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Render State Out" dstnodeid="96" dstpinname="Render State">
-   </LINK>
    <LINK srcnodeid="96" srcpinname="Layer" dstnodeid="15" dstpinname="Layer 1">
    </LINK>
    <NODE id="101" systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden">
@@ -505,7 +489,7 @@
    </PIN>
    <PIN pinname="To" slicecount="1" visible="1" values="C:\Projects\DMS_Exhibition\assets\3d\Landscape\tex\texturesLandschaftAmbient_Occlusion.png">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1884" values="||">
+   <PIN pinname="Input" visible="1" slicecount="1882" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -541,10 +525,6 @@
    <LINK srcnodeid="115" srcpinname="Output" dstnodeid="116" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="77" srcpinname="Input Index" dstnodeid="116" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="20" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Texture Out" dstnodeid="96" dstpinname="Texture">
    </LINK>
    <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="117">
    <BOUNDS type="Node" left="8685" top="2160" width="100" height="100">
@@ -648,8 +628,6 @@
    </LINK>
    <LINK srcnodeid="120" srcpinname="Output" dstnodeid="96" dstpinname="Mesh">
    </LINK>
-   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="114" dstpinname="Input">
-   </LINK>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="124">
    <BOUNDS type="Node" left="9420" top="3165" width="100" height="100">
    </BOUNDS>
@@ -723,7 +701,7 @@
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="129">
    <BOUNDS type="Node" left="11955" top="9915" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1882" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -748,18 +726,16 @@
    </LINK>
    <LINK srcnodeid="130" srcpinname="Y Output Value" dstnodeid="129" dstpinname="Index">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Up And Running" dstnodeid="129" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="116" srcpinname="Output" dstnodeid="127" dstpinname="Input">
    </LINK>
-   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="131">
-   <BOUNDS type="Node" left="5370" top="8265" width="100" height="100">
+   <NODE systemname="Substitute (String)" nodename="Substitute (String)" componentmode="Hidden" id="131" hiddenwhenlocked="0">
+   <BOUNDS type="Node" left="5340" top="7110" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="From" slicecount="1" values="C:\Projects\DMS_Exhibition\assets\3d\Landscape\tex\LandschaftOberflächenfarbe.png">
+   <PIN pinname="From" slicecount="1" values="C:\Projects\DMS_Exhibition\assets\3d\Landscape\tex\LandschaftOberflächenfarbe.png" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="To" slicecount="1" values="C:\Projects\DMS_Exhibition\assets\3d\Landscape\tex\LandschaftOberflächenfarbe.png">
+   <PIN pinname="To" slicecount="1" values="C:\Projects\DMS_Exhibition\assets\3d\Landscape\tex\LandschaftOberflaechenfarbe.png" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -917,5 +893,63 @@
    <LINK srcnodeid="143" srcpinname="Color Output" dstnodeid="144" dstpinname="Fog Color">
    </LINK>
    <LINK srcnodeid="144" srcpinname="Render State Out" dstnodeid="126" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Render State Out" dstnodeid="96" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="94" srcpinname="Render State Out" dstnodeid="6" dstpinname="Render State In">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="145">
+   <BOUNDS type="Node" left="5670" top="5925" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="145" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Y Output Value" dstnodeid="145" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="145" srcpinname="Output" dstnodeid="131" dstpinname="From">
+   </LINK>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="150">
+   <BOUNDS type="Node" left="5655" top="11550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="150" srcpinname="Up And Running" dstnodeid="129" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="151" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6060" top="6720" width="6000" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6060" top="6720" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="..\..\..\assets\3d\Landscape\tex\texturesLandschaftOberflächenfarbe.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="image.jpg">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Pictures (*.bmp, *.dds, *.hdr, *.jpg, *.png, *.tif, *.tga)||*.bmp;*.dds;*.hdr;*.jpg;*.png;*.tif;*.tga||Bitmap (*.bmp)||*.bmp||HDR (*.hdr)||*.hdr||DDS (*.dds)||*.dds||JPG (*.jpg)||*.jpg||PNG (*.png)||*.png||TIFF (*.tif)||*.tif||Targa (*.tga)||*.tga|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="151" srcpinname="Output String" dstnodeid="131" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="150" srcpinname="Texture Out" dstnodeid="96" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Output" dstnodeid="150" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="114" dstpinname="Input">
    </LINK>
    </PATCH>

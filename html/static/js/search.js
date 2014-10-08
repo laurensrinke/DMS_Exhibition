@@ -36,6 +36,7 @@ Search = function(id, myClass, x, y)
 	function create()
 	{
 		i_container = document.createElement('input');
+		i_container.type = 'text';
 		i_container.className += myClass;
 		i_container.id = id;
 		i_container.style.position = 'absolute';
