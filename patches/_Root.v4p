@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\DMS_Exhibition\Patches\_Root.v4p" systemname="root" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\root.v4p" locked="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\DMS_Exhibition\Patches\_Root.v4p" systemname="root" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\root.v4p" locked="0" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="14295" top="0" width="10905" height="15915">
    </BOUNDS>
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="18">
@@ -24,14 +24,14 @@
    <PIN pinname="Initial Interest" visible="1" slicecount="3" values="0.01,0.01,0.01">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="525" top="5805" width="1230" height="270">
    </BOUNDS>
    <PIN pinname="Maximum background fpsS" visible="1">
    </PIN>
-   <PIN pinname="Time Mode" slicecount="1" values="Increment">
+   <PIN pinname="Time Mode" slicecount="1" values="Filtered">
    </PIN>
    <PIN pinname="AsyncThreadPriority" slicecount="1" values="-2">
    </PIN>
@@ -41,7 +41,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="525" top="4620" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="30">
+   <PIN pinname="Y Input Value" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -335,6 +335,8 @@
    </PIN>
    <PIN pinname="Fullscreen" visible="1">
    </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1920 x 1080|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="99" srcpinname="Output" dstnodeid="150" dstpinname="Fullscreen">
    </LINK>
@@ -444,6 +446,8 @@
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1920 x 1080|">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Projection" dstnodeid="159" dstpinname="Projection">

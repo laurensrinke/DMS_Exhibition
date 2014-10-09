@@ -31,7 +31,7 @@
    </BOUNDS>
    <PIN pinname="Maximum background fpsS" visible="1">
    </PIN>
-   <PIN pinname="Time Mode" slicecount="1" values="Filtered">
+   <PIN pinname="Time Mode" slicecount="1" values="Increment">
    </PIN>
    <PIN pinname="AsyncThreadPriority" slicecount="1" values="-2">
    </PIN>
@@ -41,7 +41,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="525" top="4620" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="60">
+   <PIN pinname="Y Input Value" slicecount="1" values="30">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -63,7 +63,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1695" top="5445" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-2">
+   <PIN pinname="Y Input Value" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -217,6 +217,8 @@
    </PIN>
    <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="2">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="89" srcpinname="Layer" dstnodeid="123" dstpinname="Layers">
    </LINK>
@@ -341,9 +343,9 @@
    </BOUNDS>
    <PIN pinname="Source" visible="1">
    </PIN>
-   <PIN pinname="Width" visible="1" pintype="Input" slicecount="1" values="1920">
+   <PIN pinname="Width" visible="1" pintype="Input" slicecount="1" values="1280">
    </PIN>
-   <PIN pinname="Height" visible="1" pintype="Input" slicecount="1" values="1080">
+   <PIN pinname="Height" visible="1" pintype="Input" slicecount="1" values="720">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
