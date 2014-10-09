@@ -1,5 +1,22 @@
-Hello:
+Final Run:
+ ✔ Selection Color @done (14-07-16 02:09)
+ ✔ Live Flug Video einbinden @done (14-07-16 05:17)
+ ✔ Loop einbauen @done (14-07-16 05:20)
+ ✔ Umschalten von Map zu Video muss grid ausgeblendet werden. white @done (14-07-16 05:25)
+ ✔ Taktisches Zeichen hinzufügen @done (14-07-16 06:27)
+ ✔ Video Zeit einbinden @done (14-07-16 06:43)
+ ✔ Video Zeit einbinden verbleibend ~ @done (14-07-16 06:44)
+ ✔ Nav Bug fixxen @done (14-07-16 07:40)
+ ✔ Anpassen @done (14-07-16 08:56)
+ ☐ Button clos hover fix
+ ☐ 3D Bearbeitung Video einbinden.
+ ✔ Umschalten zwischen 2D Karte und Live Flug @done (14-07-16 05:25)
+ ☐ Maus Zeiger größer
+ ☐ Maus zeiger Klicks anzeigen
 
+ Talk:
+  ☐ Was ist das was man editerit
+  ☐ Er kann das Taktische Zeichen 
 
 Akutelle Datein:
   ✔ find good list animation @done (14-07-10 02:13)
@@ -38,7 +55,6 @@ Akutelle Datein:
   ☐ click auf maps, swap tp map!
   ☐ Click on Video to create Screenshot!
   ☐ Video-FilmPosition nehmen und damit die Radio&Chem animieren
-  ☐ 
  
 
   UI-Elemente:
@@ -75,7 +91,6 @@ Akutelle Datein:
     ☐ Update all color values.
     ✔ Lable Map springt bei tab_0 zu tab_1 @done (14-07-12 13:01)
 
-
 Fancy:
   ☐ Input mit pre-text versehen
   ☐ Design custom cusor
@@ -93,17 +108,12 @@ Fancy:
   ☐ Nice text transistion for time, poping up or sth.
   ☐ Clac Ratio and display it.
 
-
-
-
 Questions:
-
   ☐ If I press 'upload to drone' button do I swap to live view? Yes!?!??? Ask Team
   ☐ Können wir Datenvisualisierungen einbauen: 
     http://www.sueddeutsche.de/wissen/satellitenaufnahmen-signaturen-der-staedte-1.2021088
   ☐ Gibt es doch irgendwo einen Button wo man auf die HomePosiotn zurück kann? Ja! Nur wo?
   ☐ Kann man irgendwo die Farblichkeit verändern.
-
 
  UI-Transistions:
   ☐ Punkte die sich nacheinander aufbauen 
@@ -114,7 +124,6 @@ Andere Anliegen:
   ☐ Helligkeits-Slider
   ☐ Interfcae für Piloten
   ☐ Map wichtige Elemente anzeigen, Tankstellen, Schulen, ...ex
-
 
 Feedback:
   ☐ Spieht nach einem Spiel aus.

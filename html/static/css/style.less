@@ -7,6 +7,15 @@
 	-ms-user-select: none;
 	user-select: none;
 	cursor: crosshair;
+	font-size: 14px;
+	font-family: 'Roboto-Medium';
+	letter-spacing: 1px;
+	color: #FFF;
+	
+}
+
+.text_input::selection {
+	background: #DDD; /* WebKit/Blink Browsers */
 }
 
 @base: #red;
@@ -24,6 +33,7 @@
 
 html, body, #map-canvas {
 	background: #222222;
+	background: rgba(0, 0, 0, 0);
 	height: 100%;
 	margin: 0px;
 	padding: 0px
@@ -726,3 +736,61 @@ input[type="range"]::-webkit-slider-thumb {
 	height: 300px;
 	border: 1px solid red;
 }
+
+#video_time {
+	position: absolute;
+	top: 119px;
+	left: 284px;
+	width: 100px;
+	height: 30px;
+	font-family: 'Roboto-Bold';
+}
+
+#video_time_rest {
+	position: absolute;
+	top: 119px;
+	left: 1460px;
+	width: 100px;
+	height: 30px;
+}
+
+#tak_icon_add {
+	position: absolute;
+	top: 319px;
+	left: 1690px;
+	width: 211px;
+	height: 30px;
+}
+
+.list li img.tak_icon  {
+	position: absolute;
+	top: 4px;
+	left: 169px;
+	width: 17px;
+	height: 17px;
+}
+
+.drawing {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	// border: 1px solid red;
+	width: 63px;
+	height: 23px;
+}
+
+#punkt {
+	top: 149px;
+	left: 1682px;
+}
+
+#path {
+	top: 149px;
+	left: 1756px;
+}
+
+#area {
+	top: 149px;
+	left: 1830px;
+}
+

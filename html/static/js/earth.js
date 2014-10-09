@@ -1,5 +1,5 @@
 // // var ge;
-// google.load("earth", "1", {"other_params":"sensor=true_or_false"});
+// // google.load("earth", "1", {"other_params":"sensor=true_or_false"});
 
 // // function init() {
 // // 	google.earth.createInstance('map3d', initCB, failureCB, {

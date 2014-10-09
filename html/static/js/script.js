@@ -28,9 +28,9 @@ $(function(){
 
 	// GLOBAL STUFF
 	startTime();
-
 	var y_fix = 0;
 
+	var drawMode = 0;
 
 	// CREATE tab_0 CONTAINER /////////////////////////////////////////////////////////////////////
 	var tab_0 = document.getElementById('tab_0');
@@ -41,6 +41,9 @@ $(function(){
 
 	var tab_2 = document.getElementById('tab_2');
 	tab_2.className = 'tab';
+
+	var mapCanvas = document.getElementById('map-canvas');
+
 
 	// var tab_2 = document.createElement('section');
 	// tab_2.id = 'tab_2';
@@ -53,10 +56,6 @@ $(function(){
 	// tab_0 CONTENT
 
 	var tab_0_array = [];
-
-	
-
-
 
 	// create nav tabs
 	var myTabs = new Tabs('img/tabs/tabs_def.fw.png', 'img/tabs/tabs_act.fw.png', 'img/tabs/tabs_hover.fw.png', true);
@@ -299,7 +298,7 @@ $(function(){
 
 
 	// LIST
-	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 590 + y_fix, 'Screenshot', 0);
+	var tab_1_list_1 = new List('tab_1_list_1', 'list', 1682, 575 + y_fix, 'Screenshot', 0);
 	tab_1.appendChild(tab_1_list_1.create());
 	// tab_1_array.push(tab_1_list_1);
 
@@ -307,8 +306,6 @@ $(function(){
 	// EDIT
 	var tab_1_edit_1 = new Edit('tab_1_edit_1', 'edit', 1682, 277 + y_fix);
 	tab_1.appendChild(tab_1_edit_1.create());
-
-
 
 	// Screenshot button pressed
 	var screenshotArray = [];
@@ -321,13 +318,20 @@ $(function(){
 		screenshotArray.push(screenshot);
 		$('#tab_1_list_1').trigger('custom', [0, screenshotArray.length]);
 		tab_1_edit_1.setValue('Screenshot ' +  screenshotArray.length, screenshotArray.length);
-		say(screenshotArray);
+	});
 
+	$('#tab_2_btn_1').click(function( event) {
+		console.log('CLICKED');
+	});
+
+	// add tak icon
+	$('#tak_icon_add').click(function( event) {
+		 $('#tab_1_list_1 li:last-child').append('<img class="tak_icon" src="../img/list/tak_icon.fw.png" width="25px">');
 	});
 	// add screenshot to list
 	 // $('#tab_1_list_1').trigger('custom', [0, 0]);
 
-	 
+
 
 
 
@@ -357,16 +361,16 @@ $(function(){
 
 	// Buttons
 	var tab_2_btn_1 = new Button(
-		'tab_3_btn_1', 
+		'tab_2_btn_1', 
 		'Screenshot', 
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
-		1681, 115, true, 'btn_def');
+		1681, 115 + y_fix, true, 'btn_def');
 	tab_2.appendChild(tab_2_btn_1.create());
 
 	var tab_2_btn_2 = new Button(
-		'tab_3_btn_2', 
+		'tab_2_btn_2', 
 		'Print',
 		'img/button/button_def.fw.png',
 		'img/button/button_over.fw.png',
@@ -375,7 +379,7 @@ $(function(){
 	tab_2.appendChild(tab_2_btn_2.create());
 
 	var tab_2_btn_3 = new Button(
-		'tab_3_btn_3', 
+		'tab_2_btn_3', 
 		'Share',
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
@@ -384,7 +388,7 @@ $(function(){
 	tab_2.appendChild(tab_2_btn_3.create());
 
 	var tab_2_btn_4 = new Button(
-		'tab_3_btn_4', 
+		'tab_2_btn_4', 
 		'Path Finder', 
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
@@ -393,15 +397,26 @@ $(function(){
 	tab_2.appendChild(tab_2_btn_4.create());
 
 	var tab_2_btn_5 = new Button(
-		'tab_3_btn_5', 
+		'tab_2_btn_5', 
 		'Compare Maps', 
 		'img/button/button_def.fw.png', 
 		'img/button/button_over.fw.png', 
 		'img/button/button_down.fw.png', 
 		24, 717, true, 'btn_def');
 	tab_2.appendChild(tab_2_btn_5.create());
-	
 
+	var tab_2_lb_8 = new Lable(285, 81 + y_fix, 'Time Line', 2000, 300);
+	tab_2.appendChild(tab_2_lb_8.create());
+
+
+	// EDIT
+	var tab_2_edit_1 = new Edit('tab_2_edit_1', 'edit', 1682, 277 + y_fix);
+	tab_2.appendChild(tab_2_edit_1.create());
+
+	// waypoint list
+	var tab_2_list_1 = new List('tab_2_list_1', 'list', 1682, 325 + y_fix, 'Waypoint', 1);
+	tab_2.appendChild(tab_2_list_1.create());
+	
 	// var tab_1_btn_2 = new Button(
 	// 	'tab_1_btn_2', 
 	// 	'Print', 
@@ -440,11 +455,14 @@ $(function(){
 	var tab_2_lb_6 = new Lable(1682, 241, 'Edit Mark', 1000, 300);
 	tab_2.appendChild(tab_2_lb_6.create()); 
 
-	var tab_2_lb_7 = new Lable(1682, 531, 'Marks', 1000, 300);
+	var tab_2_lb_7 = new Lable(1682, 521, 'Marks', 1000, 300);
 	tab_2.appendChild(tab_2_lb_7.create());
 
 	var tab_2_lb_8 = new Lable(1682, 929, 'Export Data', 1000, 300);
 	tab_2.appendChild(tab_2_lb_8.create()); 
+
+	var tab_1_lb_6 = new Lable(1682, 521 + y_fix, 'Screenshot', 1000, 300);
+	tab_1.appendChild(tab_1_lb_6.create()); 
 
 
 
@@ -490,17 +508,6 @@ $(function(){
 
 	// Trigger click on nav_1
 
-
-
-
-
-
-
-
-
-
-	
-
 	// ADD TABS TO CONTAINER
 	document.body.appendChild(tab_0);
 	// document.body.appendChild(tab_2);
@@ -517,11 +524,14 @@ $(function(){
 		$('#nav_b2').trigger( "click");
 	});
 
-	var myVideo=document.getElementById("video_1"); 
+	// var myVideo=document.getElementById("video_1"); 
 
 
 	// click Tab 0
 	$('#nav_b1').click(function( event) {
+		// hide map
+		$(mapCanvas).css('display', 'block');
+
 		// grid wieder anzeigen
 		$('#grid_gray').show();
 		$('#grid_gray').animo( { animation: 'fadeIn', duration: 1 }, function() {
@@ -529,14 +539,40 @@ $(function(){
 		});
 		
 		$('#video_1').animo( { animation: 'fadeOut', duration: .4 }, function() {
-			myVideo.style.display = "none";
+			// myVideo.style.display = "none";
 		});
 	});
+
+
+	 // start 3d video
+
+	// var myVideo_2 = document.getElementById("video_2"); 
+	$('#tab_3_rd_1_nav_b0').click(function( event) { 
+		// myVideo.style.display = "none";
+		// myVideo_2.style.display = "none";
+		$(mapCanvas).css('display', 'block');
+	});
+	$('#tab_3_rd_1_nav_b1').click(function( event) { 
+		// myVideo.style.display = "none";
+		// myVideo_2.style.display = "block";
+		// myVideo_2.play();
+		// myVideo_2.loop=true;
+		$(mapCanvas).css('display', 'none');
+	});
+	$('#tab_3_rd_1_nav_b2').click(function( event) { 
+		// myVideo.style.display = "block";
+		// myVideo_2.style.display = "none";
+		$(mapCanvas).css('display', 'block');
+	});
+
 
 	var myInt = 0;
 	var myInt_2 = 0;
 	var myInt_3 = 0;
 	$('#nav_b2').click(function( event) {
+		// hide map
+		$(mapCanvas).css('display', 'none');
+
 		// update values of the messure
 		var tab_2_interval_1 = setInterval(function() {
 			if (myInt < 1000) {
@@ -567,13 +603,34 @@ $(function(){
 		 }, 2000);
 
 		// start video
-		$('#video_1').animo( { animation: 'fadeIn', duration: .4 }, function() {
-			myVideo.style.display = "block";
-		});
-		myVideo.style.display = "block";
-		myVideo.playbackRate=0.5;
-		myVideo.play();
-		myVideo.loop=true;
+		// $('#video_1').animo( { animation: 'fadeIn', duration: .4 }, function() {
+			// myVideo.style.display = "block";
+		// });
+
+		// myVideo.style.display = "block";
+		// myVideo.playbackRate=0.5;
+		// myVideo.play();
+		// myVideo.loop=true;
+		// myVideo.currentTime=30;
+
+		// draw time on timeline
+		// say(myVideo.currentTime);
+		var timeX = 0;
+		var timeY = 0;
+		// $(myVideo).on('timeupdate', function  (argument) {
+		// 	// say(myVideo.currentTime);
+		// 	timeX = parseInt(myVideo.currentTime);
+		// 	if (timeX < 10) { timeX = '0' + timeX};
+		// 	$('#video_time').html('05:' + timeX);
+
+		// 	// rest of time
+		// 	timeY = 60 - parseInt(myVideo.currentTime);
+		// 	if (timeY < 10) { timeY = '0' + timeY};
+		// 	$('#video_time_rest').html('-56:' + timeY);
+
+		// 	// update number thing
+		// });
+
 		// hide grid of map
 		$('#grid_gray').animo( { animation: 'fadeOut', duration: .4 }, function() {
 			$('#grid_gray').css('display', 'none');
@@ -584,8 +641,11 @@ $(function(){
 	});
 
 	$('#nav_b3').click(function( event) {
+		// hide map
+		$(mapCanvas).css('display', 'block');
+
 		$('#video_1').animo( { animation: 'fadeOut', duration: .4 }, function() {
-			myVideo.style.display = "none";
+			// myVideo.style.display = "none";
 		});
 		$('#grid_gray').animo( { animation: 'fadeOut', duration: .4 }, function() {
 			$('#grid_gray').css('display', 'none');
@@ -597,23 +657,53 @@ $(function(){
 		// init();
 	});
 
-	say('HELLOOOO');
-
 	$(r_5_nav_b0).click(function( event) {
 		// hide video
-		$(myVideo).show();
+		// $(myVideo).show();
+		$('#grid_white').css('display', 'none');
+		$('#grid_gray').css('display', 'none');
+		$(mapCanvas).css('display', 'none');
 	});
 
 	$(r_5_nav_b1).click(function( event) {
 		// hide video
-		$(myVideo).show();
+		// $(myVideo).show();
+		$('#grid_white').css('display', 'none');
+		$('#grid_gray').css('display', 'none');
+		$(mapCanvas).css('display', 'none');
 	});
 
 	$(r_5_nav_b2).click(function( event) {
 		// hide video
-		$(myVideo).hide();
-		$('#grid_white').css('display', 'block');
+		// $(myVideo).hide();
+		$('#grid_gray').css('display', 'block');
+		$(mapCanvas).css('display', 'block');
 	});
+
+	$('#punkt').click(function( event) {
+		// hide video
+		say('Punkt');
+		drawMode = 1
+		$(document).trigger( "custom", ["drawMode", 1]);
+	});
+
+	$('#path').click(function( event) {
+		// hide video
+		say('Path');
+		drawMode = 2;
+		$(document).trigger( "custom", ["drawMode", 2]);
+
+	});
+
+	$('#area').click(function( event) {
+		// hide video
+		say('Area');
+		drawMode = 0;
+		$(document).trigger( "custom", ["drawMode", 0]);
+
+	});
+
+ 	
 
 	
 	

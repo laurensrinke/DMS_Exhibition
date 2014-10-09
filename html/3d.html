@@ -1,13 +1,255 @@
+<!--
+	You are free to copy and use this sample in accordance with the terms of the
+	Apache license (http://www.apache.org/licenses/LICENSE-2.0.html)
+-->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>My first Three.js app</title>
-		<style>canvas { width: 100%; height: 100% }</style>
-	</head>
-	<body>
-	<script>
-	setTimeout(function(){
-		window.open ('http://127.0.0.1:4000','_self',false)
-	}, 3000);
-	</script>
-	</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Earth API Sample</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//www.google.com/jsapi?key=ABQIAAAAuPsJpk3MBtDpJ4G8cqBnjRRaGTYH6UMl8mADNa0YKuWNNa8VNxQCzVBXTx2DYyXGsTOxpWhvIG7Djw" type="text/javascript"></script>
+    
+    <script src="//earth-api-utility-library.googlecode.com/svn/trunk/extensions/dist/extensions.pack.js" type="text/javascript"></script>
+    <style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+
+	}
+
+	#map3d {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	#map3d img{
+		display: none;
+	}
+
+	 a {
+		display: none;
+	}
+
+	button {
+		position: absolute;
+		top: 10px;
+		left: 1500px;
+		z-index: 10000;
+	}
+
+    </style>
+    <script type="text/javascript">
+    
+    var ge;
+    var gex;
+
+    google.load("earth", "1");
+    
+    function initCallback(instance) {
+      base_setup(instance);
+      var la = ge.createLookAt('');
+      // la.set(18.572182154720327, -72.34312534332275, 0, ge.ALTITUDE_RELATIVE_TO_GROUND, 29, 35, 3500 );
+      // la.set(31.699601, -106.430566, 0, ge.ALTITUDE_RELATIVE_TO_GROUND, 29, 35, 3500 );
+      la.set(23.249066, -106.419943, 0, ge.ALTITUDE_RELATIVE_TO_GROUND, 29, 35, 3500 );
+      // 23.249066, -106.419943
+      ge.getLayerRoot().enableLayerById(ge.LAYER_BUILDINGS, true);
+      ge.getLayerRoot().enableLayerById(ge.LAYER_TERRAIN , true);
+      ge.getLayerRoot().enableLayerById(ge.LAYER_TREES , true);
+      ge.getOptions().setAtmosphereVisibility(true);
+      // ge.getSun().setVisibility(true);
+      // 31.699601, -106.430566
+      ge.getView().setAbstractView(la);
+    }
+    
+    function addPlacemark(latLon, selectedTime){
+      pm = gex.dom.addPointPlacemark( latLon, { name: selectedTime});
+      ts = ge.createTimeStamp('');
+      ts.getWhen().set(selectedTime);
+      pm.setTimePrimitive(ts);
+    }
+    
+    function logCurrentTime(){
+      var tp = ge.getTime().getTimePrimitive();
+      if (tp.getType() == 'KmlTimeSpan') {
+        var text = 'TimeSpan from ' + tp.getBegin().get() + ' to ' + tp.getEnd().get();
+      } else {
+        var text = 'TimeStamp at ' + tp.getWhen().get();
+      }
+     alert(text);
+    }
+    
+    function setTime(selectedTime){
+        var gts = ge.createTimeStamp('');
+        gts.getWhen().set(selectedTime);
+        ge.getTime().setTimePrimitive(gts);
+    }
+    
+    
+      
+    function base_setup(instance){
+      ge = instance;
+      ge.getWindow().setVisibility(true);
+      gex = new GEarthExtensions(ge);
+    }
+    
+    function init() {
+      	google.earth.createInstance('map3d', initCallback, failureCallback);
+    }
+    
+    function failureCallback(errorCode) {
+
+    }
+
+
+
+    // IX ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+     $(document).ready(function() {
+     	setTimeout(function(){
+     		  // TILT IT
+		    var tiltCamera = function(count) {
+		    var idealTilt = 55;  // all angles in the API are in degrees.
+		    var c0 = 0.90;
+		    var la = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+
+		    var tilt = la.getTilt();
+		    tilt = c0 * tilt + (1 - c0) * idealTilt;
+		    la.setTilt(tilt);
+		    ge.getView().setAbstractView(la);
+
+		    if (count < 60) {
+		      setTimeout(function() {
+		        tiltCamera(count + 1);
+		      }, 33);
+		    }
+		  }
+
+		 var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		  lookAt.setLatitude(lookAt.getLatitude() + 2);
+		  lookAt.setLongitude(lookAt.getLongitude() + 20);
+		  ge.getView().setAbstractView(lookAt);
+
+		  tiltCamera(0);
+		// startAnimation();
+
+     	}, 3000);
+     	var animRunning = false;
+	var ANIM_ALTITUDE = 100;
+            //run code that MUST be after initialize
+	$('#move').click(function (argument) {
+ 	// 	var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		// lookAt.setLatitude(lookAt.getLatitude() + 0.005);
+		// lookAt.setLongitude(lookAt.getLongitude());
+		// ge.getView().setAbstractView(lookAt); 
+		  // var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		  // lookAt.setLatitude(lookAt.getLatitude());
+		  // lookAt.setLongitude(lookAt.getLongitude() + 0.01);
+		  // ge.getView().setAbstractView(lookAt);
+
+		  // TILT IT
+		    var tiltCamera = function(count) {
+		    var idealTilt = 40;  // all angles in the API are in degrees.
+		    var c0 = 0.90;
+		    var la = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+
+		    var tilt = la.getTilt();
+		    tilt = c0 * tilt + (1 - c0) * idealTilt;
+		    la.setTilt(tilt);
+		    ge.getView().setAbstractView(la);
+
+		    if (count < 60) {
+		      setTimeout(function() {
+		        tiltCamera(count + 1);
+		      }, 33);
+		    }
+		  }
+
+		 var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		  lookAt.setLatitude(lookAt.getLatitude() + 2);
+		  lookAt.setLongitude(lookAt.getLongitude() + 20);
+		  ge.getView().setAbstractView(lookAt);
+
+		  tiltCamera(0);
+		startAnimation();
+	});
+
+
+	function startAnimation() {
+		  if (!animRunning) {
+		    ge.getOptions().setFlyToSpeed(ge.SPEED_TELEPORT);
+		    animRunning = true;
+		    google.earth.addEventListener(ge, 'frameend', tickAnimation);
+		    
+		    // start it off
+		    tickAnimation();
+		  }
+		}
+
+		function stopAnimation() {
+		  if (animRunning) {
+		    google.earth.removeEventListener(ge, 'frameend', tickAnimation);
+		    animRunning = false;
+		  }
+		}
+
+		function tickAnimation() {
+		  // an example of some camera manipulation that's possible w/ the Earth API
+		  var camera = ge.getView().copyAsCamera(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		  var dest = destination(camera.getLatitude(), camera.getLongitude(), 10, camera.getHeading());
+
+		  camera.setAltitude(ANIM_ALTITUDE);
+		  camera.setLatitude(dest[0]);
+		  camera.setLongitude(dest[1]);
+
+		  ge.getView().setAbstractView(camera);
+
+		  var lookAt = ge.getView().copyAsLookAt(ge.ALTITUDE_RELATIVE_TO_GROUND);
+		  // lookAt.setLatitude(lookAt.getLatitude() + 0.00002);
+		  // lookAt.setLongitude(lookAt.getLongitude());
+		  ge.getView().setAbstractView(lookAt);
+		}
+
+		/* Helper functions, courtesy of
+		   http://www.movable-type.co.uk/scripts/latlong.html */
+		function distance(lat1, lng1, lat2, lng2) {
+		  	var a = Math.sin(lat1 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180);
+		  	var b = Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+		      	Math.cos((lng2 - lng1) * Math.PI / 180);
+		  	return 637105001 * Math.acos(a + b) / 10;
+		}
+
+		function destination(lat, lng, dist, heading) {
+			  lat *= Math.PI / 180;
+			  lng *= Math.PI / 180;
+			  heading *= Math.PI / 180;
+			  // dist /= 6371000; // angular dist
+			  dist /= 25000000; // angular dist
+			  
+			  var lat2 = Math.asin(Math.sin(lat) * Math.cos(dist) + Math.cos(lat) * Math.sin(dist) * Math.cos(heading));
+
+			  return [
+			      		180 / Math.PI * lat2,
+			      		180 / Math.PI *
+			        		(lng + Math.atan2(Math.sin(heading) * Math.sin(dist) * Math.cos(lat2),
+			           	Math.cos(dist) - Math.sin(lat) * Math.sin(lat2)))
+			        	];
+		}
+
+
+
+      });
+    </script>
+  </head>
+  <body onload="init()" style="font-family: arial, sans-serif; font-size: 13px; border: 0;">
+    <button id="move">Move</button>
+
+    <div id="sample-ui"></div>
+    <div id="map3d" style="width: 1920px; height: 1080px;"></div>
+    <br>
+    <!-- <div>Installed Plugin Version: <span id="installed-plugin-version" style="font-weight: bold;">Loading...</span></div> -->
+  </body>
 </html>
+​

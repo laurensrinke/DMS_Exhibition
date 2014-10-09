@@ -51,16 +51,15 @@ Edit = function(id, myClass, x, y)
 		});
 
 		$(i_container).on('input', function  (argument) {
-			say(i_container.value);
-			say(target);
-			say('#' + id);
-			// $( "#ul li:nth-child(" + nr + ")" ).css('border', '1px solid green');
-			// $('#' + id).css('border', '1px soild green');
 			say(('#tab_1_list_1 ul li:nth-child(' + (target-1) + ')'));
 			// $('#tab_1_list_1 li:nth-child(' + target + ')').css('border', '1px solid green');
 			$('#tab_1_list_1 li:nth-child(' + target + ')').html(i_container.value);
-			// $('#tab_1_list_1 li:nth-child(' + target + ')').html('<img src="https://i.chzbgr.com/maxW500/8244506112/h0BDFEEB6/" width="25px">');
-		})
+			// $('#tab_1_list_1 li:nth-child(' + target + ')').append('<img class="tak_icon" src="../img/list/tak_icon.fw.png" width="25px">');
+		});
+
+		// click on tag icon - icon will be added!
+		
+
 		return i_container;
 	}
 

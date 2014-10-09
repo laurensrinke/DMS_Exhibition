@@ -104,12 +104,20 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 
 	function mouseOut()
 	{
-		b_def.style.opacity = 1;
-		b_hover.style.opacity = 0;
-		b_act.style.opacity = 0;
+		if(isActive == false) {
+			b_hover.style.opacity = 0;
+			b_act.style.opacity = 0;
+			b_def.style.opacity = 1;
+		} else {
+			b_hover.style.opacity = 0;
+			b_act.style.opacity = 1;
+		}
+		// b_def.style.opacity = 1;
+		// b_hover.style.opacity = 0;
+		// b_act.style.opacity = 0;
 		$('#' + id).trigger( "custom", ["out", id]);
 		// if not active, set inacitve
-		if (isActive == false) {setInactive()};
+		// if (isActive == false) {setInactive()};
 	}
 
 	function mouseDown()
@@ -120,22 +128,21 @@ Button = function(id, text, img_def, img_hover, img_act, x, y, show_prozess, sty
 
 	function mouseUp()
 	{
+		$('#' + id).trigger( "custom", ["up", id]);
 		// change active status
 		b_act.style.opacity = 0;
 		if (isActive) {
 			b_act.style.opacity = 1;
-			isActive = false;
+			setActive();
 		} else{
 			b_act.style.opacity = 0;
-			isActive = true;
+			setInactive();
 		};
-		$('#' + id).trigger( "custom", ["up", id]);
+		
 	}
 
 	// ---------------- Mouse Effects ----------------
-
 	// function hoverButton (argument) {
-
 	// }
 
 	// ---------------- Settings ----------------

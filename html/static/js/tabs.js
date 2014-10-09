@@ -97,6 +97,7 @@ Tabs = function(img_def, img_act, img_hover)
 			    case 'up':
 			      	updateStat(0);
 			      	hideElements();
+			      	buttons[0][2].setActive();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b1');
@@ -115,7 +116,8 @@ Tabs = function(img_def, img_act, img_hover)
 			        break;
 			    case 'up':
 			      	updateStat(1);
-			      	hideElements();
+			    	hideElements();
+			      	buttons[1][2].setActive();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b2');
@@ -134,7 +136,8 @@ Tabs = function(img_def, img_act, img_hover)
 			        break;
 			    case 'up':
 			      	updateStat(2);
-			      	hideElements();
+			    	hideElements();
+			      	buttons[2][2].setActive();
 			        break;
 			    default:{
 			        alert('unknow event! nav_b3');
@@ -184,7 +187,6 @@ Tabs = function(img_def, img_act, img_hover)
 				$('#tab_v_0' ).css('display', 'inline');
 				$('#tab_v_1').css('display', 'none');
 				$('#tab_v_2').css('display', 'none');
-
 				$('#mapRadio').hide();
 				$('#mapChemic').hide();
 			        break;
@@ -211,7 +213,7 @@ Tabs = function(img_def, img_act, img_hover)
 			    default:{
 			        alert('!');
 			    }
-			}
+		}
 	}
 
 	

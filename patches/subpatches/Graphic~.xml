@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Projects\DMS_Exhibition\Patches\subpatches\Graphic.v4p" systemname="Graphic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Graphic.v4p">
+   <PATCH nodename="C:\DMS_Exhibition\Patches\subpatches\Graphic.v4p" systemname="Graphic" filename="C:\Users\laurens\Desktop\20140520-AusstellungSystem\patches\Graphic.v4p">
    <NODE id="3" systemname="PerfMeter (Debug)" filename="%VVVV%\lib\nodes\modules\Debug\PerfMeter (Debug).v4p" nodename="PerfMeter (Debug)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="13862" top="11937" width="100" height="100">
    </BOUNDS>
@@ -60,7 +60,7 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <NODE id="1" componentmode="Hidden" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
+   <NODE id="1" componentmode="InAWindow" systemname="landscape" filename="graphic\landscape.v4p" nodename="graphic\landscape.v4p" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Window" left="8385" top="1485" width="15375" height="13665">
    </BOUNDS>
    <BOUNDS type="Node" left="3737" top="4172" width="4335" height="270">
